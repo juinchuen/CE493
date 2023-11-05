@@ -13,12 +13,12 @@ logic signed [D_WIDTH-1:0] beta;
 clarke #(
     .D_WIDTH(D_WIDTH),
     .Q_BITS(Q_BITS)
-) clarke_u {
+) clarke_u (
     .a(a),
     .b(b),
     .alpha(alpha),
     .beta(beta)
-};
+);
 
 initial begin : tb_process
     a = 'd40;
