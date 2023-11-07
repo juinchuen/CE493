@@ -1,7 +1,7 @@
 module park #(
     //output (n+1) larger than max input bits
     parameter D_WIDTH = 32,
-    parameter Q_BITS = 10,
+    parameter Q_BITS = 10
 ) (
     input logic signed [D_WIDTH-1:0] alpha,
     input logic signed [D_WIDTH-1:0] beta,

@@ -15,5 +15,10 @@ alpha = cos(theta)*D - sin(theta)*Q
 beta = sin(theta)*D - cos(theta)*Q
 cos and sin values need to be quantized
 */
+
+always_comb begin
+    alpha = ((D * cos) - (Q * sin)) >>> Q_BITS;
+    beta = ((D * sin) - (Q * cos)) >>> Q_BITS;
+end
     
 endmodule
