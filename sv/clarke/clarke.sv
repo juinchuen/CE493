@@ -1,5 +1,5 @@
 module clarke #(
-    // output (2n + 2) larger than max input bits for no overflow
+    // output (n + 1) larger than max input bits for no overflow
     parameter D_WIDTH = 32,
     parameter Q_BITS = 10
 ) (
