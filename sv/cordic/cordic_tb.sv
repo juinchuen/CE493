@@ -34,7 +34,8 @@ module cordic_tb ();
     end
 
     cordic #(
-        .D_WIDTH(8)
+        .D_WIDTH(8),
+        .DEBUG  (1)
     ) c0 (
         sin, cos, theta);
 
