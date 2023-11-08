@@ -17,10 +17,15 @@ module cordic # (
 
     initial begin
 
-        $display("Populating trig LUT with %d entries of %d bits\n", LUT_SIZE, D_WIDTH);
-        $readmemh("in_file.txt", LUT_CMP);
+        if (DEBUG) begin
 
-        out_file = $fopen("out_file.txt", "wb");
+            $display("Populating trig LUT with %d entries of %d bits\n", LUT_SIZE, D_WIDTH);
+            
+            $readmemh("in_file.txt", LUT_CMP);
+
+            out_file = $fopen("out_file.txt", "wb");
+
+        end
 
         dwidthr = $itor(D_WIDTH);
 
@@ -34,6 +39,7 @@ module cordic # (
             LUT[i] = $rtoi($cos(thetar)*(2**(dwidthr - 1)));
 
             if (DEBUG) begin
+
                 if (LUT[i] != LUT_CMP[i])begin
 
                     $fwrite(out_file, "mem = %x, val = %x, truth = %x\n", i, LUT[i], LUT_CMP[i]);
@@ -43,13 +49,14 @@ module cordic # (
                     $fwrite(out_file, "mem = %x, PASS\n", i);
 
                 end
+                
             end
 
             thetar = thetar + theta_step;
 
         end
 
-        $fclose(out_file);
+        if (DEBUG) $fclose(out_file);
 
     end
 
