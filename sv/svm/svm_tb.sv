@@ -11,7 +11,7 @@ module svm_tb ();
     initial begin
 
         rstb <= 1;
-        pTop <= 1 << 12;
+        pTop <= 1 << 11;
         vA   <= {{2{1'b0}}, {14{1'b1}}};
         vB   <= {{2{1'b1}}, {14{1'b0}}};
         vC   <= {{8{1'b0}}, {8{1'b0}}};
@@ -24,6 +24,14 @@ module svm_tb ();
         #10
 
         rstb <= 1;
+
+        # 30
+
+        wait (halt)
+
+        #30
+
+        wait (halt);
 
         # 30
 
