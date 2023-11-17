@@ -1,0 +1,55 @@
+{
+   "creator": "Yosys 0.34+27 (git sha1 7d30f716e, clang 10.0.0-4ubuntu1 -fPIC -Os)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\cordic": {
+         "num_wires":         3101,
+         "num_wire_bits":     3314,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 128,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3291,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 963,
+            "$_AND_": 73,
+            "$_MUX_": 264,
+            "$_NAND_": 36,
+            "$_NOR_": 192,
+            "$_NOT_": 299,
+            "$_ORNOT_": 140,
+            "$_OR_": 395,
+            "$_XNOR_": 286,
+            "$_XOR_": 536,
+            "sky130_fd_sc_hd__dfrtp_2": 90,
+            "sky130_fd_sc_hd__dfstp_2": 17
+         }
+      }
+   },
+      "design": {
+         "num_wires":         3101,
+         "num_wire_bits":     3314,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 128,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3291,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 963,
+            "$_AND_": 73,
+            "$_MUX_": 264,
+            "$_NAND_": 36,
+            "$_NOR_": 192,
+            "$_NOT_": 299,
+            "$_ORNOT_": 140,
+            "$_OR_": 395,
+            "$_XNOR_": 286,
+            "$_XOR_": 536,
+            "sky130_fd_sc_hd__dfrtp_2": 90,
+            "sky130_fd_sc_hd__dfstp_2": 17
+         }
+      }
+}
+

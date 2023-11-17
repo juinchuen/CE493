@@ -1,0 +1,20 @@
+{
+	"design__instance__count__setup_buffer": 2,
+	"design__instance__count__hold_buffer": 44,
+	"design__instance__displacement__total": 678.603,
+	"design__instance__displacement__mean": 0.189,
+	"design__instance__displacement__max": 8.74,
+	"route__wirelength__estimated": 52627.5,
+	"design__violations": 0,
+	"design__io": 55,
+	"design__die__area": 57809.1,
+	"design__core__area": 49965.4,
+	"design__instance__count": 3409,
+	"design__instance__area": 23346.1,
+	"design__instance__count__stdcell": 3409,
+	"design__instance__area__stdcell": 23346.1,
+	"design__instance__count__macros": 0,
+	"design__instance__area__macros": 0,
+	"design__instance__utilization": 0.467246,
+	"design__instance__utilization__stdcell": 0.467246
+}

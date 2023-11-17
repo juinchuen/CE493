@@ -1,0 +1,1 @@
+verilator --lint-only --Wall --Wno-DECLFILENAME --Wno-EOFNEWLINE --top-module cordic /home/jco1147/393_folder/CE493/sv/cordic/runs/RUN_2023-11-15_10-07-41/01-verilator-lint/bb.v cordic.sv gamma.sv --Wno-fatal --relative-includes --Werror-LATCH

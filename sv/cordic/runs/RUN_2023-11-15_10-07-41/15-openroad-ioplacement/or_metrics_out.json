@@ -1,0 +1,15 @@
+{
+	"floorplan__design__io": 53,
+	"design__io__hpwl": 3197563,
+	"design__io": 53,
+	"design__die__area": 57809.1,
+	"design__core__area": 49965.4,
+	"design__instance__count": 3168,
+	"design__instance__area": 26002.4,
+	"design__instance__count__stdcell": 3168,
+	"design__instance__area__stdcell": 26002.4,
+	"design__instance__count__macros": 0,
+	"design__instance__area__macros": 0,
+	"design__instance__utilization": 0.520409,
+	"design__instance__utilization__stdcell": 0.520409
+}

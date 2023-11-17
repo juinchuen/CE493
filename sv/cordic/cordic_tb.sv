@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module cordic_tb ();
 
     reg [15:0]  theta;
@@ -39,9 +41,9 @@ module cordic_tb ();
 
         rstb        <= 1;
 
-        $fwrite(file_out, "theta_r, theta_q, sin_r, sin_q, sin_err, cos_err\n");
+        $fwrite(file_out, "theta_r, theta_q, sin_r, sin_q, cos_r, cos_q, sin_err, cos_err\n");
 
-        for (int i = 0; i < 65535; i = i + 5) begin
+        for (int i = 0; i < 65535; i = i + 2000) begin
 
             theta_q     <= i;
 
@@ -49,11 +51,13 @@ module cordic_tb ();
 
             theta_valid <= 1;
 
-            # 10
+            # 20
 
             theta_valid <= 0;
 
             wait (trig_valid);
+
+            # 10
 
             sin_q <= sin;
             cos_q <= cos;

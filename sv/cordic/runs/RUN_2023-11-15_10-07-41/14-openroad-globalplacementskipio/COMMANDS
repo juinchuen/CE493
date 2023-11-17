@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /home/jco1147/393_folder/CE493/sv/cordic/runs/RUN_2023-11-15_10-07-41/14-openroad-globalplacementskipio/or_metrics_out.json /home/jco1147/.local/lib/python3.9/site-packages/openlane/scripts/openroad/gpl.tcl
