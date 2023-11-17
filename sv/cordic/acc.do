@@ -20,5 +20,8 @@ add wave -noupdate -group ALU -radix unsigned /cordic_tb/cordic0/gamma_i
 add wave -noupdate -group ALU -radix unsigned /cordic_tb/cordic0/sigma
 add wave -noupdate -group ALU -radix unsigned /cordic_tb/cordic0/vec
 
+add wave -noupdate -group ALL -radix unsigned /cordic_tb/cordic0/*
+add wave -noupdate -group ALL -radix unsigned /cordic_tb/cordic0/vec
+
 
 run -all

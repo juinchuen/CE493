@@ -43,7 +43,7 @@ module cordic_tb ();
 
         $fwrite(file_out, "theta_r, theta_q, sin_r, sin_q, cos_r, cos_q, sin_err, cos_err\n");
 
-        for (int i = 0; i < 65535; i = i + 2000) begin
+        for (int i = 0; i < 65535; i = i + 5) begin
 
             theta_q     <= i;
 
@@ -59,8 +59,8 @@ module cordic_tb ();
 
             # 10
 
-            sin_q <= sin;
-            cos_q <= cos;
+            sin_q = sin;
+            cos_q = cos;
 
             theta_r = $itor(i) / 65535 * 3.14159265 / 2;
 
