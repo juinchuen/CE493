@@ -17,22 +17,23 @@ module pid_tb ();
         #4
 
         write_enable = 0;
-        reg_data = 'b1110
-
+        reg_addr = 0;
+        reg_data = 'b1;
+        
         #5
 
         reg_addr = 1;
-        reg_data = 'b1101;
+        reg_data = 'b10;
 
         #5
 
         reg_addr = 2;
-        reg_data = 'b1101;
+        reg_data = 'b11;
 
         #5
 
         reg_addr = 3;
-        reg_data = 'b1101;
+        reg_data = 'b100;
 
         #5
 
@@ -48,15 +49,19 @@ module pid_tb ();
 
         #5
 
-        reset = 0
+        reset = 0;
 
         #5
 
-        reset = 1
+        reset = 1;
+        
+        #100
+        
+        $stop;
     end
 
     pid #(
-    .D_WIDTH(16),
+    	.D_WIDTH(16)
     ) test_pid (
         .clock(clk),
         .reset(reset),
@@ -69,9 +74,8 @@ module pid_tb ();
     );
 
     initial begin
-        $dumpfile("counter.vcd");
-        $dumpvars(0, test);
-        $monitor("At time %t, value = %h (%0d)", $time, value, value);
+        $dumpfile("pid.vcd");
+        $dumpvars(0, pid_tb);
     end
 
 endmodule
