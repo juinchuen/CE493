@@ -14,49 +14,54 @@ module pid_tb ();
     logic [15:0] out;
 
     initial begin : tb_process
-        #4
+        #9
 
         write_enable = 0;
         reg_addr = 0;
         reg_data = 'b1;
         
-        #5
+        #10
 
         reg_addr = 1;
         reg_data = 'b10;
 
-        #5
+        #10
 
         reg_addr = 2;
         reg_data = 'b11;
 
-        #5
+        #10
 
         reg_addr = 3;
         reg_data = 'b100;
 
-        #5
-
-        measurement = 10;
-
-        #5
-
-        measurement = 20;
-
-        #5
-
-        measurement = 45;
-
-        #5
+        #1
 
         reset = 0;
 
-        #5
+        #9
+
+        reset = 1;
+        write_enable = 1;
+        measurement = 10;
+
+        #10
+
+        measurement = 20;
+
+        #10
+
+        measurement = 45;
+
+        #10
+
+        reset = 0;
+
+        #10
 
         reset = 1;
         
         #100
-        
         $stop;
     end
 

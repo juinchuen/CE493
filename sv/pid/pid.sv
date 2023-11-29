@@ -1,6 +1,6 @@
 module pid #(
-    parameter D_WIDTH = 32,
-    parameter Q_BITS = 10,
+    parameter D_WIDTH = 16,
+    parameter Q_BITS = 16,
     parameter LIM_MAX = 100,
     parameter LIM_MIN = -100
 ) (
@@ -21,8 +21,6 @@ logic signed [D_WIDTH-1:0] lim_max_int_c, lim_min_int_c;
 
 always_ff @(posedge clock or negedge reset) begin
     if(!reset) begin
-        lim_min_int_c <= '0;
-        lim_max_int_c <= '0;
         i_error <= '0;
         prev_error <= '0;
         prev_d_error <= '0;
@@ -46,6 +44,7 @@ E = target - measurement
 P = Kp * E
 eint = eint + e
 I = I + Ki * ()
+D = 
 
 anti windup
 clamp integrator
@@ -53,9 +52,9 @@ clamp integrator
 
 always_comb begin
     error = target - measurement;
-    p_error = error * kp;
-    i_error_c = i_error + ki * (error + prev_error);
-    d_error = kd_1 * (error - prev_error) + kd_2 * prev_d_error;
+    p_error = error * kp >> Q_BITS;
+    i_error_c = i_error + (ki * (error + prev_error)) >> Q_BITS;
+    d_error = (kd_1 * (error - prev_error)) >> Q_BITS + (kd_2 * prev_d_error) >> Q_BITS;
     
     // anti windup via dynamic integrator clamping
     if (LIM_MAX > p_error)
