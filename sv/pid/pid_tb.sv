@@ -36,6 +36,18 @@ module pid_tb ();
 
         #5
 
+        measurement = 10;
+
+        #5
+
+        measurement = 20;
+
+        #5
+
+        measurement = 45;
+
+        #5
+
         reset = 0
 
         #5
