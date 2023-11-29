@@ -37,7 +37,7 @@ module cordic (
     wire [15:0] gamma_i;
     wire sigma;
 
-    always @ (negedge clk or negedge rstb) begin
+    always @ (posedge clk or negedge rstb) begin
 
         if (!rstb) begin
 

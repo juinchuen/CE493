@@ -27,7 +27,7 @@ module cordic_tb ();
         cos_err = 0;
 
         rstb <= 1;
-        clk  <= 0;
+        clk  <= 1;
 
         theta_valid <= 0;
 
