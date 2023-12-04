@@ -25,7 +25,7 @@ beta = (a + 2*b) * one_div_sqrt_3
 logic signed [D_WIDTH-1:0] alpha_c, beta_c;
 logic done_c;
 
-always_ff @(posedge clk or posedge reset) begin
+always_ff @(posedge clk or negedge reset) begin
   if !reset begin
     alpha <= 'b0;
     beta <= 'b0;

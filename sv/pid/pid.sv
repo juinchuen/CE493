@@ -19,7 +19,7 @@ logic signed [D_WIDTH-1:0] i_error, i_error_c, d_error, prev_d_error;
 logic [D_WIDTH-1:0] kp, ki, kd_1, kd_2;
 logic signed [D_WIDTH-1:0] lim_max_int_c, lim_min_int_c;
 
-always_ff @(posedge clock or posedge reset) begin
+always_ff @(posedge clock or negedge reset) begin
     if(!reset) begin
         lim_min_int_c <= '0;
         lim_max_int_c <= '0;

@@ -12,16 +12,17 @@ module cordic_tb ();
 
     reg clk, rstb;
 
-    real        theta_r, sin_r, cos_r;
-    reg [15:0]  theta_q, sin_q, cos_q;
+    real        theta_r;
+    int         sin_r, cos_r;
+    reg signed [15:0]  theta_q, sin_q, cos_q;
 
-    real sin_err, cos_err;
+    int sin_err, cos_err;
 
     int file_out;
 
     initial begin
 
-        file_out = $fopen("file.out", "wb");
+        file_out = $fopen("file.csv", "wb");
 
         sin_err = 0;
         cos_err = 0;
@@ -43,7 +44,7 @@ module cordic_tb ();
 
         $fwrite(file_out, "theta_r, theta_q, sin_r, sin_q, cos_r, cos_q, sin_err, cos_err\n");
 
-        for (int i = 0; i < 65535; i = i + 5) begin
+        for (int i = 0; i < 65535; i = i + 500) begin
 
             theta_q     <= i;
 
@@ -62,13 +63,13 @@ module cordic_tb ();
             sin_q = sin;
             cos_q = cos;
 
-            theta_r = $itor(i) / 65535 * 3.14159265 / 2;
+            theta_r = $itor(i) / 65535 * 2 * 3.14159265;
 
-            sin_r = $rtoi($sin(theta_r) * 65535);
-            cos_r = $rtoi($cos(theta_r) * 65535);
+            sin_r = $rtoi($sin(theta_r) * 32768);
+            cos_r = $rtoi($cos(theta_r) * 32768);
 
-            sin_err = sin_err + (((sin - sin_r) > 0) ? (sin - sin_r) : (sin_r - sin));
-            cos_err = cos_err + (((cos - cos_r) > 0) ? (cos - cos_r) : (cos_r - cos));
+            sin_err = sin_err + (((sin_q - sin_r) > 0) ? (sin_q - sin_r) : (sin_r - sin_q));
+            cos_err = cos_err + (((cos_q - cos_r) > 0) ? (cos_q - cos_r) : (cos_r - cos_q));
 
             $fwrite(file_out, "%3.3f, %5d, %5d, %5d, %5d, %5d, %3.3f, %3.3f\n", theta_r, theta_q, sin_r, sin_q, cos_r, cos_q, sin_err, cos_err);
 
@@ -78,7 +79,7 @@ module cordic_tb ();
 
         end
 
-        $display("total mean cos error is %f, total mean sin eror is %f", $itor(sin_err)/65535, $itor(cos_err)/65535);
+        $display("total mean cos error is %f, total mean sin eror is %f", $itor(sin_err)/32768, $itor(cos_err)/32768);
 
         $fclose(file_out);
 
