@@ -255,16 +255,16 @@ module top #(
     .D_WIDTH    (D_WIDTH),
     .Q_BITS     (15)
   ) ipark0 (
-    clk     (clk),
-    reset   (rstb_m),
-    D       (Dcurr_i),
-    Q       (Qcurr_i),
-    sin     (sin),
-    cos     (cos),
-    start   (valid_ipark),
-    alpha   (alpha_i),
-    beta    (beta_i),
-    done    (ipark_out_valid)
+    .clk     (clk),
+    .reset   (rstb_m),
+    .D       (Dcurr_i),
+    .Q       (Qcurr_i),
+    .sin     (sin),
+    .cos     (cos),
+    .start   (valid_ipark),
+    .alpha   (alpha_i),
+    .beta    (beta_i),
+    .done    (ipark_out_valid)
   );
 
   inverse_clarke #(
