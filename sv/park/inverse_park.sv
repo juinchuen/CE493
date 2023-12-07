@@ -42,7 +42,7 @@ always_comb begin
   beta_c <= beta;
   done_c <= done;
 
-  if start begin
+  if (start) begin
     alpha_c = ((D * cos) - (Q * sin)) >>> Q_BITS;
     beta_c = ((D * sin) - (Q * cos)) >>> Q_BITS;
     done_c <= 'b1;
