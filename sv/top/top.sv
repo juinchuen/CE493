@@ -34,7 +34,7 @@ module top #(
 );
 
   // store registers
-  reg [D_WIDTH - 1 : 0] angle_r;
+  reg [         15 : 0] angle_r;
   reg [D_WIDTH - 1 : 0] currA_r;
   reg [D_WIDTH - 1 : 0] currB_r;
   reg [D_WIDTH - 1 : 0] currC_r;
@@ -59,7 +59,7 @@ module top #(
 
   // wires between modules
   wire    [D_WIDTH - 1 : 0] alpha, beta;
-  wire    [D_WIDTH - 1 : 0] sin, cos;
+  wire    [         15 : 0] sin, cos;
   wire    [D_WIDTH - 1 : 0] Dcurr, Qcurr;
   wire    [D_WIDTH - 1 : 0] Dcurr_i, Qcurr_i;
   wire    [D_WIDTH - 1 : 0] alpha_i, beta_i;
