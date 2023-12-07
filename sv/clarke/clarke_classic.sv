@@ -16,6 +16,7 @@ module clarke #(
     output logic signed [D_WIDTH-1:0] beta,
     output logic done
 );
+
 localparam logic signed [D_WIDTH+Q_BITS-1:0] one_div_sqrt_3 = 0.57735026919 * (2**Q_BITS);
 logic signed [D_WIDTH+1:0] a_plus_2b;
 
@@ -24,13 +25,9 @@ alpha = a
 beta = (a + 2*b) * one_div_sqrt_3
 */
 
-logic signed [D_WIDTH-1:0] alpha_c, beta_c;
-
-logic done_c;
-
 assign a_plus_2b = a + $signed({b, 1'b0});
 
-always @(posedge clk or negedge rstb) begin
+always @ (posedge clk or negedge rstb) begin
   if (!rstb) begin
     alpha <= 'b0;
     beta  <= 'b0;

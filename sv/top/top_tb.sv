@@ -4,7 +4,7 @@ module top_tb();
 
 localparam D_WIDTH = 19;
 localparam Q_BITS = 15;
-localparam CLOCK_PERIOD = 10;
+localparam CLOCK_PERIOD = 20;
 
 logic clk = 'b1;
 logic rstb = 'b1;
@@ -24,10 +24,12 @@ logic pid_d_wen, pid_q_wen;
 logic [D_WIDTH-1:0] pid_d_addr, pid_q_addr;
 logic [D_WIDTH-1:0] pid_d_data, pid_q_data;
 
-top #(
-  .D_WIDTH     (D_WIDTH),
-  .Q_BITS      (Q_BITS)
-) u_top (
+top # (
+  
+    .D_WIDTH  (D_WIDTH),
+    .Q_BITS   (Q_BITS)
+
+  )u_top (
   // angle from resolver
   .angle_in    (angle_in),
 
@@ -67,6 +69,8 @@ always begin : clock_process
 end
 
 initial begin : reset_process
+  @(posedge clk);
+  rstb = 1'b0;
   @(posedge clk);
   rstb = 1'b0;
   @(posedge clk);

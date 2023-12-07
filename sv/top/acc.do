@@ -17,7 +17,7 @@ vlog -work work "top_tb.sv"
 vsim -classdebug -voptargs=+acc +notimingchecks -L work work.top_tb -wlf top_tb.wlf
 
 # wave
-add wave -noupdate -group TOP       -radix decimal /top_tb/*
+add wave -noupdate -group TOP       -radix decimal /top_tb/u_top/*
 add wave -noupdate -group CORDIC    -radix decimal /top_tb/u_top/cordic0/*
 add wave -noupdate -group CLARKE    -radix decimal /top_tb/u_top/clarke0/*
 add wave -noupdate -group PARK      -radix decimal /top_tb/u_top/park0/*

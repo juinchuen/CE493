@@ -22,7 +22,7 @@ logic signed [2*D_WIDTH-1:0] p_mult, i_mult, d_mult_1, d_mult_2;
 logic signed [D_WIDTH-1:0] lim_max_int_c, lim_min_int_c;
 logic signed [D_WIDTH-1:0] out;
 
-always_ff @(posedge clock or negedge reset) begin
+always_ff @(posedge clock) begin
     if(!reset) begin
         i_error <= '0;
         prev_error <= '0;
@@ -66,16 +66,16 @@ clamp integrator
 
 always_comb begin
     out = out_clocked;
-    lim_max_int_c = 0;
-    lim_min_int_c = 0;
-    i_error_c = 0;
-    error = 0;
-    d_error = 0;
-    p_error = 0;
-    p_mult = 0;
-    i_mult = 0;
-    d_mult_1 = 0;
-    d_mult_2 = 0;
+    lim_max_int_c = 'b0;
+    lim_min_int_c = 'b0;
+    i_error_c = 'b0;
+    error = 'b0;
+    d_error = 'b0;
+    p_error = 'b0;
+    p_mult = 'b0;
+    i_mult = 'b0;
+    d_mult_1 = 'b0;
+    d_mult_2 = 'b0;
 
     if (iterate_enable) begin
         error = target - measurement;
