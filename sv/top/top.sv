@@ -65,6 +65,11 @@ module top #(
   wire    [D_WIDTH - 1 : 0] alpha_i, beta_i;
   wire    [D_WIDTH - 1 : 0] currA_i, currB_i, currC_i;
 
+  wire    [D_WIDTH - 1 : 0] sin_ex, cos_ex;
+
+  assign sin_ex = {{(D_WIDTH - 16){sin[15]}}, sin};
+  assign cos_ex = {{(D_WIDTH - 16){cos[15]}}, cos};
+
   // module start signals
   reg     valid_cordic_clarke ,
           valid_park          ,
@@ -209,8 +214,8 @@ module top #(
       .rstb    (rstb_m),
       .alpha   (alpha),
       .beta    (beta),
-      .sin     (sin),
-      .cos     (cos),
+      .sin     (sin_ex),
+      .cos     (cos_ex),
       .start   (valid_park),
       .D       (Dcurr),
       .Q       (Qcurr),
@@ -229,7 +234,7 @@ module top #(
     .iterate_enable (valid_PID),
     .reg_addr       (pid_d_addr),
     .reg_data       (pid_d_data),
-    .target         (0),
+    .target         ('b0),
     .measurement    (Dcurr),
     .out_clocked    (Dcurr_i)        
   );
@@ -259,8 +264,8 @@ module top #(
     .rstb    (rstb_m),
     .D       (Dcurr_i),
     .Q       (Qcurr_i),
-    .sin     (sin),
-    .cos     (cos),
+    .sin     (sin_ex),
+    .cos     (cos_ex),
     .start   (valid_ipark),
     .alpha   (alpha_i),
     .beta    (beta_i),
