@@ -6,8 +6,8 @@ localparam D_WIDTH = 18;
 localparam Q_BITS = 15;
 localparam CLOCK_PERIOD = 10;
 
-logic clk = 1'b1;
-logic rtsb = 1'b1;
+logic clk = 'b1;
+logic rstb = 'b1;
 
 logic signed [D_WIDTH-1:0] a, b;
 logic signed [D_WIDTH-1:0] alpha, beta;
@@ -28,17 +28,17 @@ clarke #(
 );
 
 always begin : clock_process
-  clk = 1'b1;
+  clk = 'b1;
   #(CLOCK_PERIOD/2);
-  clk = 1'b0;
+  clk = 'b0;
   #(CLOCK_PERIOD/2);
 end
 
 initial begin : reset_process
   @(posedge clk);
-  rstb = 1'b0;
+  rstb = 'b0;
   @(posedge clk);
-  rstb = 1'b1;
+  rstb = 'b1;
 end
 
 initial begin : tb_process
