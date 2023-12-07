@@ -286,7 +286,7 @@ module top #(
 
   svm #(
     .D_WIDTH    (D_WIDTH)
-  )(
+  ) svm0 (
     .pwmA       (pwmA_out), 
     .pwmB       (pwmB_out), 
     .pwmC       (pwmC_out), 

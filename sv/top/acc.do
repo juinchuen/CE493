@@ -1,0 +1,27 @@
+setenv LMC_TIMEUNIT -9
+vlib work
+vmap work work
+
+# compile
+vlog -work work "../cordic/cordic.sv"
+vlog -work work "../clarke/clarke.sv"
+vlog -work work "../clarke/inverse_clarke.sv"
+vlog -work work "../park/park.sv"
+vlog -work work "../park/inverse_clarke.sv"
+vlog -work work "../pid/pid.sv"
+vlog -work work "../svm/svm.sv"
+
+vsim -classdebug -voptargs=+acc +notimingchecks -L work work.svm_tb -wlf svm_tb.wlf
+
+# wave
+add wave -noupdate -group TOP -radix unsigned /top_tb/*
+add wave -noupdate -group CORDIC -radix unsigned /top_tb/u_top/cordic0/*
+add wave -noupdate -group CLARKE -radix unsigned /top_tb/u_top/clarke0/*
+add wave -noupdate -group PARK -radix unsigned /top_tb/u_top/park0/*
+add wave -noupdate -group PID_D -radix unsigned /top_tb/u_top/pid_d/*
+add wave -noupdate -group PID_Q -radix unsigned /top_tb/u_top/pid_q/*
+add wave -noupdate -group IN_PARK -radix unsigned /top_tb/u_top/ipark0/*
+add wave -noupdate -group IN_CLARKE -radix unsigned /top_tb/u_top/iclarke0/*
+add wave -noupdate -group SVM -radix unsigned /top_tb/u_top/svm 0/*
+
+run -all
