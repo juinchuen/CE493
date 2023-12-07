@@ -1,0 +1,8 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "top",
+    "VERILOG_FILES": ["../cordic/gamma.sv", "../cordic/cordic.sv", "../clarke/clarke.sv", "../clarke/inverse_clarke.sv", "../park/park.sv", "../park/inverse_park.sv", "../pid/pid.sv", "../svm/svm.sv", "top.sv", "top_tb.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10
+}
+

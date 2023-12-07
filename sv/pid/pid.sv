@@ -65,6 +65,8 @@ clamp integrator
 */
 
 always_comb begin
+    out = out_clocked;
+
     if (iterate_enable) begin
         error = target - measurement;
         p_mult = (error * kp);
