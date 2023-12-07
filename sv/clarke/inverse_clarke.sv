@@ -31,7 +31,7 @@ c = - a - b
 logic signed [D_WIDTH-1:0] a_c, b_c, c_c;
 logic done_c;
 
-always_ff @(posedge clk or negedge reset) begin
+always_ff @(posedge clk or negedge rstb) begin
   if (!rstb) begin
     a <= 'b0;
     b <= 'b0;
@@ -51,7 +51,7 @@ always_comb begin
   c_c <= c;
   done_c <= done;
 
-  if start begin
+  if (start) begin
     beta_sqrt_3 = (beta * sqrt_3) >>> Q_BITS; //dequantize
     a_c = alpha;
     b_c = (-alpha + beta_sqrt_3) >>> 1;    //divide by 2

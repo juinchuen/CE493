@@ -29,8 +29,8 @@ cos and sin values have to be quantized
 logic signed [D_WIDTH-1:0] D_c, Q_c;
 logic done_c;
 
-always_ff @(posedge clk or negedge reset) begin
-  if !(rstb) begin
+always_ff @(posedge clk or negedge rstb) begin
+  if (!rstb) begin
     D <= 'b0;
     Q <= 'b0;
     done <= 'b0;
@@ -46,7 +46,7 @@ always_comb begin
   Q_c = Q;
   done_c = done;
   
-  if start begin
+  if (start) begin
     D_c = ((beta * sin) + (alpha * cos)) >>> Q_BITS;
     Q_c = ((beta * cos) - (alpha * sin)) >>> Q_BITS;
     done_c <= 'b1;

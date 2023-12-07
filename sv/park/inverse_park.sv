@@ -28,7 +28,7 @@ always_ff @(posedge clk or negedge rstb) begin
   if (!rstb) begin
     alpha <= 'b0;
     beta <= 'b0;
-    done <= 'b0
+    done <= 'b0;
   end else begin
     alpha <= alpha_c;
     beta <= beta_c;
