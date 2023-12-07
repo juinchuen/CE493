@@ -51,6 +51,7 @@ always_comb begin
   alpha_c <= alpha;
   beta_c <= beta;
   done_c <= done;
+  next_state <= state;
 
   case(state)
     s0: begin
