@@ -46,17 +46,17 @@ always_ff @(posedge clk or negedge rstb) begin
 end
 
 always_comb begin
-  a_c <= a;
-  b_c <= b;
-  c_c <= c;
-  done_c <= done;
+  a_c = a;
+  b_c = b;
+  c_c = c;
+  done_c = done;
 
   if (start) begin
     beta_sqrt_3 = (beta * sqrt_3) >>> Q_BITS; //dequantize
     a_c = alpha;
     b_c = (-alpha + beta_sqrt_3) >>> 1;    //divide by 2
     c_c = (-alpha - beta_sqrt_3) >>> 1;    //divide by 2
-    done_c <= 'b1;
+    done_c = 'b1;
   end
 end
     

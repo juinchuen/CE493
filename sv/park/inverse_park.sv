@@ -57,14 +57,14 @@ always_ff @(posedge clk or negedge rstb) begin
 end
 
 always_comb begin
-  alpha_c <= alpha;
-  beta_c <= beta;
-  done_c <= done;
-  next_state <= state;
-  D_cos_c <= D_cos;
-  D_sin_c <= D_sin;
-  Q_sin_c <= Q_sin;
-  Q_cos_c <= Q_cos;
+  alpha_c = alpha;
+  beta_c = beta;
+  done_c = done;
+  next_state = state;
+  D_cos_c = D_cos;
+  D_sin_c = D_sin;
+  Q_sin_c = Q_sin;
+  Q_cos_c = Q_cos;
 
   case(state)
     s0: begin
