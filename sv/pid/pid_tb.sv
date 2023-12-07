@@ -7,6 +7,8 @@ module pid_tb #(
     logic clk = 0;
     always #5 clk = !clk;
 
+    integer i;
+
     logic reset = 1;
     logic write_enable = 1;
     logic iterate_enable = 1;
@@ -21,12 +23,12 @@ module pid_tb #(
 
         write_enable = 0;
         reg_addr = 0;
-        reg_data = 'b1<<<15;
+        reg_data = 'b1<<<12;
         
         #10
         
         reg_addr = 1;
-        reg_data = 'b1<<<15;
+        reg_data = 'b1<<<9;
 
         #10
 
@@ -50,25 +52,21 @@ module pid_tb #(
 
         #10
 
-        measurement = out+measurement;
+        for(i=0; i<100; i++) begin
+            measurement = out+measurement;
+            #10;
+        end
 
-        #10
-
-        measurement = out+measurement;
-
-        #10
-
-        measurement = out+measurement;
-
-        #10
-
-        measurement = out+measurement;
-
-        #10
-
-        measurement = out+measurement;
-
-        #10
+        for(i=0; i<100; i++) begin
+            if (i%20==10) begin
+                iterate_enable = 0;
+            end
+            if (i%20==0) begin
+                iterate_enable = 1;
+            end
+            measurement = out+measurement;
+            #10;
+        end
 
         reset = 0;
 

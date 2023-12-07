@@ -1,8 +1,8 @@
 module pid #(
     parameter D_WIDTH = 32,
     parameter Q_BITS = 15,
-    parameter LIM_MAX = 1 <<< Q_BITS,
-    parameter LIM_MIN = 1 <<< Q_BITS
+    parameter LIM_MAX = 1 <<< 12,
+    parameter LIM_MIN = -1 <<< 12
 ) (
     input logic clock,
     input logic reset,
