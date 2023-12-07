@@ -51,8 +51,8 @@ initial begin : tb_process
   start = 'b1;
   D = (0.837 * (2**Q_BITS));
   Q = 'b0;
-  sin = 'd23167
-  cos = 'd23167
+  sin = 'd23167;
+  cos = 'd23167;
 
   @(posedge clk)
   D = (-0.927 * (2**Q_BITS));
