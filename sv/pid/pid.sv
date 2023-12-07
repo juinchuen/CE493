@@ -71,6 +71,7 @@ always_comb begin
     i_error_c = 0;
     error = 0;
     d_error = 0;
+    p_error = 0;
     p_mult = 0;
     i_mult = 0;
     d_mult_1 = 0;
