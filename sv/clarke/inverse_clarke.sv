@@ -4,7 +4,7 @@ module inverse_clarke #(
     parameter Q_BITS = 10
 ) (
     input logic clk,
-    input logic reset,
+    input logic rstb,
 
     input logic signed [D_WIDTH-1:0] alpha,
     input logic signed [D_WIDTH-1:0] beta,
@@ -32,7 +32,7 @@ logic signed [D_WIDTH-1:0] a_c, b_c, c_c;
 logic done_c;
 
 always_ff @(posedge clk or negedge reset) begin
-  if !reset begin
+  if (!rstb) begin
     a <= 'b0;
     b <= 'b0;
     c <= 'b0;
@@ -54,8 +54,8 @@ always_comb begin
   if start begin
     beta_sqrt_3 = (beta * sqrt_3) >>> Q_BITS; //dequantize
     a_c = alpha;
-    b_c = (-alpha + beta_sqrt_3) >> 1;    //divide by 2
-    c_c = (-alpha - beta_sqrt_3) >> 1;    //divide by 2
+    b_c = (-alpha + beta_sqrt_3) >>> 1;    //divide by 2
+    c_c = (-alpha - beta_sqrt_3) >>> 1;    //divide by 2
     done_c <= 'b1;
   end
 end

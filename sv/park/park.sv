@@ -7,7 +7,7 @@ module park #(
     parameter Q_BITS = 15
 ) (
     input logic clk,
-    input logic reset,
+    input logic rstb,
 
     input logic signed [D_WIDTH-1:0] alpha,
     input logic signed [D_WIDTH-1:0] beta,
@@ -30,7 +30,7 @@ logic signed [D_WIDTH-1:0] D_c, Q_c;
 logic done_c;
 
 always_ff @(posedge clk or negedge reset) begin
-  if !reset begin
+  if !(rstb) begin
     D <= 'b0;
     Q <= 'b0;
     done <= 'b0;
