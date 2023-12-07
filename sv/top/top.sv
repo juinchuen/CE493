@@ -43,7 +43,6 @@ module top #(
 
   // state registers
   reg [3:0] state;
-  reg valid_cordic_clarke;
   reg module_reset;
   wire rstb_m;
 
@@ -77,7 +76,6 @@ module top #(
   always (posedge clk or negedge rstb) begin
 
     if (!rstb) begin
-      angle_r     <= 0;
       angle_r     <= 0;
       currA_r     <= 0;
       currB_r     <= 0;
