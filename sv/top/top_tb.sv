@@ -81,8 +81,8 @@ initial begin : tb_process
   //Set proportional coefficient
   pid_d_wen = 1;
   pid_q_wen = 1;
-  pid_d_add = 0;
-  pid_q_add = 0;
+  pid_d_addr = 0;
+  pid_q_addr = 0;
   pid_d_data = 'b1<<<12;
   pid_q_data = 'b1<<<12;
   currT_in = 0.9999 * (2**Q_BITS);  //max torque request
