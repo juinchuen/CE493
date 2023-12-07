@@ -49,7 +49,7 @@ always_comb begin
     alpha_c = a;
   
     a_plus_2b = a + {b, 1'b0};
-    beta_c = (a_plus_2b * one_div_sqrt_3) >>> Q_BTIS;   //dequantize
+    beta_c = (a_plus_2b * one_div_sqrt_3) >>> Q_BITS;   //dequantize
     
     done_c = 'b1;
   end
