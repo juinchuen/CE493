@@ -28,20 +28,20 @@ logic done_c;
 always_ff @(posedge clk or negedge reset) begin
   if !reset begin
     alpha <= 'b0;
-    beta <= 'b0;
-    done <= 'b0;
+    beta  <= 'b0;
+    done  <= 'b0;
   end else begin
     alpha <= alpha_c;
-    beta <= beta_c;
-    done <= done_c;
+    beta  <= beta_c;
+    done  <= done_c;
   end
 end
 
 always_comb begin
-  next_state = state;
-  alpha_c = alpha;
-  beta_c = beta;
-  done_c = done;
+  next_state  = state;
+  alpha_c     = alpha;
+  beta_c      = beta;
+  done_c      = done;
 
   if start begin
     alpha_c = a;
