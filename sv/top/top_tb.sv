@@ -88,6 +88,7 @@ initial begin : tb_process
   pid_q_data = 'b1<<<12;
   currT_in = 0.9999 * (2**Q_BITS);  //max torque request
   periodTop = 1'b1<<11;
+  
 
   @(posedge clk);
 
@@ -108,6 +109,7 @@ initial begin : tb_process
   valid = 'b1;
   currA_in = 0.5 * (2**Q_BITS);
   currB_in = -0.5 * (2**Q_BITS);
+  angle_in = 16'hffff >> 3//45
   #40ns;
   valid = 'b0;
 
@@ -115,6 +117,7 @@ initial begin : tb_process
   valid = 'b1;
   currA_in = 0.5 * (2**Q_BITS);
   currB_in = -0.5 * (2**Q_BITS);
+  angle_in = (16'hffff >> 3) + 1//idk 46
   #40ns;
   valid = 'b0;
 
