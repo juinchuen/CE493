@@ -42,7 +42,7 @@ module top #(
     reg [D_WIDTH - 1 : 0] periodTop_r;
 
     // state registers
-    reg [1:0] state;
+    reg [3:0] state;
     reg valid_cordic_clarke;
     reg module_reset;
     wire rstb_m;
