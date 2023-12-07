@@ -20,7 +20,7 @@ logic [D_WIDTH - 1 : 0] periodTop;
 logic pwmA_out, pwmB_out, pwmC_out;
 
 logic pid_d_wen, pid_q_wen;
-logic [D_WIDTH-1:0] pid_d_add, pid_q_add;
+logic [D_WIDTH-1:0] pid_d_addr, pid_q_addr;
 logic [D_WIDTH-1:0] pid_d_data, pid_q_data;
 
 top #(
