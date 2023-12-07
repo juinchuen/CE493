@@ -1,7 +1,7 @@
 `timescale 1ns/1ns
 
 module pid_tb #(
-    parameter D_WIDTH = 18
+    parameter D_WIDTH = 32
 )();
 
     logic clk = 0;
@@ -10,11 +10,11 @@ module pid_tb #(
     logic reset = 1;
     logic write_enable = 1;
     logic iterate_enable = 1;
-    logic [D_WIDTH:0] reg_addr = 0;
-    logic [D_WIDTH:0] reg_data = 0;
-    logic signed [D_WIDTH:0] target = 1 <<< 15;
-    logic signed [D_WIDTH:0] measurement = 2 <<< 15;
-    logic signed [D_WIDTH:0] out;
+    logic [D_WIDTH-1:0] reg_addr = 0;
+    logic signed [D_WIDTH-1:0] reg_data = 0;
+    logic signed [D_WIDTH-1:0] target = 1 <<< 15;
+    logic signed [D_WIDTH-1:0] measurement = 2 <<< 15;
+    logic signed [D_WIDTH-1:0] out;
 
     initial begin : tb_process
         #9

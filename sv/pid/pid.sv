@@ -1,5 +1,5 @@
 module pid #(
-    parameter D_WIDTH = 18,
+    parameter D_WIDTH = 32,
     parameter Q_BITS = 15,
     parameter LIM_MAX = 1 <<< Q_BITS,
     parameter LIM_MIN = 1 <<< Q_BITS
@@ -9,7 +9,7 @@ module pid #(
     input logic write_enable,
     input logic iterate_enable,
     input logic [D_WIDTH-1:0] reg_addr,
-    input logic [D_WIDTH-1:0] reg_data,
+    input logic signed [D_WIDTH-1:0] reg_data,
     input logic signed [D_WIDTH-1:0] target,
     input logic signed [D_WIDTH-1:0] measurement,
     output logic signed [D_WIDTH-1:0] out_clocked
@@ -17,7 +17,7 @@ module pid #(
 
 logic signed [D_WIDTH-1:0] error, prev_error, p_error;
 logic signed [D_WIDTH-1:0] i_error, i_error_c, d_error, prev_d_error;
-logic [D_WIDTH-1:0] kp, ki, kd_1, kd_2;
+logic signed [D_WIDTH-1:0] kp, ki, kd_1, kd_2;
 logic signed [D_WIDTH-1:0] lim_max_int_c, lim_min_int_c;
 logic signed [D_WIDTH-1:0] out;
 
@@ -57,9 +57,9 @@ clamp integrator
 always_comb begin
     if (iterate_enable) begin
         error = target - measurement;
-        p_error = error * kp >>> Q_BITS;
-        i_error_c = i_error + (ki * (error + prev_error)) >>> Q_BITS;
-        d_error = (kd_1 * (error - prev_error)) >>> Q_BITS + (kd_2 * prev_d_error) >> Q_BITS;
+        p_error = (error * kp) >>> Q_BITS;
+        i_error_c = i_error + ((ki * (error + prev_error)) >>> Q_BITS);
+        d_error = ((kd_1 * (error - prev_error)) >>> Q_BITS) + ((kd_2 * prev_d_error) >> Q_BITS);
         
         // anti windup via dynamic integrator clamping
         if (LIM_MAX > p_error)
