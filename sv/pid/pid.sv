@@ -28,11 +28,20 @@ always_ff @(posedge clock or negedge reset) begin
         prev_error <= '0;
         prev_d_error <= '0;
         out_clocked <= '0;
-    end else begin
+        kp <= '0;
+        ki <= '0;
+        kd_1 <= '0;
+        kd_2 <= '0;
+    end else if (iterate_enable) begin
         i_error <= i_error_c;
         prev_error <= error;
         prev_d_error <= d_error;
         out_clocked <= out;
+    end else begin
+        i_error <= i_error;
+        prev_error <= prev_error;
+        prev_d_error <= prev_d_error;
+        out_clocked <= out_clocked;
     end
     if (!write_enable) begin
         case (reg_addr)
