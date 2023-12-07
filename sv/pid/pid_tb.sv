@@ -1,7 +1,7 @@
 `timescale 1ns/1ns
 
 module pid_tb #(
-    parameter D_WIDTH = 32
+    parameter D_WIDTH = 18
 )();
 
     logic clk = 0;
@@ -79,7 +79,7 @@ module pid_tb #(
     end
 
     pid #(
-    	.D_WIDTH(32)
+        .D_WIDTH(D_WIDTH)
     ) test_pid (
         .clock(clk),
         .reset(reset),
