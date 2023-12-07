@@ -44,6 +44,7 @@ always_comb begin
   alpha_c    = alpha;
   beta_c     = beta;
   done_c     = done;
+  a_plus_2b  = 'b0;
 
   if (start) begin
     alpha_c = a;
