@@ -49,7 +49,7 @@ always_comb begin
   if (start) begin
     alpha_c = a;
   
-    a_plus_2b = a + {b, 1'b0};
+    a_plus_2b = a + $signed{b, 1'b0};
     mult = a_plus_2b * one_div_sqrt_3;
     beta_c = mult >>> Q_BITS;   //dequantize
     
