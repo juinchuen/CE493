@@ -115,24 +115,24 @@ initial begin : tb_process
 
   @(posedge ready);
   valid = 'b1;
-  currA_in = 0.5 * (2**Q_BITS);
-  currB_in = -0.5 * (2**Q_BITS);
+  currA_in = 0.8 * (2**Q_BITS);
+  currB_in = 0.82 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 1;//idk 46
   #40ns;
   valid = 'b0;
 
   @(posedge ready);
   valid = 'b1;
-  currA_in = 0.5 * (2**Q_BITS);
-  currB_in = -0.5 * (2**Q_BITS);
+  currA_in = -0.348 * (2**Q_BITS);
+  currB_in = -0.999 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 2;//idk 46
   #40ns;
   valid = 'b0;
 
   @(posedge ready);
   valid = 'b1;
-  currA_in = 0.5 * (2**Q_BITS);
-  currB_in = -0.5 * (2**Q_BITS);
+  currA_in = 0.480 * (2**Q_BITS);
+  currB_in = -0.900 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 3;//idk 46
   #40ns;
   valid = 'b0;
