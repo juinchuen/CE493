@@ -14,15 +14,21 @@ module top #(
 
     // target current from ECU
     input logic [D_WIDTH - 1 : 0] currT_in,
+    input logic [D_WIDTH - 1 : 0] periodTop,
     
     // PWM output
     output logic pwmA_out,
     output logic pwmB_out,
     output logic pwmC_out,
+
+    // pid config signals
+    output logic                    pid_d_wen , pid_q_wen;
+    output logic [D_WIDTH - 1 : 0]  pid_d_addr, pid_q_addr;
+    output logic [D_WIDTH - 1 : 0]  pid_d_data, pid_q_data;
     
     // control signals
     input  logic clk,
-    input  logic rstb
+    input  logic rstb,
     input  logic valid,
     output logic ready
 );
@@ -33,9 +39,10 @@ module top #(
     reg [D_WIDTH - 1 : 0] currB_r;
     reg [D_WIDTH - 1 : 0] currC_r;
     reg [D_WIDTH - 1 : 0] currT_r;
+    reg [D_WIDTH - 1 : 0] periodTop_r;
 
     // state registers
-    reg [1:0] state;
+    reg [3:0] state;
     reg valid_cordic_clarke;
     reg module_reset;
     wire rstb_m;
@@ -51,6 +58,14 @@ module top #(
     wire    iclarke_out_valid;
     wire    svm_out_valid;
 
+    // wires between modules
+    wire    [D_WIDTH - 1 : 0] alpha, beta;
+    wire    [D_WIDTH - 1 : 0] sin, cos;
+    wire    [D_WIDTH - 1 : 0] Dcurr, Qcurr;
+    wire    [D_WIDTH - 1 : 0] Dcurr_i, Qcurr_i;
+    wire    [D_WIDTH - 1 : 0] alpha_i, beta_i;
+    wire    [D_WIDTH - 1 : 0] currA_i, currB_i, currC_i;
+
     // module start signals
     reg     valid_cordic_clarke,
             valid_park,
@@ -63,15 +78,17 @@ module top #(
 
         if (!rstb) begin
 
-            angle_r <= 0;
-            angle_r <= 0;
-            currA_r <= 0;
-            currB_r <= 0;
-            currC_r <= 0;
-            currT_r <= 0;
+            angle_r     <= 0;
+            angle_r     <= 0;
+            currA_r     <= 0;
+            currB_r     <= 0;
+            currC_r     <= 0;
+            currT_r     <= 0;
+            periodTop_r <= 0;
 
-            state <= 0;
-            ready <= 1;
+            state        <= 0;
+            ready        <= 1;
+            module_reset <= 1;
 
             valid_cordic_clarke <= 0;
             valid_park          <= 0;
@@ -86,14 +103,17 @@ module top #(
 
                 0 : begin // wait for valid input
 
+                    module_reset <= 1;
+
                     if (valid) begin
 
-                        angle_r <= angle_in;
-                        angle_r <= angle_in;
-                        currA_r <= currA_in;
-                        currB_r <= currB_in;
-                        currC_r <= currC_in;
-                        currT_r <= currT_in;
+                        angle_r     <= angle_in;
+                        angle_r     <= angle_in;
+                        currA_r     <= currA_in;
+                        currB_r     <= currB_in;
+                        currC_r     <= currC_in;
+                        currT_r     <= currT_in;
+                        periodTop_r <= periodTop
 
                         state <= 1;
                         ready <= 0;
@@ -214,8 +234,8 @@ module top #(
         .a      (currA_r),
         .b      (currB_r),
         .start  (valid_cordic_clarke),
-        .alpha  (),
-        .beta   (),
+        .alpha  (alpha),
+        .beta   (beta),
         .done   (clarke_out_valid)
     );
 
@@ -224,8 +244,8 @@ module top #(
     .in_valid   (valid_cordic_clarke),
     .ready      (),
     .out_valid  (cordic_out_valid),
-    .sin        (),
-    .cos        (),
+    .sin        (sin),
+    .cos        (cos),
     .clk        (clk),
     .rstb       (rstb_m)
     )
@@ -236,15 +256,49 @@ module top #(
     ) park0 (
         clk     (clk),
         reset   (rstb_m),
-        alpha   (),
-        beta    (),
-        sin     (),
-        cos     (),
+        alpha   (alpha),
+        beta    (beta),
+        sin     (sin),
+        cos     (cos),
         start   (valid_park),
-        D       (),
-        Q       (),
+        D       (Dcurr),
+        Q       (Qcurr),
         done    (valid_park)
     )
+
+    pid #(
+        .D_WIDTH    (D_WIDTH),
+        .Q_BITS     (15),
+        .LIM_MAX    (1 <<< 12),
+        .LIM_MIN    (-1 <<< 12)
+    ) pid_d (
+        .clock          (clk),
+        .reset          (rstb),
+        .write_enable   (pid_d_wen),
+        .iterate_enable (valid_PID),
+        .reg_addr       (pid_d_addr),
+        .reg_data       (pid_d_data),
+        .target         (0),
+        .measurement    (Dcurr),
+        .out_clocked    (Dcurr_i)        
+    );
+
+    pid #(
+        .D_WIDTH    (D_WIDTH),
+        .Q_BITS     (15),
+        .LIM_MAX    (1 <<< 12),
+        .LIM_MIN    (-1 <<< 12)
+    ) pid_q (
+        .clock          (clk),
+        .reset          (rstb),
+        .write_enable   (pid_q_wen),
+        .iterate_enable (valid_PID),
+        .reg_addr       (pid_q_addr),
+        .reg_data       (pid_q_data),
+        .target         (currT_in),
+        .measurement    (Qcurr),
+        .out_clocked    (Qcurr_i)        
+    );
 
     inverse_park #(
         .D_WIDTH    (D_WIDTH),
@@ -252,21 +306,48 @@ module top #(
     ) ipark0 (
         clk     (clk),
         reset   (rstb_m),
-        D       (),
-        Q       (),
-        sin     (),
-        cos     (),
+        D       (Dcurr_i),
+        Q       (Qcurr_i),
+        sin     (sin),
+        cos     (cos),
         start   (valid_ipark),
-        alpha   (),
-        beta    (),
+        alpha   (alpha_i),
+        beta    (beta_i),
         done    (ipark_out_valid)
     );
 
     inverse_clarke #(
         .D_WIDTH    (D_WIDTH),
         .Q_BITS     (15)
-    )
+    ) iclarke0 (
+        .clk    (clk),
+        .reset  (rstb_m),
+        .alpha  (alpha_i),
+        .beta   (beta_i),
+        .start  (valid_iclarke),
+        .a      (currA_i),
+        .b      (currB_i),
+        .c      (currC_i),
+        .done   (iclarke_out_valid)
+    );
 
+    svm #(
+        .D_WIDTH    (D_WIDTH)
+    )(
+        .pwmA       (pwmA_out), 
+        .pwmB       (pwmB_out), 
+        .pwmC       (pwmC_out), 
+        .halt       (),
+        .vA         (currA_i), 
+        .vB         (currB_i), 
+        .vC         (currC_i), 
+        .periodTop  (periodTop),
+        .in_valid   (valid_svm),
+        .ready      (svm_out_valid),
+        .clk        (clk), 
+        .rstb       (rstb_m)
+    );
+ 
 
 
 endmodule
