@@ -104,7 +104,7 @@ module top #(
             currB_r     <= currB_in;
             currC_r     <= currC_in;
             currT_r     <= currT_in;
-            periodTop_r <= periodTop
+            periodTop_r <= periodTop;
 
             state <= 1;
             ready <= 0;
@@ -157,7 +157,7 @@ module top #(
         end
 
         7 : begin // wait for SVM
-          if (SVM_ready) begin
+          if (svm_out_valid) begin
             state <= 8;
           end
         end
@@ -199,7 +199,7 @@ module top #(
   .cos        (cos),
   .clk        (clk),
   .rstb       (rstb_m)
-  )
+  );
 
   park #(
       .D_WIDTH    (D_WIDTH),
@@ -215,7 +215,7 @@ module top #(
       D       (Dcurr),
       Q       (Qcurr),
       done    (valid_park)
-  )
+  );
 
   pid #(
     .D_WIDTH    (D_WIDTH),
