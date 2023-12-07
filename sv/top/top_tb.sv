@@ -87,7 +87,7 @@ initial begin : tb_process
   pid_d_data = 'b1<<<12;
   pid_q_data = 'b1<<<12;
   currT_in = 0.9999 * (2**Q_BITS);  //max torque request
-  //set periodtop
+  periodTop = 1'b1<<11;
 
   @(posedge clk);
 
