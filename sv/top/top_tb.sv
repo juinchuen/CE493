@@ -21,7 +21,7 @@ logic pwmA_out, pwmB_out, pwmC_out;
 
 logic pid_d_wen, pid_q_wen;
 logic [D_WIDTH-1:0] pid_d_add, pid_q_add;
-logic [D_WIDTH-1:0] pid_d_dat, pid_q_dat;
+logic [D_WIDTH-1:0] pid_d_data, pid_q_data;
 
 top #(
   .D_WIDTH     (D_WIDTH),
@@ -78,9 +78,29 @@ initial begin : tb_process
 
   //setup
   //set pid stuff
+  //Set proportional coefficient
+  pid_d_wen = 1;
+  pid_q_wen = 1;
+  pid_d_add = 0;
+  pid_q_add = 0;
+  pid_d_data = 'b1<<<12;
+  pid_q_data = 'b1<<<12;
   currT_in = 0.9999 * (2**Q_BITS);  //max torque request
   //set periodtop
 
+  @(posedge clk);
+
+  //Set integral coefficient
+  pid_d_add = 1;
+  pid_q_add = 1;
+  pid_d_data = 'b1<<<9;
+  pid_q_data = 'b1<<<9;
+
+  @(posedge clk);
+
+  //Disable PID coefficient write
+  pid_d_wen = 0;
+  pid_q_wen = 0;
 
   @(posedge clk);
   //main
