@@ -117,6 +117,9 @@ initial begin : tb_process
   #10ns;
   valid = 'b0;
 
+  @(posedge ready);
+  @(posedge clk);
+  $finish;
 end
 
 endmodule
