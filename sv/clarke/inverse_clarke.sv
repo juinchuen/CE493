@@ -50,6 +50,7 @@ always_comb begin
   b_c = b;
   c_c = c;
   done_c = done;
+  beta_sqrt_3 = 'b0;
 
   if (start) begin
     beta_sqrt_3 = (beta * sqrt_3) >>> Q_BITS; //dequantize
