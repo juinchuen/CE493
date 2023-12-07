@@ -73,7 +73,7 @@ module top #(
           valid_iclarke       ,
           valid_svm           ;
 
-  always (posedge clk or negedge rstb) begin
+  always @(posedge clk or negedge rstb) begin
 
     if (!rstb) begin
       angle_r     <= 0;
