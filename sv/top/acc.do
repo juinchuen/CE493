@@ -3,6 +3,7 @@ vlib work
 vmap work work
 
 # compile
+vlog -work work "../cordic/gamma.sv"
 vlog -work work "../cordic/cordic.sv"
 vlog -work work "../clarke/clarke.sv"
 vlog -work work "../clarke/inverse_clarke.sv"
