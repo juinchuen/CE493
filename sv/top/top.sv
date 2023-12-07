@@ -22,9 +22,9 @@ module top #(
   output logic pwmC_out,
 
   // pid config signals
-  output logic                    pid_d_wen , pid_q_wen;
-  output logic [D_WIDTH - 1 : 0]  pid_d_addr, pid_q_addr;
-  output logic [D_WIDTH - 1 : 0]  pid_d_data, pid_q_data;
+  output logic                    pid_d_wen , pid_q_wen,
+  output logic [D_WIDTH - 1 : 0]  pid_d_addr, pid_q_addr,
+  output logic [D_WIDTH - 1 : 0]  pid_d_data, pid_q_data,
   
   // control signals
   input  logic clk,
