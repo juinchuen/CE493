@@ -28,7 +28,7 @@ cos and sin values need to be quantized
 */
 
 logic signed [D_WIDTH-1:0] alpha_c, beta_c;
-logic sifned [D_WIDTH*2-1:0] D_cos, D_sin, Q_sin, Q_cos; 
+logic signed [D_WIDTH*2-1:0] D_cos, D_sin, Q_sin, Q_cos; 
 logic done_c;
 
 enum logic {s0, s1} state, next_state;
