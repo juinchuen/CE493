@@ -4,7 +4,7 @@ module top_tb();
 
 localparam D_WIDTH = 19;
 localparam Q_BITS = 15;
-localparam CLOCK_PERIOD = 20;
+localparam CLOCK_PERIOD = 100;
 
 logic clk = 'b1;
 logic rstb = 'b1;
@@ -26,8 +26,8 @@ logic [D_WIDTH-1:0] pid_d_data, pid_q_data;
 
 top # (
   
-    .D_WIDTH  (D_WIDTH),
-    .Q_BITS   (Q_BITS)
+    // .D_WIDTH  (D_WIDTH),
+    // .Q_BITS   (Q_BITS)
 
   )u_top (
   // angle from resolver
@@ -131,7 +131,7 @@ initial begin : tb_process
   currA_in = 0.5 * (2**Q_BITS);
   currB_in = -0.5 * (2**Q_BITS);
   angle_in = 16'hffff >> 3; //45
-  #40ns;
+  #400ns;
   valid = 'b0;
 
   @(posedge ready);
@@ -139,7 +139,7 @@ initial begin : tb_process
   currA_in = 0.8 * (2**Q_BITS);
   currB_in = 0.82 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 1;//idk 46
-  #40ns;
+  #400ns;
   valid = 'b0;
 
   @(posedge ready);
@@ -147,7 +147,7 @@ initial begin : tb_process
   currA_in = -0.348 * (2**Q_BITS);
   currB_in = -0.999 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 2;//idk 46
-  #40ns;
+  #400ns;
   valid = 'b0;
 
   @(posedge ready);
@@ -155,7 +155,7 @@ initial begin : tb_process
   currA_in = 0.480 * (2**Q_BITS);
   currB_in = -0.900 * (2**Q_BITS);
   angle_in = (16'hffff >> 3) + 3;//idk 46
-  #40ns;
+  #400ns;
   valid = 'b0;
 
   @(posedge ready);

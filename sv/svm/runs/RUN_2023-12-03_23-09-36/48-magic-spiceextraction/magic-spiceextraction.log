@@ -1,0 +1,679 @@
+
+Magic 8.3 revision 439 - Compiled on Tue Oct 17 11:08:03 CDT 2023.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2265: section cifinput:
+	Labels on layer "NWELL" attached to "nwell" supersedes prior attachment to "nbase".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2266: section cifinput:
+	Labels on layer "WELLPIN" attached to "nwell" supersedes prior attachment to "nbase".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2267: section cifinput:
+	Labels on layer "WELLTXT" attached to "nwell" supersedes prior attachment to "nbase".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2342: section cifinput:
+	Labels on layer "DIFF" attached to "mvndiffc" supersedes prior attachment to "nmoslvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2343: section cifinput:
+	Labels on layer "DIFFPIN" attached to "mvndiffc" supersedes prior attachment to "nmoslvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2344: section cifinput:
+	Labels on layer "DIFFTXT" attached to "mvndiffc" supersedes prior attachment to "nmoslvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2360: section cifinput:
+	Labels on layer "DIFF" attached to "ndiode" supersedes prior attachment to "mvndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2370: section cifinput:
+	Labels on layer "DIFF" attached to "ndiodelvt" supersedes prior attachment to "ndiode".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2381: section cifinput:
+	Labels on layer "DIFF" attached to "ndiffres" supersedes prior attachment to "ndiodelvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2391: section cifinput:
+	Labels on layer "DIFF" attached to "mvnsubdiff" supersedes prior attachment to "ndiffres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2392: section cifinput:
+	Labels on layer "DIFFPIN" attached to "mvnsubdiff" supersedes prior attachment to "mvndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2393: section cifinput:
+	Labels on layer "DIFFTXT" attached to "mvnsubdiff" supersedes prior attachment to "mvndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2404: section cifinput:
+	Labels on layer "DIFF" attached to "mvndiode" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2413: section cifinput:
+	Labels on layer "DIFF" attached to "nndiode" supersedes prior attachment to "mvndiode".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2424: section cifinput:
+	Labels on layer "DIFF" attached to "mvndiffres" supersedes prior attachment to "nndiode".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2435: section cifinput:
+	Labels on layer "DIFF" attached to "mvpsubdiffcont" supersedes prior attachment to "mvndiffres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2436: section cifinput:
+	Labels on layer "DIFFPIN" attached to "mvpsubdiffcont" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2437: section cifinput:
+	Labels on layer "DIFFTXT" attached to "mvpsubdiffcont" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2453: section cifinput:
+	Labels on layer "DIFF" attached to "pdiode" supersedes prior attachment to "mvpsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2463: section cifinput:
+	Labels on layer "DIFF" attached to "pdiodelvt" supersedes prior attachment to "pdiode".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2473: section cifinput:
+	Labels on layer "DIFF" attached to "pdiodehvt" supersedes prior attachment to "pdiodelvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2493: section cifinput:
+	Labels on layer "DIFF" attached to "pmos" supersedes prior attachment to "pdiodehvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2500: section cifinput:
+	Labels on layer "DIFF" attached to "scpmos" supersedes prior attachment to "pmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2506: section cifinput:
+	Labels on layer "DIFF" attached to "scpmoshvt" supersedes prior attachment to "scpmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2515: section cifinput:
+	Labels on layer "DIFF" attached to "ppu" supersedes prior attachment to "scpmoshvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2519: section cifinput:
+	Labels on layer "DIFF" attached to "pmoslvt" supersedes prior attachment to "ppu".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2523: section cifinput:
+	Labels on layer "DIFF" attached to "pmosmvt" supersedes prior attachment to "pmoslvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2529: section cifinput:
+	Labels on layer "DIFF" attached to "pmoshvt" supersedes prior attachment to "pmosmvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2546: section cifinput:
+	Labels on layer "DIFF" attached to "mvpdiode" supersedes prior attachment to "pmoshvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2565: section cifinput:
+	Labels on layer "DIFF" attached to "mvpmos" supersedes prior attachment to "mvpdiode".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2569: section cifinput:
+	Labels on layer "DIFF" attached to "mvpmosesd" supersedes prior attachment to "mvpmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2577: section cifinput:
+	Labels on layer "DIFF" attached to "pdiff" supersedes prior attachment to "mvpmosesd".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2578: section cifinput:
+	Labels on layer "DIFFPIN" attached to "pdiff" supersedes prior attachment to "mvpsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2579: section cifinput:
+	Labels on layer "DIFFTXT" attached to "pdiff" supersedes prior attachment to "mvpsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2585: section cifinput:
+	Labels on layer "DIFF" attached to "pdiffres" supersedes prior attachment to "pdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2597: section cifinput:
+	Labels on layer "DIFF" attached to "nmos" supersedes prior attachment to "pdiffres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2609: section cifinput:
+	Labels on layer "DIFF" attached to "scnmos" supersedes prior attachment to "nmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2618: section cifinput:
+	Labels on layer "DIFF" attached to "npass" supersedes prior attachment to "scnmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2630: section cifinput:
+	Labels on layer "DIFF" attached to "npd" supersedes prior attachment to "npass".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2641: section cifinput:
+	Labels on layer "DIFF" attached to "npd" supersedes prior attachment to "npd".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2651: section cifinput:
+	Labels on layer "DIFF" attached to "nmoslvt" supersedes prior attachment to "npd".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2661: section cifinput:
+	Labels on layer "DIFF" attached to "nsonos" supersedes prior attachment to "nmoslvt".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2679: section cifinput:
+	Labels on layer "TAP" attached to "nsubdiff" supersedes prior attachment to "nsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2686: section cifinput:
+	Labels on layer "TAP" attached to "sramnvar" supersedes prior attachment to "nsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2705: section cifinput:
+	Labels on layer "TAP" attached to "psubdiff" supersedes prior attachment to "sramnvar".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2711: section cifinput:
+	Labels on layer "TAP" attached to "psubdiff" supersedes prior attachment to "psubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2712: section cifinput:
+	Labels on layer "TAPTXT" attached to "psubdiff" supersedes prior attachment to "nsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2718: section cifinput:
+	Labels on layer "TAP" attached to "srampvar" supersedes prior attachment to "psubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2728: section cifinput:
+	Labels on layer "DIFF" attached to "mvpdiff" supersedes prior attachment to "nsonos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2729: section cifinput:
+	Labels on layer "DIFFPIN" attached to "mvpdiff" supersedes prior attachment to "pdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2730: section cifinput:
+	Labels on layer "DIFFTXT" attached to "mvpdiff" supersedes prior attachment to "pdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2737: section cifinput:
+	Labels on layer "DIFF" attached to "mvpdiffres" supersedes prior attachment to "mvpdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2765: section cifinput:
+	Labels on layer "DIFF" attached to "mvnmosesd" supersedes prior attachment to "mvpdiffres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2775: section cifinput:
+	Labels on layer "DIFF" attached to "mvnmos" supersedes prior attachment to "mvnmosesd".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2779: section cifinput:
+	Labels on layer "DIFF" attached to "nnmos" supersedes prior attachment to "mvnmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2783: section cifinput:
+	Labels on layer "DIFF" attached to "mvnnmos" supersedes prior attachment to "nnmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2794: section cifinput:
+	Labels on layer "TAP" attached to "mvnsubdiff" supersedes prior attachment to "srampvar".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2799: section cifinput:
+	Labels on layer "TAP" attached to "mvnsubdiff" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2800: section cifinput:
+	Labels on layer "TAPTXT" attached to "mvnsubdiff" supersedes prior attachment to "psubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2819: section cifinput:
+	Labels on layer "DIFF" attached to "mvpsubdiff" supersedes prior attachment to "mvnnmos".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2824: section cifinput:
+	Labels on layer "TAP" attached to "mvpsubdiff" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2825: section cifinput:
+	Labels on layer "TAPTXT" attached to "mvpsubdiff" supersedes prior attachment to "mvnsubdiff".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2941: section cifinput:
+	Labels on layer "POLY" attached to "npolyres" supersedes prior attachment to "poly".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2945: section cifinput:
+	Labels on layer "POLY" attached to "rmp" supersedes prior attachment to "npolyres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2954: section cifinput:
+	Labels on layer "POLY" attached to "ppolyres" supersedes prior attachment to "rmp".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2962: section cifinput:
+	Labels on layer "POLY" attached to "xpolyres" supersedes prior attachment to "ppolyres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 2996: section cifinput:
+	Labels on layer "CONT" attached to "nsubdiffcont" supersedes prior attachment to "ndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3013: section cifinput:
+	Labels on layer "CONT" attached to "pdiffc" supersedes prior attachment to "nsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3030: section cifinput:
+	Labels on layer "CONT" attached to "pdiffc" supersedes prior attachment to "pdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3048: section cifinput:
+	Labels on layer "CONT" attached to "psubdiffcont" supersedes prior attachment to "pdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3064: section cifinput:
+	Labels on layer "CONT" attached to "polycont" supersedes prior attachment to "psubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3085: section cifinput:
+	Labels on layer "CONT" attached to "ndiodec" supersedes prior attachment to "polycont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3106: section cifinput:
+	Labels on layer "CONT" attached to "ndiodelvtc" supersedes prior attachment to "ndiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3127: section cifinput:
+	Labels on layer "CONT" attached to "pdiodec" supersedes prior attachment to "ndiodelvtc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3148: section cifinput:
+	Labels on layer "CONT" attached to "pdiodelvtc" supersedes prior attachment to "pdiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3169: section cifinput:
+	Labels on layer "CONT" attached to "pdiodehvtc" supersedes prior attachment to "pdiodelvtc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3186: section cifinput:
+	Labels on layer "CONT" attached to "mvndiffc" supersedes prior attachment to "pdiodehvtc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3203: section cifinput:
+	Labels on layer "CONT" attached to "mvnsubdiffcont" supersedes prior attachment to "mvndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3220: section cifinput:
+	Labels on layer "CONT" attached to "mvpdiffc" supersedes prior attachment to "mvnsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3238: section cifinput:
+	Labels on layer "CONT" attached to "mvpdiffc" supersedes prior attachment to "mvpdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3256: section cifinput:
+	Labels on layer "CONT" attached to "mvpsubdiffcont" supersedes prior attachment to "mvpdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3276: section cifinput:
+	Labels on layer "CONT" attached to "mvndiodec" supersedes prior attachment to "mvpsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3296: section cifinput:
+	Labels on layer "CONT" attached to "nndiodec" supersedes prior attachment to "mvndiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3315: section cifinput:
+	Labels on layer "CONT" attached to "mvpdiodec" supersedes prior attachment to "nndiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3333: section cifinput:
+	Labels on layer "LI" attached to "locali" supersedes prior attachment to "corelocali".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3334: section cifinput:
+	Labels on layer "LIPIN" attached to "locali" supersedes prior attachment to "corelocali".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3335: section cifinput:
+	Labels on layer "LITXT" attached to "locali" supersedes prior attachment to "corelocali".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3374: section cifinput:
+	Labels on layer "CAPM" attached to "mimcapcontact" supersedes prior attachment to "mimcap".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3385: section cifinput:
+	Labels on layer "CAPM2" attached to "mimcap2contact" supersedes prior attachment to "mimcap2".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3526: section cifinput:
+	Labels on layer "CONT" attached to "ndiodec" supersedes prior attachment to "mvpdiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3543: section cifinput:
+	Labels on layer "CONT" attached to "mvndiodec" supersedes prior attachment to "ndiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3558: section cifinput:
+	Labels on layer "CONT" attached to "pdiodec" supersedes prior attachment to "mvndiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3572: section cifinput:
+	Labels on layer "CONT" attached to "mvpdiodec" supersedes prior attachment to "pdiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3583: section cifinput:
+	Labels on layer "CONT" attached to "ndiffc" supersedes prior attachment to "mvpdiodec".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3594: section cifinput:
+	Labels on layer "CONT" attached to "mvndiffc" supersedes prior attachment to "ndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3605: section cifinput:
+	Labels on layer "CONT" attached to "pdiffc" supersedes prior attachment to "mvndiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3616: section cifinput:
+	Labels on layer "CONT" attached to "mvpdiffc" supersedes prior attachment to "pdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3627: section cifinput:
+	Labels on layer "CONT" attached to "polycont" supersedes prior attachment to "mvpdiffc".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3638: section cifinput:
+	Labels on layer "CONT" attached to "nsubdiffcont" supersedes prior attachment to "polycont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3649: section cifinput:
+	Labels on layer "CONT" attached to "mvnsubdiffcont" supersedes prior attachment to "nsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3660: section cifinput:
+	Labels on layer "CONT" attached to "psubdiffcont" supersedes prior attachment to "mvnsubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3671: section cifinput:
+	Labels on layer "CONT" attached to "mvpsubdiffcont" supersedes prior attachment to "psubdiffcont".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3717: section cifinput:
+	Labels on layer "FILLOBSM1" attached to "fillblock" supersedes prior attachment to "fillblock".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3717: section cifinput:
+	Labels on layer "FILLOBSM2" attached to "fillblock" supersedes prior attachment to "fillblock".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3717: section cifinput:
+	Labels on layer "FILLOBSM3" attached to "fillblock" supersedes prior attachment to "fillblock".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3717: section cifinput:
+	Labels on layer "FILLOBSM4" attached to "fillblock" supersedes prior attachment to "fillblock".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3731: section cifinput:
+	Labels on layer "POLY" attached to "varactor" supersedes prior attachment to "xpolyres".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3739: section cifinput:
+	Labels on layer "POLY" attached to "varactorhvt" supersedes prior attachment to "varactor".
+/home/jco1147/393_folder/openlane/sky130A/libs.tech/magic/sky130A.tech: line 3746: section cifinput:
+	Labels on layer "POLY" attached to "mvvaractor" supersedes prior attachment to "varactorhvt".
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.446-0-gdd7771c
+> lef read /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+Reading LEF data from file /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 78 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 79 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 112 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 114 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 115 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 122 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 123 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 156 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 167 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 209 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 249 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 251 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 290 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 291 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 797 lines.
+> def read /home/jco1147/393_folder/CE493/sv/svm/runs/RUN_2023-12-03_23-09-36/37-openroad-fillinsertion/svm.def -noblockage -labels
+Reading DEF data from file /home/jco1147/393_folder/CE493/sv/svm/runs/RUN_2023-12-03_23-09-36/37-openroad-fillinsertion/svm.def.
+This action cannot be undone.
+  Processed 4 vias total.
+Cell sky130_fd_sc_hd__diode_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_8 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_6 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_3 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__inv_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_8 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a221o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_6 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21bo_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ba_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4bb_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2111a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor4_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor4_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ba_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41o_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4bb_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2bb2a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o221a_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4b_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfstp_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfstp_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_4 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_2 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_16 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_8 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd3_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_1 read from path /home/jco1147/393_folder/openlane/sky130A/libs.ref/sky130_fd_sc_hd/mag
+  Processed 5922 subcell instances total.
+  Processed 74 pins total.
+  Processed 2 special nets total.
+  Processed 2284 nets total.
+DEF read: Processed 41870 lines.
+Moving label "_0129_" from metal1 to via1 in cell svm.
+Moving label "_0397_" from metal1 to viali in cell svm.
+Moving label "_0422_" from metal1 to viali in cell svm.
+Moving label "_0510_" from metal1 to via1 in cell svm.
+Moving label "_0673_" from metal1 to viali in cell svm.
+Moving label "_0844_" from metal2 to via1 in cell svm.
+Moving label "_0853_" from metal1 to via1 in cell svm.
+Moving label "_0867_" from metal3 to via3 in cell svm.
+Moving label "_1002_" from metal1 to viali in cell svm.
+Moving label "_1118_" from metal1 to viali in cell svm.
+Moving label "_1145_" from metal1 to via1 in cell svm.
+Moving label "_1148_" from metal1 to viali in cell svm.
+Moving label "_1189_" from metal1 to viali in cell svm.
+Moving label "_1395_" from metal2 to via2 in cell svm.
+Moving label "_1396_" from metal1 to viali in cell svm.
+Moving label "_1521_" from metal1 to via1 in cell svm.
+Moving label "_1749_" from metal2 to via2 in cell svm.
+Moving label "_1803_" from metal2 to via1 in cell svm.
+Moving label "_1880_" from metal1 to viali in cell svm.
+Moving label "_1897_" from metal2 to via2 in cell svm.
+Moving label "halt" from metal2 to via2 in cell svm.
+Moving label "net109" from metal2 to via2 in cell svm.
+Moving label "net120" from metal1 to via1 in cell svm.
+Moving label "net16" from metal2 to via2 in cell svm.
+Moving label "net178" from metal2 to via2 in cell svm.
+Moving label "net290" from metal1 to viali in cell svm.
+Moving label "pwmA" from metal2 to via2 in cell svm.
+Moving label "tA\[1\]" from metal1 to viali in cell svm.
+Processing sky130_fd_sc_hd__decap_8
+Processing sky130_fd_sc_hd__decap_3
+Processing sky130_fd_sc_hd__buf_8
+Processing sky130_fd_sc_hd__tapvpwrvgnd_1
+Processing sky130_fd_sc_hd__fill_1
+Processing sky130_fd_sc_hd__clkbuf_1
+Processing sky130_fd_sc_hd__decap_4
+Processing sky130_fd_sc_hd__buf_1
+Processing sky130_fd_sc_hd__nand3b_1
+Processing sky130_fd_sc_hd__decap_6
+Processing sky130_fd_sc_hd__nand2_1
+Processing sky130_fd_sc_hd__fill_2
+Processing sky130_fd_sc_hd__and3_1
+Processing sky130_fd_sc_hd__a22oi_1
+Processing sky130_fd_sc_hd__and2b_1
+Processing sky130_fd_sc_hd__xnor2_2
+Processing sky130_fd_sc_hd__clkbuf_4
+Processing sky130_fd_sc_hd__o21ai_1
+Processing sky130_fd_sc_hd__a21bo_1
+Processing sky130_fd_sc_hd__nand3_2
+Processing sky130_fd_sc_hd__a21o_1
+Processing sky130_fd_sc_hd__or3_1
+Processing sky130_fd_sc_hd__a2bb2o_2
+Processing sky130_fd_sc_hd__a21oi_1
+Processing sky130_fd_sc_hd__a2bb2o_4
+Processing sky130_fd_sc_hd__nand4_1
+Processing sky130_fd_sc_hd__nand3_1
+Processing sky130_fd_sc_hd__nand4_2
+Processing sky130_fd_sc_hd__a22o_1
+Processing sky130_fd_sc_hd__and4_1
+Processing sky130_fd_sc_hd__xor2_2
+Processing sky130_fd_sc_hd__a31o_1
+Processing sky130_fd_sc_hd__o21a_1
+Processing sky130_fd_sc_hd__nor3_1
+Processing sky130_fd_sc_hd__nor2_1
+Processing sky130_fd_sc_hd__and2_1
+Processing sky130_fd_sc_hd__clkbuf_2
+Processing sky130_fd_sc_hd__a22oi_2
+Processing sky130_fd_sc_hd__or4bb_4
+Processing sky130_fd_sc_hd__buf_2
+Processing sky130_fd_sc_hd__xnor2_1
+Processing sky130_fd_sc_hd__buf_4
+Processing sky130_fd_sc_hd__a2bb2o_1
+Processing sky130_fd_sc_hd__nor2_2
+Processing sky130_fd_sc_hd__nand4_4
+Processing sky130_fd_sc_hd__nand3b_4
+Processing sky130_fd_sc_hd__xor2_1
+Processing sky130_fd_sc_hd__and3_2
+Processing sky130_fd_sc_hd__a21oi_2
+Processing sky130_fd_sc_hd__o21ba_1
+Processing sky130_fd_sc_hd__o211ai_4
+Processing sky130_fd_sc_hd__a211o_1
+Processing sky130_fd_sc_hd__nand2_2
+Processing sky130_fd_sc_hd__or2_1
+Processing sky130_fd_sc_hd__a21boi_2
+Processing sky130_fd_sc_hd__a211oi_2
+Processing sky130_fd_sc_hd__o211a_1
+Processing sky130_fd_sc_hd__nor4_4
+Processing sky130_fd_sc_hd__o211ai_2
+Processing sky130_fd_sc_hd__o22a_1
+Processing sky130_fd_sc_hd__a211oi_1
+Processing sky130_fd_sc_hd__nor3_2
+Processing sky130_fd_sc_hd__inv_2
+Processing sky130_fd_sc_hd__or2b_1
+Processing sky130_fd_sc_hd__o21bai_2
+Processing sky130_fd_sc_hd__o21bai_1
+Processing sky130_fd_sc_hd__or3b_1
+Processing sky130_fd_sc_hd__or2_4
+Processing sky130_fd_sc_hd__and3b_1
+Processing sky130_fd_sc_hd__and2_2
+Processing sky130_fd_sc_hd__xnor2_4
+Processing sky130_fd_sc_hd__a311o_1
+Processing sky130_fd_sc_hd__a21boi_4
+Processing sky130_fd_sc_hd__o21ai_2
+Processing sky130_fd_sc_hd__a31o_4
+Processing sky130_fd_sc_hd__clkbuf_8
+Processing sky130_fd_sc_hd__and4bb_1
+Processing sky130_fd_sc_hd__dfrtp_1
+Processing sky130_fd_sc_hd__dfrtp_4
+Processing sky130_fd_sc_hd__buf_6
+Processing sky130_fd_sc_hd__a41o_1
+Processing sky130_fd_sc_hd__o21ai_4
+Processing sky130_fd_sc_hd__or3_4
+Processing sky130_fd_sc_hd__and2_4
+Processing sky130_fd_sc_hd__mux2_4
+Processing sky130_fd_sc_hd__o31a_1
+Processing sky130_fd_sc_hd__mux2_1
+Processing sky130_fd_sc_hd__o22ai_2
+Processing sky130_fd_sc_hd__o32a_1
+Processing sky130_fd_sc_hd__or3b_2
+Processing sky130_fd_sc_hd__nand3b_2
+Processing sky130_fd_sc_hd__dlymetal6s2s_1
+Processing sky130_fd_sc_hd__a221o_1
+Processing sky130_fd_sc_hd__or3b_4
+Processing sky130_fd_sc_hd__clkbuf_16
+Processing sky130_fd_sc_hd__o21a_2
+Processing sky130_fd_sc_hd__diode_2
+Processing sky130_fd_sc_hd__a21oi_4
+Processing sky130_fd_sc_hd__a211oi_4
+Processing sky130_fd_sc_hd__o2bb2a_1
+Processing sky130_fd_sc_hd__o211a_4
+Processing sky130_fd_sc_hd__o21ba_4
+Processing sky130_fd_sc_hd__o221a_1
+Processing sky130_fd_sc_hd__o211ai_1
+Processing sky130_fd_sc_hd__or4b_1
+Processing sky130_fd_sc_hd__o22ai_1
+Processing sky130_fd_sc_hd__or4_1
+Processing sky130_fd_sc_hd__and3_4
+Processing sky130_fd_sc_hd__nor4_1
+Processing sky130_fd_sc_hd__dlygate4sd3_1
+Processing sky130_fd_sc_hd__nand3_4
+Processing sky130_fd_sc_hd__a21boi_1
+Processing sky130_fd_sc_hd__a31oi_4
+Processing sky130_fd_sc_hd__dfstp_1
+Processing sky130_fd_sc_hd__or2_2
+Processing sky130_fd_sc_hd__or4_2
+Processing sky130_fd_sc_hd__nor2_4
+Processing sky130_fd_sc_hd__a31oi_2
+Processing sky130_fd_sc_hd__o31ai_1
+Processing sky130_fd_sc_hd__dfrtp_2
+Processing sky130_fd_sc_hd__a32o_1
+Processing sky130_fd_sc_hd__o2111a_1
+Processing sky130_fd_sc_hd__nor3b_1
+Processing sky130_fd_sc_hd__dfstp_2
+Processing svm
+Extracting sky130_fd_sc_hd__decap_8 into sky130_fd_sc_hd__decap_8.ext:
+sky130_fd_sc_hd__decap_8: 2 warnings
+Extracting sky130_fd_sc_hd__decap_3 into sky130_fd_sc_hd__decap_3.ext:
+sky130_fd_sc_hd__decap_3: 2 warnings
+Extracting sky130_fd_sc_hd__buf_8 into sky130_fd_sc_hd__buf_8.ext:
+Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
+Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
+Extracting sky130_fd_sc_hd__clkbuf_1 into sky130_fd_sc_hd__clkbuf_1.ext:
+Extracting sky130_fd_sc_hd__decap_4 into sky130_fd_sc_hd__decap_4.ext:
+sky130_fd_sc_hd__decap_4: 2 warnings
+Extracting sky130_fd_sc_hd__buf_1 into sky130_fd_sc_hd__buf_1.ext:
+Extracting sky130_fd_sc_hd__nand3b_1 into sky130_fd_sc_hd__nand3b_1.ext:
+Extracting sky130_fd_sc_hd__decap_6 into sky130_fd_sc_hd__decap_6.ext:
+sky130_fd_sc_hd__decap_6: 2 warnings
+Extracting sky130_fd_sc_hd__nand2_1 into sky130_fd_sc_hd__nand2_1.ext:
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
+Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
+Extracting sky130_fd_sc_hd__a22oi_1 into sky130_fd_sc_hd__a22oi_1.ext:
+Extracting sky130_fd_sc_hd__and2b_1 into sky130_fd_sc_hd__and2b_1.ext:
+Extracting sky130_fd_sc_hd__xnor2_2 into sky130_fd_sc_hd__xnor2_2.ext:
+Extracting sky130_fd_sc_hd__clkbuf_4 into sky130_fd_sc_hd__clkbuf_4.ext:
+Extracting sky130_fd_sc_hd__o21ai_1 into sky130_fd_sc_hd__o21ai_1.ext:
+Extracting sky130_fd_sc_hd__a21bo_1 into sky130_fd_sc_hd__a21bo_1.ext:
+Extracting sky130_fd_sc_hd__nand3_2 into sky130_fd_sc_hd__nand3_2.ext:
+Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
+Extracting sky130_fd_sc_hd__or3_1 into sky130_fd_sc_hd__or3_1.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_2 into sky130_fd_sc_hd__a2bb2o_2.ext:
+Extracting sky130_fd_sc_hd__a21oi_1 into sky130_fd_sc_hd__a21oi_1.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_4 into sky130_fd_sc_hd__a2bb2o_4.ext:
+Extracting sky130_fd_sc_hd__nand4_1 into sky130_fd_sc_hd__nand4_1.ext:
+Extracting sky130_fd_sc_hd__nand3_1 into sky130_fd_sc_hd__nand3_1.ext:
+Extracting sky130_fd_sc_hd__nand4_2 into sky130_fd_sc_hd__nand4_2.ext:
+Extracting sky130_fd_sc_hd__a22o_1 into sky130_fd_sc_hd__a22o_1.ext:
+Extracting sky130_fd_sc_hd__and4_1 into sky130_fd_sc_hd__and4_1.ext:
+Extracting sky130_fd_sc_hd__xor2_2 into sky130_fd_sc_hd__xor2_2.ext:
+Extracting sky130_fd_sc_hd__a31o_1 into sky130_fd_sc_hd__a31o_1.ext:
+Extracting sky130_fd_sc_hd__o21a_1 into sky130_fd_sc_hd__o21a_1.ext:
+Extracting sky130_fd_sc_hd__nor3_1 into sky130_fd_sc_hd__nor3_1.ext:
+Extracting sky130_fd_sc_hd__nor2_1 into sky130_fd_sc_hd__nor2_1.ext:
+Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
+Extracting sky130_fd_sc_hd__clkbuf_2 into sky130_fd_sc_hd__clkbuf_2.ext:
+Extracting sky130_fd_sc_hd__a22oi_2 into sky130_fd_sc_hd__a22oi_2.ext:
+Extracting sky130_fd_sc_hd__or4bb_4 into sky130_fd_sc_hd__or4bb_4.ext:
+Extracting sky130_fd_sc_hd__buf_2 into sky130_fd_sc_hd__buf_2.ext:
+Extracting sky130_fd_sc_hd__xnor2_1 into sky130_fd_sc_hd__xnor2_1.ext:
+Extracting sky130_fd_sc_hd__buf_4 into sky130_fd_sc_hd__buf_4.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_1 into sky130_fd_sc_hd__a2bb2o_1.ext:
+Extracting sky130_fd_sc_hd__nor2_2 into sky130_fd_sc_hd__nor2_2.ext:
+Extracting sky130_fd_sc_hd__nand4_4 into sky130_fd_sc_hd__nand4_4.ext:
+Extracting sky130_fd_sc_hd__nand3b_4 into sky130_fd_sc_hd__nand3b_4.ext:
+Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
+Extracting sky130_fd_sc_hd__and3_2 into sky130_fd_sc_hd__and3_2.ext:
+Extracting sky130_fd_sc_hd__a21oi_2 into sky130_fd_sc_hd__a21oi_2.ext:
+Extracting sky130_fd_sc_hd__o21ba_1 into sky130_fd_sc_hd__o21ba_1.ext:
+Extracting sky130_fd_sc_hd__o211ai_4 into sky130_fd_sc_hd__o211ai_4.ext:
+Extracting sky130_fd_sc_hd__a211o_1 into sky130_fd_sc_hd__a211o_1.ext:
+Extracting sky130_fd_sc_hd__nand2_2 into sky130_fd_sc_hd__nand2_2.ext:
+Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
+Extracting sky130_fd_sc_hd__a21boi_2 into sky130_fd_sc_hd__a21boi_2.ext:
+Extracting sky130_fd_sc_hd__a211oi_2 into sky130_fd_sc_hd__a211oi_2.ext:
+Extracting sky130_fd_sc_hd__o211a_1 into sky130_fd_sc_hd__o211a_1.ext:
+Extracting sky130_fd_sc_hd__nor4_4 into sky130_fd_sc_hd__nor4_4.ext:
+Extracting sky130_fd_sc_hd__o211ai_2 into sky130_fd_sc_hd__o211ai_2.ext:
+Extracting sky130_fd_sc_hd__o22a_1 into sky130_fd_sc_hd__o22a_1.ext:
+Extracting sky130_fd_sc_hd__a211oi_1 into sky130_fd_sc_hd__a211oi_1.ext:
+Extracting sky130_fd_sc_hd__nor3_2 into sky130_fd_sc_hd__nor3_2.ext:
+Extracting sky130_fd_sc_hd__inv_2 into sky130_fd_sc_hd__inv_2.ext:
+Extracting sky130_fd_sc_hd__or2b_1 into sky130_fd_sc_hd__or2b_1.ext:
+Extracting sky130_fd_sc_hd__o21bai_2 into sky130_fd_sc_hd__o21bai_2.ext:
+Extracting sky130_fd_sc_hd__o21bai_1 into sky130_fd_sc_hd__o21bai_1.ext:
+Extracting sky130_fd_sc_hd__or3b_1 into sky130_fd_sc_hd__or3b_1.ext:
+Extracting sky130_fd_sc_hd__or2_4 into sky130_fd_sc_hd__or2_4.ext:
+Extracting sky130_fd_sc_hd__and3b_1 into sky130_fd_sc_hd__and3b_1.ext:
+Extracting sky130_fd_sc_hd__and2_2 into sky130_fd_sc_hd__and2_2.ext:
+Extracting sky130_fd_sc_hd__xnor2_4 into sky130_fd_sc_hd__xnor2_4.ext:
+Extracting sky130_fd_sc_hd__a311o_1 into sky130_fd_sc_hd__a311o_1.ext:
+Extracting sky130_fd_sc_hd__a21boi_4 into sky130_fd_sc_hd__a21boi_4.ext:
+Extracting sky130_fd_sc_hd__o21ai_2 into sky130_fd_sc_hd__o21ai_2.ext:
+Extracting sky130_fd_sc_hd__a31o_4 into sky130_fd_sc_hd__a31o_4.ext:
+Extracting sky130_fd_sc_hd__clkbuf_8 into sky130_fd_sc_hd__clkbuf_8.ext:
+Extracting sky130_fd_sc_hd__and4bb_1 into sky130_fd_sc_hd__and4bb_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_1 into sky130_fd_sc_hd__dfrtp_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_4 into sky130_fd_sc_hd__dfrtp_4.ext:
+Extracting sky130_fd_sc_hd__buf_6 into sky130_fd_sc_hd__buf_6.ext:
+Extracting sky130_fd_sc_hd__a41o_1 into sky130_fd_sc_hd__a41o_1.ext:
+Extracting sky130_fd_sc_hd__o21ai_4 into sky130_fd_sc_hd__o21ai_4.ext:
+Extracting sky130_fd_sc_hd__or3_4 into sky130_fd_sc_hd__or3_4.ext:
+Extracting sky130_fd_sc_hd__and2_4 into sky130_fd_sc_hd__and2_4.ext:
+Extracting sky130_fd_sc_hd__mux2_4 into sky130_fd_sc_hd__mux2_4.ext:
+Extracting sky130_fd_sc_hd__o31a_1 into sky130_fd_sc_hd__o31a_1.ext:
+Extracting sky130_fd_sc_hd__mux2_1 into sky130_fd_sc_hd__mux2_1.ext:
+Extracting sky130_fd_sc_hd__o22ai_2 into sky130_fd_sc_hd__o22ai_2.ext:
+Extracting sky130_fd_sc_hd__o32a_1 into sky130_fd_sc_hd__o32a_1.ext:
+Extracting sky130_fd_sc_hd__or3b_2 into sky130_fd_sc_hd__or3b_2.ext:
+Extracting sky130_fd_sc_hd__nand3b_2 into sky130_fd_sc_hd__nand3b_2.ext:
+Extracting sky130_fd_sc_hd__dlymetal6s2s_1 into sky130_fd_sc_hd__dlymetal6s2s_1.ext:
+Extracting sky130_fd_sc_hd__a221o_1 into sky130_fd_sc_hd__a221o_1.ext:
+Extracting sky130_fd_sc_hd__or3b_4 into sky130_fd_sc_hd__or3b_4.ext:
+Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
+Extracting sky130_fd_sc_hd__o21a_2 into sky130_fd_sc_hd__o21a_2.ext:
+Extracting sky130_fd_sc_hd__diode_2 into sky130_fd_sc_hd__diode_2.ext:
+Extracting sky130_fd_sc_hd__a21oi_4 into sky130_fd_sc_hd__a21oi_4.ext:
+Extracting sky130_fd_sc_hd__a211oi_4 into sky130_fd_sc_hd__a211oi_4.ext:
+Extracting sky130_fd_sc_hd__o2bb2a_1 into sky130_fd_sc_hd__o2bb2a_1.ext:
+Extracting sky130_fd_sc_hd__o211a_4 into sky130_fd_sc_hd__o211a_4.ext:
+Extracting sky130_fd_sc_hd__o21ba_4 into sky130_fd_sc_hd__o21ba_4.ext:
+Extracting sky130_fd_sc_hd__o221a_1 into sky130_fd_sc_hd__o221a_1.ext:
+Extracting sky130_fd_sc_hd__o211ai_1 into sky130_fd_sc_hd__o211ai_1.ext:
+Extracting sky130_fd_sc_hd__or4b_1 into sky130_fd_sc_hd__or4b_1.ext:
+Extracting sky130_fd_sc_hd__o22ai_1 into sky130_fd_sc_hd__o22ai_1.ext:
+Extracting sky130_fd_sc_hd__or4_1 into sky130_fd_sc_hd__or4_1.ext:
+Extracting sky130_fd_sc_hd__and3_4 into sky130_fd_sc_hd__and3_4.ext:
+Extracting sky130_fd_sc_hd__nor4_1 into sky130_fd_sc_hd__nor4_1.ext:
+Extracting sky130_fd_sc_hd__dlygate4sd3_1 into sky130_fd_sc_hd__dlygate4sd3_1.ext:
+Extracting sky130_fd_sc_hd__nand3_4 into sky130_fd_sc_hd__nand3_4.ext:
+Extracting sky130_fd_sc_hd__a21boi_1 into sky130_fd_sc_hd__a21boi_1.ext:
+Extracting sky130_fd_sc_hd__a31oi_4 into sky130_fd_sc_hd__a31oi_4.ext:
+Extracting sky130_fd_sc_hd__dfstp_1 into sky130_fd_sc_hd__dfstp_1.ext:
+Extracting sky130_fd_sc_hd__or2_2 into sky130_fd_sc_hd__or2_2.ext:
+Extracting sky130_fd_sc_hd__or4_2 into sky130_fd_sc_hd__or4_2.ext:
+Extracting sky130_fd_sc_hd__nor2_4 into sky130_fd_sc_hd__nor2_4.ext:
+Extracting sky130_fd_sc_hd__a31oi_2 into sky130_fd_sc_hd__a31oi_2.ext:
+Extracting sky130_fd_sc_hd__o31ai_1 into sky130_fd_sc_hd__o31ai_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_2 into sky130_fd_sc_hd__dfrtp_2.ext:
+Extracting sky130_fd_sc_hd__a32o_1 into sky130_fd_sc_hd__a32o_1.ext:
+Extracting sky130_fd_sc_hd__o2111a_1 into sky130_fd_sc_hd__o2111a_1.ext:
+Extracting sky130_fd_sc_hd__nor3b_1 into sky130_fd_sc_hd__nor3b_1.ext:
+Extracting sky130_fd_sc_hd__dfstp_2 into sky130_fd_sc_hd__dfstp_2.ext:
+Extracting svm into svm.ext:
+Total of 8 warnings.
+exttospice finished.

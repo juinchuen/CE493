@@ -1,0 +1,1 @@
+verilator --lint-only --Wall --Wno-DECLFILENAME --Wno-EOFNEWLINE --top-module svm /home/jco1147/393_folder/CE493/sv/svm/runs/RUN_2023-12-03_23-09-36/01-verilator-lint/bb.v svm.sv --Wno-fatal --relative-includes --Werror-LATCH

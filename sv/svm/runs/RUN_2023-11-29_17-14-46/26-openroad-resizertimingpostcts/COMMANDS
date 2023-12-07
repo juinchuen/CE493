@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /home/jco1147/393_folder/CE493/sv/svm/runs/RUN_2023-11-29_17-14-46/26-openroad-resizertimingpostcts/or_metrics_out.json /home/jco1147/.local/lib/python3.9/site-packages/openlane/scripts/openroad/rsz_timing_postcts.tcl
