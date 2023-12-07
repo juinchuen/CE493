@@ -181,7 +181,7 @@ module top #(
     .Q_BITS     (15)
   ) clarke0 (
     .clk    (clk),
-    .reset  (rstb_m),
+    .rstb   (rstb_m),
     .a      (currA_r),
     .b      (currB_r),
     .start  (valid_cordic_clarke),
@@ -206,7 +206,7 @@ module top #(
       .Q_BITS     (15)
   ) park0 (
       .clk     (clk),
-      .reset   (rstb_m),
+      .rstb    (rstb_m),
       .alpha   (alpha),
       .beta    (beta),
       .sin     (sin),
@@ -256,7 +256,7 @@ module top #(
     .Q_BITS     (15)
   ) ipark0 (
     .clk     (clk),
-    .reset   (rstb_m),
+    .rstb    (rstb_m),
     .D       (Dcurr_i),
     .Q       (Qcurr_i),
     .sin     (sin),
@@ -272,7 +272,7 @@ module top #(
     .Q_BITS     (15)
   ) iclarke0 (
     .clk    (clk),
-    .reset  (rstb_m),
+    .rstb   (rstb_m),
     .alpha  (alpha_i),
     .beta   (beta_i),
     .start  (valid_iclarke),
