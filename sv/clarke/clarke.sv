@@ -28,7 +28,7 @@ logic signed [D_WIDTH-1:0] alpha_c, beta_c;
 logic done_c;
 
 always_ff @(posedge clk or negedge rstb) begin
-  if !(rstb) begin
+  if (!rstb) begin
     alpha <= 'b0;
     beta  <= 'b0;
     done  <= 'b0;
