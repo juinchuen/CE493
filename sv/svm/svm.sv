@@ -169,7 +169,7 @@ module svm #(
     end
 
     v_to_t #(
-        .D_WIDTH (16)
+        .D_WIDTH (D_WIDTH)
     ) v2t0 (
         .v   (v_pass),
         .top (periodTop),

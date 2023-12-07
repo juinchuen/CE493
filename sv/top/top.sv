@@ -22,9 +22,9 @@ module top #(
   output logic pwmC_out,
 
   // pid config signals
-  output logic                    pid_d_wen , pid_q_wen,
-  output logic [D_WIDTH - 1 : 0]  pid_d_addr, pid_q_addr,
-  output logic [D_WIDTH - 1 : 0]  pid_d_data, pid_q_data,
+  input logic                    pid_d_wen , pid_q_wen,
+  input logic [D_WIDTH - 1 : 0]  pid_d_addr, pid_q_addr,
+  input logic [D_WIDTH - 1 : 0]  pid_d_data, pid_q_data,
   
   // control signals
   input  logic clk,
@@ -219,7 +219,7 @@ module top #(
       .start   (valid_park),
       .D       (Dcurr),
       .Q       (Qcurr),
-      .done    (valid_park)
+      .done    (park_out_valid)
   );
 
   pid #(
@@ -234,7 +234,7 @@ module top #(
     .iterate_enable (valid_PID),
     .reg_addr       (pid_d_addr),
     .reg_data       (pid_d_data),
-    .target         ('b0),
+    .target         (19'b0),
     .measurement    (Dcurr),
     .out_clocked    (Dcurr_i)        
   );

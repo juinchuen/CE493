@@ -25,6 +25,6 @@ add wave -noupdate -group PID_D -radix unsigned /top_tb/u_top/pid_d/*
 add wave -noupdate -group PID_Q -radix unsigned /top_tb/u_top/pid_q/*
 add wave -noupdate -group IN_PARK -radix unsigned /top_tb/u_top/ipark0/*
 add wave -noupdate -group IN_CLARKE -radix unsigned /top_tb/u_top/iclarke0/*
-add wave -noupdate -group SVM -radix unsigned /top_tb/u_top/svm 0/*
+add wave -noupdate -group SVM -radix unsigned /top_tb/u_top/svm0/*
 
 run -all
