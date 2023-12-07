@@ -1,6 +1,6 @@
 module top #(
-    parameter D_WIDTH,
-    parameter Q_BITS
+    parameter D_WIDTH = 19,
+    parameter Q_BITS  = 15
 )(
   //################### IO list ###################
 

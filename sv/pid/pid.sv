@@ -65,6 +65,18 @@ clamp integrator
 */
 
 always_comb begin
+    out = out_clocked;
+    lim_max_int_c = 0;
+    lim_min_int_c = 0;
+    i_error_c = 0;
+    error = 0;
+    d_error = 0;
+    p_error = 0;
+    p_mult = 0;
+    i_mult = 0;
+    d_mult_1 = 0;
+    d_mult_2 = 0;
+
     if (iterate_enable) begin
         error = target - measurement;
         p_mult = (error * kp);
