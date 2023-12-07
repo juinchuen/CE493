@@ -76,15 +76,15 @@ always_comb begin
         // alpha_c = ((D * cos) - (Q * sin)) >>> Q_BITS;
         // beta_c = ((D * sin) - (Q * cos)) >>> Q_BITS;
         
-        next_state <= s1;
+        next_state = s1;
       end
     end
 
     s1: begin
-      alpha_c <= (D_cos - Q_sin) >>> Q_BITS;
-      beta_c <= (D_sin - Q_cos) >>> Q_BITS;
-      done_c <= 'b1;
-      next_state <= s0;
+      alpha_c = (D_cos - Q_sin) >>> Q_BITS;
+      beta_c = (D_sin - Q_cos) >>> Q_BITS;
+      done_c = 'b1;
+      next_state = s0;
     end
   endcase;
 end
