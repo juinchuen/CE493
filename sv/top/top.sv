@@ -205,16 +205,16 @@ module top #(
       .D_WIDTH    (D_WIDTH),
       .Q_BITS     (15)
   ) park0 (
-      clk     (clk),
-      reset   (rstb_m),
-      alpha   (alpha),
-      beta    (beta),
-      sin     (sin),
-      cos     (cos),
-      start   (valid_park),
-      D       (Dcurr),
-      Q       (Qcurr),
-      done    (valid_park)
+      .clk     (clk),
+      .reset   (rstb_m),
+      .alpha   (alpha),
+      .beta    (beta),
+      .sin     (sin),
+      .cos     (cos),
+      .start   (valid_park),
+      .D       (Dcurr),
+      .Q       (Qcurr),
+      .done    (valid_park)
   );
 
   pid #(
