@@ -2,14 +2,26 @@
 
 module top_tb();
 
-localparam D_WIDTH = 32;
+localparam D_WIDTH = 19;
 localparam Q_BITS = 15;
 localparam CLOCK_PERIOD = 10;
 
 logic clk = 'b1;
 logic rstb = 'b1;
+logic valid, ready;
 
-logic [D_WIDTH-1:0] a, b; //the current inputs
+logic [D_WIDTH - 1 : 0] angle_in; //16 bits
+
+logic [D_WIDTH-1:0] currA_in, currB_in, currC_in; //the current inputs
+
+logic signed [D_WIDTH - 1 : 0] currT_in;
+logic [D_WIDTH - 1 : 0] periodTop;
+
+logic pwmA_out, pwmB_out, pwmC_out;
+
+logic pid_d_wen, pid_q_wen;
+logic [D_WIDTH-1:0] pid_d_add, pid_q_add;
+logic [D_WIDTH-1:0] pid_d_dat, pid_q_dat;
 
 top #(
   .D_WIDTH     (D_WIDTH),
@@ -25,11 +37,19 @@ top #(
 
   // target current from ECU
   .currT_in    (currT_in),
+  .periodTop   (periodTop),
 
   // PWM output
   .pwmA_out    (pwmA_out),
   .pwmB_out    (pwmB_out),
   .pwmC_out    (pwmC_out),
+
+  .pid_d_wen   (pid_d_wen), 
+  .pid_q_wen   (pid_q_wen),
+  .pid_d_addr  (pid_d_addr), 
+  .pid_q_addr  (pid_q_addr),
+  .pid_d_data  (pid_d_data), 
+  .pid_q_data  (pid_q_data),
 
   // control signals
   .clk         (clk),
@@ -55,6 +75,27 @@ end
 initial begin : tb_process
   @(posedge rstb);
   @(posedge clk);
+
+  //setup
+  //set pid stuff
+  currT_in = 0.9999 * (2**Q_BITS);  //max torque request
+  //set periodtop
+
+
+  @(posedge clk);
+  //main
+  valid = 'b1;
+  currA_in = 0.5 * (2**Q_BITS);
+  currB_in = -0.5 * (2**Q_BITS);
+  #10ns;
+  valid = 'b0;
+
+  @(posedge ready);
+  valid = 'b1;
+  currA_in = 0.5 * (2**Q_BITS);
+  currB_in = -0.5 * (2**Q_BITS);
+  #10ns;
+  valid = 'b0;
 
 end
 
