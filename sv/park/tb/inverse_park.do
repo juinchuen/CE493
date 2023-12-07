@@ -6,7 +6,7 @@ vmap work work
 vlog -work work "../inverse_park.sv"
 vlog -work work "inverse_park_tb.sv"
 
-vsim -classdebug -voptargs=+acc +notimingchecks -L work work.inverse_park_tb_tb -wlf inverse_park_tb.wlf
+vsim -classdebug -voptargs=+acc +notimingchecks -L work work.inverse_park_tb -wlf inverse_park_tb.wlf
 
 # wave
 add wave -noupdate -group inverse_park_tb
