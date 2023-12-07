@@ -68,10 +68,10 @@ always_comb begin
   case(state)
     s0: begin
       if (start) begin
-        a_cos_c = (a * cos) >>> Q_BITS;
-        a_sin_c = (a * sin) >>> Q_BITS;
-        b_sin_c = (b * sin) >>> Q_BITS;
-        b_cos_c = (b * cos) >>> Q_BITS;
+        a_cos_c = (alpha * cos) >>> Q_BITS;
+        a_sin_c = (alpha * sin) >>> Q_BITS;
+        b_sin_c = (beta * sin) >>> Q_BITS;
+        b_cos_c = (beta * cos) >>> Q_BITS;
         // D_c = ((beta * sin) + (alpha * cos)) >>> Q_BITS;
         // Q_c = ((beta * cos) - (alpha * sin)) >>> Q_BITS;
         next_state = s1;
