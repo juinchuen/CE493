@@ -48,10 +48,6 @@ initial begin : tb_process
   start = 'b1;
   a = (0.837 * (2**Q_BITS));
   b = (0.101 * (2**Q_BITS));
-  
-  
-  a = (0.837 * (2**Q_BITS));
-  b = (0.101 * (2**Q_BITS));
 
   @(posedge clk)
   a = (-0.927 * (2**Q_BITS));
