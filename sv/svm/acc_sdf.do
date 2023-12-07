@@ -3,7 +3,7 @@ vlib work
 vmap work work
 
 # compile
-vlog -work work "svm_tb.sv"
+vlog -work work "svm_tb_v1.sv"
 vlog -work work "runs/RUN_2023-11-29_17-14-46/final/nl/svm.nl.v"
 vlog -work work "../../../openlane/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd_nettype_fix.v"
 vlog -work work "../../../openlane/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
