@@ -49,7 +49,7 @@ always_comb begin
   if (start) begin
     D_c = ((beta * sin) + (alpha * cos)) >>> Q_BITS;
     Q_c = ((beta * cos) - (alpha * sin)) >>> Q_BITS;
-    done_c <= 'b1;
+    done_c = 'b1;
   end
 end
     
