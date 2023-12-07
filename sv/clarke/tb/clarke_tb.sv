@@ -6,8 +6,8 @@ localparam D_WIDTH = 18;
 localparam Q_BITS = 15;
 localparam CLOCK_PERIOD = 10;
 
-logic clk = 'b1;
-logic rtsb = 'b1;
+logic clk = 1'b1;
+logic rtsb = 1'b1;
 
 logic signed [D_WIDTH-1:0] a, b;
 logic signed [D_WIDTH-1:0] alpha, beta;
