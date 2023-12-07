@@ -16,6 +16,11 @@ module inverse_park #(
     output logic done
 );
 
+//D = -2
+//Q = 4096
+//sin = 23157
+//cos = 23173
+
 /*
 alpha = cos(theta)*D - sin(theta)*Q
 beta = sin(theta)*D - cos(theta)*Q
