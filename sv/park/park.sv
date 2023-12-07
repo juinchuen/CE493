@@ -1,7 +1,10 @@
 module park #(
     //output (n+1) larger than max input bits
-    parameter D_WIDTH = 32,
-    parameter Q_BITS = 10
+    //input range cordic -0.9999... to 0.99999...
+    //input range clarke -1.74 to 1.74
+    //output range -2 to 2
+    parameter D_WIDTH = 18,
+    parameter Q_BITS = 15
 ) (
     input logic clk,
     input logic reset,
