@@ -23,6 +23,7 @@ cos and sin values need to be quantized
 */
 
 logic signed [D_WIDTH-1:0] alpha_c, beta_c;
+logic done_c;
 
 always_ff @(posedge clk or negedge rstb) begin
   if (!rstb) begin
