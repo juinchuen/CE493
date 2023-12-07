@@ -10,8 +10,9 @@ vlog -work work "../park/park.sv"
 vlog -work work "../park/inverse_park.sv"
 vlog -work work "../pid/pid.sv"
 vlog -work work "../svm/svm.sv"
+vlog -work work "top_tb.sv"
 
-vsim -classdebug -voptargs=+acc +notimingchecks -L work work.svm_tb -wlf svm_tb.wlf
+vsim -classdebug -voptargs=+acc +notimingchecks -L work work.top_tb -wlf top_tb.wlf
 
 # wave
 add wave -noupdate -group TOP -radix unsigned /top_tb/*
