@@ -1,39 +1,42 @@
 `timescale 1ns/1ns
 
-module pid_tb ();
+module pid_tb #(
+    parameter D_WIDTH = 18
+)();
 
     logic clk = 0;
     always #5 clk = !clk;
 
     logic reset = 1;
     logic write_enable = 1;
-    logic [15:0] reg_addr = 0;
-    logic [15:0] reg_data = 0;
-    logic [15:0] target = 60;
-    logic [15:0] measurement = 0;
-    logic [15:0] out;
+    logic iterate_enable = 1;
+    logic [D_WIDTH:0] reg_addr = 0;
+    logic [D_WIDTH:0] reg_data = 0;
+    logic signed [D_WIDTH:0] target = 1 <<< 15;
+    logic signed [D_WIDTH:0] measurement = 2 <<< 15;
+    logic signed [D_WIDTH:0] out;
 
     initial begin : tb_process
         #9
 
         write_enable = 0;
         reg_addr = 0;
-        reg_data = 'b1;
+        reg_data = 'b1<<<15;
         
         #10
-
+        
         reg_addr = 1;
-        reg_data = 'b10;
+        reg_data = 'b1<<<15;
 
         #10
 
         reg_addr = 2;
-        reg_data = 'b11;
+        reg_data = 'b0;
 
         #10
 
         reg_addr = 3;
-        reg_data = 'b100;
+        reg_data = 'b0;
 
         #1
 
@@ -43,15 +46,27 @@ module pid_tb ();
 
         reset = 1;
         write_enable = 1;
-        measurement = 10;
+        measurement = out+measurement;
 
         #10
 
-        measurement = 20;
+        measurement = out+measurement;
 
         #10
 
-        measurement = 45;
+        measurement = out+measurement;
+
+        #10
+
+        measurement = out+measurement;
+
+        #10
+
+        measurement = out+measurement;
+
+        #10
+
+        measurement = out+measurement;
 
         #10
 
@@ -66,16 +81,17 @@ module pid_tb ();
     end
 
     pid #(
-    	.D_WIDTH(16)
+    	.D_WIDTH(32)
     ) test_pid (
         .clock(clk),
         .reset(reset),
         .write_enable(write_enable),
+        .iterate_enable(iterate_enable),
         .reg_addr(reg_addr),
         .reg_data(reg_data),
         .target(target),
         .measurement(measurement),
-        .out(out)
+        .out_clocked(out)
     );
 
     initial begin
