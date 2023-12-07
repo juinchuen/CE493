@@ -25,6 +25,7 @@ beta = (a + 2*b) * one_div_sqrt_3
 */
 
 logic signed [D_WIDTH-1:0] alpha_c, beta_c;
+
 logic done_c;
 
 always_ff @(posedge clk or negedge rstb) begin
@@ -40,12 +41,11 @@ always_ff @(posedge clk or negedge rstb) begin
 end
 
 always_comb begin
-  next_state = state;
   alpha_c    = alpha;
   beta_c     = beta;
   done_c     = done;
 
-  if start begin
+  if (start) begin
     alpha_c = a;
   
     a_plus_2b = a + {b, 1'b0};
