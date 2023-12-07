@@ -8,7 +8,8 @@ localparam CLOCK_PERIOD = 10;
 
 logic clk = 'b1;
 logic rstb = 'b1;
-logic valid, ready;
+logic valid = '0;
+logic ready;
 
 logic [D_WIDTH - 1 : 0] angle_in; //16 bits
 
