@@ -2,19 +2,19 @@ module top #(
     parameter D_WIDTH,
     parameter Q_BITS
 )(
-    //IO list
+    //################### IO list ###################
 
     // angle from resolver
     input logic [D_WIDTH - 1 : 0] angle_in,
 
     // three phase current from motor
-    input logic [D_WIDTH - 1 : 0] currA_in,
-    input logic [D_WIDTH - 1 : 0] currB_in,
-    input logic [D_WIDTH - 1 : 0] currC_in,
+    input logic signed [D_WIDTH - 1 : 0] currA_in,
+    input logic signed [D_WIDTH - 1 : 0] currB_in,
+    input logic signed [D_WIDTH - 1 : 0] currC_in,
 
     // target current from ECU
-    input logic [D_WIDTH - 1 : 0] currT_in,
-    input logic [D_WIDTH - 1 : 0] periodTop,
+    input logic signed [D_WIDTH - 1 : 0] currT_in,
+    input logic        [D_WIDTH - 1 : 0] periodTop,
     
     // PWM output
     output logic pwmA_out,
@@ -67,12 +67,12 @@ module top #(
     wire    [D_WIDTH - 1 : 0] currA_i, currB_i, currC_i;
 
     // module start signals
-    reg     valid_cordic_clarke,
-            valid_park,
-            valid_PID,
-            valid_ipark,
-            valid_iclarke,
-            valid_svm;
+    reg     valid_cordic_clarke ,
+            valid_park          ,
+            valid_PID           ,
+            valid_ipark         ,
+            valid_iclarke       ,
+            valid_svm           ;
 
     always (posedge clk or negedge rstb) begin
 
@@ -212,6 +212,7 @@ module top #(
                     module_reset <= 0;
 
                     state <= 0;
+                    ready <= 1;
 
                 end
 
