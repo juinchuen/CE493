@@ -91,8 +91,8 @@ initial begin : tb_process
   @(posedge clk);
 
   //Set integral coefficient
-  pid_d_add = 1;
-  pid_q_add = 1;
+  pid_d_addr = 1;
+  pid_q_addr = 1;
   pid_d_data = 'b1<<<9;
   pid_q_data = 'b1<<<9;
 
