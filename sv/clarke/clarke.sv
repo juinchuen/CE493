@@ -50,8 +50,9 @@ always_comb begin
     alpha_c = a;
   
     a_plus_2b = a + $signed({b, 1'b0});
-    mult = a_plus_2b * one_div_sqrt_3;
-    beta_c = mult >>> Q_BITS;   //dequantize
+    // mult = a_plus_2b * one_div_sqrt_3;
+    // beta_c = mult >>> Q_BITS;   //dequantize
+    beta_C = (a_plus_2b * one_div_sqrt_3) >>> Q_BITS;
     
     done_c = 'b1;
   end
