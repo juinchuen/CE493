@@ -18,7 +18,6 @@ module clarke #(
 );
 localparam logic signed [D_WIDTH+Q_BITS-1:0] one_div_sqrt_3 = 0.57735026919 * (2**Q_BITS);
 logic signed [D_WIDTH+1:0] a_plus_2b;
-logic signed [D_WIDTH*2-1:0] mult;
 
 /*
 alpha = a
