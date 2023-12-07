@@ -9,7 +9,7 @@ module pid_tb ();
     logic write_enable = 1;
     logic [15:0] reg_addr = 0;
     logic [15:0] reg_data = 0;
-    logic [15:0] target = 50;
+    logic [15:0] target = 60;
     logic [15:0] measurement = 0;
     logic [15:0] out;
 
