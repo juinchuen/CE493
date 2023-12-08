@@ -134,7 +134,7 @@ initial begin : tb_process
   #400ns;
   valid = 'b0;
 
-  wait 100000ns;
+  #100000ns;
 
   @(posedge ready);
   valid = 'b1;
