@@ -134,6 +134,8 @@ initial begin : tb_process
   #400ns;
   valid = 'b0;
 
+  wait 100000ns;
+
   @(posedge ready);
   valid = 'b1;
   currA_in = 0.8 * (2**Q_BITS);
