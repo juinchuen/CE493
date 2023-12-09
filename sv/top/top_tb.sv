@@ -4,7 +4,7 @@ module top_tb();
 
 localparam D_WIDTH = 19;
 localparam Q_BITS = 15;
-localparam CLOCK_PERIOD = 100;
+localparam CLOCK_PERIOD = 10;
 
 logic clk = 'b1;
 logic rstb = 'b1;

@@ -1,0 +1,46 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "top",
+    "VERILOG_FILES": ["top_sdf.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10,
+
+    "EXTRA_LEFS":  ["../cordic/runs/RUN_2023-12-08_19-39-43/final/lef/cordic.lef",
+                    "../clarke/runs/RUN_2023-12-08_21-02-05/final/lef/clarke.lef",
+                    "../clarke/runs/RUN_2023-12-08_21-05-12/final/lef/inverse_clarke.lef",
+                    "../park/runs/RUN_2023-12-08_20-56-12/final/lef/park.lef",
+                    "../park/runs/RUN_2023-12-08_21-04-35/final/lef/inverse_park.lef",
+                    "../pid/runs/RUN_2023-12-08_21-33-05/final/lef/pid.lef",
+                    "../svm/runs/RUN_2023-12-08_19-11-14/final/lef/svm.lef"],
+
+    "EXTRA_GDS_FILES": ["../cordic/runs/RUN_2023-12-08_19-39-43/final/gds/cordic.gds",
+                        "../clarke/runs/RUN_2023-12-08_21-02-05/final/gds/clarke.gds",
+                        "../clarke/runs/RUN_2023-12-08_21-05-12/final/gds/inverse_clarke.gds",
+                        "../park/runs/RUN_2023-12-08_20-56-12/final/gds/park.gds",
+                        "../park/runs/RUN_2023-12-08_21-04-35/final/gds/inverse_park.gds",
+                        "../pid/runs/RUN_2023-12-08_21-33-05/final/gds/pid.gds",
+                        "../svm/runs/RUN_2023-12-08_19-11-14/final/gds/svm.gds"],
+                        
+    "VERILOG_FILES_BLACKBOX": [ "../cordic/runs/RUN_2023-12-08_19-39-43/final/nl/cordic.nl.v",
+                                "../clarke/runs/RUN_2023-12-08_21-02-05/final/nl/clarke.nl.v",
+                                "../clarke/runs/RUN_2023-12-08_21-05-12/final/nl/inverse_clarke.nl.v",
+                                "../park/runs/RUN_2023-12-08_20-56-12/final/nl/park.nl.v",
+                                "../park/runs/RUN_2023-12-08_21-04-35/final/nl/inverse_park.nl.v",
+                                "../pid/runs/RUN_2023-12-08_21-33-05/final/nl/pid.nl.v",
+                                "../svm/runs/RUN_2023-12-08_19-11-14/final/nl/svm.nl.v"]
+
+}
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
