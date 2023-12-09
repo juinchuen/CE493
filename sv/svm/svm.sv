@@ -48,15 +48,17 @@ module svm #(
     reg [D_WIDTH - 1 : 0] tA, tB, tC;
     wire [D_WIDTH - 1 : 0] v_pass, t_pass;
 
+    wire pwmA_c, pwmB_c, pwmC_c;
+
     assign v_pass = (state == 1) ? vA :
                     (state == 2) ? vB :
                     (state == 3) ? vC :
                     0;
 
     // PWM output
-    assign pwmA = calc_ready & (counter >= tA);
-    assign pwmB = calc_ready & (counter >= tB);
-    assign pwmC = calc_ready & (counter >= tC);
+    assign pwmA_c = calc_ready & (counter >= tA);
+    assign pwmB_c = calc_ready & (counter >= tB);
+    assign pwmC_c = calc_ready & (counter >= tC);
 
     // // calculate 1 - V
     // assign diffA = ({1'b0, {(D_WIDTH - 1){1'b1}}} - vA);     
@@ -93,6 +95,10 @@ module svm #(
             vA_store <= 0;
             vB_store <= 0;
             vC_store <= 0;
+
+            pwmA    <= 0;
+            pwmB    <= 0;
+            pwmC    <= 0;
 
             calc_ready <= 0;
 
@@ -148,7 +154,15 @@ module svm #(
                         ready       <= 1;
                         calc_ready  <= 0;
 
+                        pwmA    <= 0;
+                        pwmB    <= 0;
+                        pwmC    <= 0;
+
                     end
+
+                    pwmA    <= pwmA_c;
+                    pwmB    <= pwmB_c;
+                    pwmC    <= pwmC_c;
 
                     counter <= counter + delta;
 
