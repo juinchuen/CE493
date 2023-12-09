@@ -2,7 +2,7 @@ module clarke #(
     //D_width = Q_BITS + 3
     //input range -0.9999... to 0.99999...
     //output range -1.74 to 1.74
-    parameter D_WIDTH = 18,
+    parameter D_WIDTH = 19,
     parameter Q_BITS = 15
 ) (
     input logic clk,

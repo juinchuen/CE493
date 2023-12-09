@@ -63,12 +63,17 @@ module top #(
   wire    [D_WIDTH - 1 : 0] Dcurr, Qcurr;
   wire    [D_WIDTH - 1 : 0] Dcurr_i, Qcurr_i;
   wire    [D_WIDTH - 1 : 0] alpha_i, beta_i;
-  wire    [D_WIDTH - 1 : 0] currA_i, currB_i, currC_i;
+  wire    [D_WIDTH - 1 : 0] currA_i_ex, currB_i_ex, currC_i_ex;
+  wire    [         15 : 0] currA_i, currB_i, currC_i;
 
   wire    [D_WIDTH - 1 : 0] sin_ex, cos_ex;
 
   assign sin_ex = {{(D_WIDTH - 16){sin[15]}}, sin};
   assign cos_ex = {{(D_WIDTH - 16){cos[15]}}, cos};
+
+  assign currA_i = currA_i_ex[15:0];
+  assign currB_i = currB_i_ex[15:0];
+  assign currC_i = currC_i_ex[15:0];
 
   // module start signals
   reg     valid_cordic_clarke ,
@@ -281,14 +286,14 @@ module top #(
     .alpha  (alpha_i),
     .beta   (beta_i),
     .start  (valid_iclarke),
-    .a      (currA_i),
-    .b      (currB_i),
-    .c      (currC_i),
+    .a      (currA_i_ex),
+    .b      (currB_i_ex),
+    .c      (currC_i_ex),
     .done   (iclarke_out_valid)
   );
 
   svm #(
-    .D_WIDTH    (D_WIDTH)
+    .D_WIDTH    (16)
   ) svm0 (
     .pwmA       (pwmA_out), 
     .pwmB       (pwmB_out), 

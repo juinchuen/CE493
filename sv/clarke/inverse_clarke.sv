@@ -1,7 +1,7 @@
 module inverse_clarke #(
     
-    parameter D_WIDTH = 32,
-    parameter Q_BITS = 10
+    parameter D_WIDTH = 19,
+    parameter Q_BITS = 15
 ) (
     input logic clk,
     input logic rstb,
