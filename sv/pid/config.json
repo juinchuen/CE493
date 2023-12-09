@@ -2,6 +2,6 @@
     "PDK": "sky130A",
     "DESIGN_NAME": "pid",
     "VERILOG_FILES": ["pid.sv"],
-    "CLOCK_PORT": "clk",
+    "CLOCK_PORT": "clock",
     "CLOCK_PERIOD": 10
 }
