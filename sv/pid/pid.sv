@@ -1,5 +1,5 @@
 module pid #(
-    parameter D_WIDTH = 18,
+    parameter D_WIDTH = 19,
     parameter Q_BITS = 15,
     parameter LIM_MAX = 1 <<< 12,
     parameter LIM_MIN = -1 <<< 12
