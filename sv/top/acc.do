@@ -10,7 +10,7 @@ vlog -work work "../clarke/inverse_clarke.sv"
 vlog -work work "../park/park.sv"
 vlog -work work "../park/inverse_park.sv"
 vlog -work work "../pid/pid.sv"
-vlog -work work "../svm/svm_v1.sv"
+vlog -work work "../svm/svm.sv"
 vlog -work work "top.sv"
 vlog -work work "top_tb.sv"
 
