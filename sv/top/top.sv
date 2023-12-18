@@ -39,10 +39,10 @@ module top #(
   reg [D_WIDTH - 1 : 0] currB_r;
   reg [D_WIDTH - 1 : 0] currC_r;
   reg [D_WIDTH - 1 : 0] currT_r;
-  reg [D_WIDTH - 1 : 0] periodTop_r;
+  reg [         15 : 0] periodTop_r;
 
   // state registers
-  reg [3:0] state;
+  reg [4:0] state;
   reg module_reset;
   wire rstb_m;
 
@@ -114,7 +114,7 @@ module top #(
             currB_r     <= currB_in;
             currC_r     <= currC_in;
             currT_r     <= currT_in;
-            periodTop_r <= periodTop;
+            periodTop_r <= periodTop[15:0];
 
             state <= 1;
             ready <= 0;
@@ -174,6 +174,12 @@ module top #(
 
         8 : begin // reset the comb modules
           module_reset <= 0;
+          state <= 9;
+          // ready <= 1;
+        end
+
+        9 : begin // stop reset
+          module_reset <= 1;
           state <= 0;
           ready <= 1;
         end
@@ -256,7 +262,7 @@ module top #(
     .iterate_enable (valid_PID),
     .reg_addr       (pid_q_addr),
     .reg_data       (pid_q_data),
-    .target         (currT_in),
+    .target         (currT_r),
     .measurement    (Qcurr),
     .out_clocked    (Qcurr_i)        
   );
@@ -302,7 +308,7 @@ module top #(
     .vA         (currA_i), 
     .vB         (currB_i), 
     .vC         (currC_i), 
-    .periodTop  (periodTop),
+    .periodTop  (periodTop_r),
     .in_valid   (valid_svm),
     .ready      (svm_out_valid),
     .clk        (clk), 
