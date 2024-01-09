@@ -1,13 +1,13 @@
 module signed_lte (
     output logic out, 
     
-    input logic [16:0] opA, 
-    input logic [16:0] opB
+    input logic [17:0] opA, 
+    input logic [17:0] opB
     );
 
-        assign out = opA[16] ? opB[16] ? opA <=  opB // both neg
+        assign out = opA[17] ? opB[17] ? opA <=  opB // both neg
                                        : 1          // A neg
-                             : opB[16] ? 0          // B neg
+                             : opB[17] ? 0          // B neg
                                        : opA <= opB; // both pos
 
 endmodule
@@ -30,25 +30,27 @@ module cordic (
     reg [4:0] iter;
     reg [1:0] state;
 
-    reg [16:0] theta_store;
-    reg [16:0] theta_iter;
-    reg [16:0] vec [1:0];
+    reg signed [17:0] theta_store;
+    reg        [1 :0] domain;
+    reg signed [17:0] theta_iter;
+    reg signed [17:0] vec [1:0];
 
     wire [15:0] gamma_i;
     wire sigma;
 
-    always @ (negedge clk or negedge rstb) begin
+    always @ (posedge clk or negedge rstb) begin
 
         if (!rstb) begin
 
             iter <= 0;
             state <= 0;
 
-            vec[0] <= 17'hffff;
-            vec[1] <= 17'h0;
+            vec[0] <= 18'hffff;
+            vec[1] <= 18'h0;
 
-            theta_store <= 17'h0;
-            theta_iter  <= 17'h0;
+            theta_store <= 18'h0;
+            theta_iter  <= 18'h0;
+            domain      <= 2'b00;
 
             ready <= 1;
 
@@ -65,8 +67,17 @@ module cordic (
 
                         if (in_valid) begin
 
-                            theta_store[15:0]   <= theta;
-                            theta_store[16]     <= 0;
+                            // FUTURE: explicitly state MUX before adder architecture
+
+                            theta_store[15:0]   <=  (theta[15:14] == 2'b00) ? (theta << 2)             :
+                                                    (theta[15:14] == 2'b01) ? (16'h7fff - theta) << 2  :
+                                                    (theta[15:14] == 2'b10) ? (theta - 16'h7fff) << 2  :
+                                                    (theta[15:14] == 2'b11) ? (16'hffff - theta) << 2  :
+                                                    0;
+
+                            domain              <= theta[15:14];
+
+                            theta_store[17:16]  <= 0;
                             state               <= 1;
 
                             out_valid   <= 0;
@@ -86,11 +97,19 @@ module cordic (
                         iter        <= 0;
                         theta_iter  <= 0;
 
-                        cos     <= (vec[0] * 39797) >> 16;
-                        sin     <= (vec[1] * 39797) >> 16;
+                        // FIX: data width needs to be adjusted
+                        //      to accomodate two's complement in trig output
+
+                        cos     <=  (domain == 2'b00) || (domain == 2'b11)  ? 
+                                    (vec[0] * 39797) >> 17                  :
+                                    ~((vec[0] * 39797) >> 17) + 1           ;
+
+                        sin     <= (domain == 2'b00) || (domain == 2'b01)  ? 
+                                    (vec[1] * 39797) >> 17                  :
+                                    ~((vec[1] * 39797) >> 17) + 1           ;
                             
-                        vec[0]  <= 17'hffff;
-                        vec[1]  <= 17'h0;
+                        vec[0]  <= 18'hffff;
+                        vec[1]  <= 18'h0;
 
                         state       <= 0;
                         out_valid   <= 1;
@@ -105,12 +124,12 @@ module cordic (
                                             theta_iter - gamma_i;
 
                         vec[0]      <=  (sigma)  ?
-                                        vec[0] - (vec[1] >> iter)     :
-                                        vec[0] + (vec[1] >> iter);
+                                        vec[0] - ( (vec[1][17] ? ~(18'h3ffff >> iter) : 18'h0) | vec[1] >> iter)    :
+                                        vec[0] + ( (vec[1][17] ? ~(18'h3ffff >> iter) : 18'h0) | vec[1] >> iter);
 
                         vec[1]      <=  (sigma)  ?
-                                        vec[1] + (vec[0] >> iter)     :
-                                        vec[1] - (vec[0] >> iter);
+                                        vec[1] + ( (vec[0][17] ? ~(18'h3ffff >> iter) : 18'h0) | vec[0] >> iter)    :
+                                        vec[1] - ( (vec[0][17] ? ~(18'h3ffff >> iter) : 18'h0) | vec[0] >> iter);
 
                     end
 

@@ -1,0 +1,7 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "svm",
+    "VERILOG_FILES": ["svm.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10
+}

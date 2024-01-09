@@ -1,0 +1,8 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "inverse_clarke",
+    "VERILOG_FILES": ["../clarke/inverse_clarke.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10
+}
+

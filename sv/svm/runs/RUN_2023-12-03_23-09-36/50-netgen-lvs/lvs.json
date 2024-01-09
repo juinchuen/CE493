@@ -1,0 +1,5742 @@
+[
+  {
+   "pins": [
+      [
+        "1",
+        "2",
+        "3",
+        "4"
+      ], [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "1",
+        "2",
+        "3",
+        "4"
+      ], [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and2b_1",
+      "sky130_fd_sc_hd__and2b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "B",
+        "X",
+        "A_N",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "B",
+        "X",
+        "A_N",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand2_1",
+      "sky130_fd_sc_hd__nand2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    8,
+    8
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "A",
+        "VPWR",
+        "VPB",
+        "B",
+        "VNB"
+      ], [
+        "VGND",
+        "Y",
+        "A",
+        "VPWR",
+        "VPB",
+        "B",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a22o_1",
+      "sky130_fd_sc_hd__a22o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "A2",
+        "A1",
+        "B1",
+        "X",
+        "B2",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "A2",
+        "A1",
+        "B1",
+        "X",
+        "B2",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21bo_1",
+      "sky130_fd_sc_hd__a21bo_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "A2",
+        "A1",
+        "B1_N",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ], [
+        "X",
+        "A2",
+        "A1",
+        "B1_N",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__decap_8",
+      "sky130_fd_sc_hd__decap_8"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1 ],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ]
+   ],
+   "nets": [
+    4,
+    4
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or3_1",
+      "sky130_fd_sc_hd__or3_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "X",
+        "C",
+        "A",
+        "B"
+      ], [
+        "VPB",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "X",
+        "C",
+        "A",
+        "B"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__decap_4",
+      "sky130_fd_sc_hd__decap_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1 ],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ]
+   ],
+   "nets": [
+    4,
+    4
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__decap_3",
+      "sky130_fd_sc_hd__decap_3"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1 ],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ]
+   ],
+   "nets": [
+    4,
+    4
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__clkbuf_1",
+      "sky130_fd_sc_hd__clkbuf_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "A",
+        "VNB",
+        "X",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "A",
+        "VNB",
+        "X",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dfrtp_1",
+      "sky130_fd_sc_hd__dfrtp_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 14],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 14 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ]
+   ],
+   "nets": [
+    21,
+    21
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "RESET_B",
+        "VPB",
+        "VNB",
+        "VGND",
+        "D",
+        "Q",
+        "CLK"
+      ], [
+        "VPWR",
+        "RESET_B",
+        "VPB",
+        "VNB",
+        "VGND",
+        "D",
+        "Q",
+        "CLK"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3_2",
+      "sky130_fd_sc_hd__nand3_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 3],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 3 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "C",
+        "B",
+        "A",
+        "VGND"
+      ], [
+        "Y",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "C",
+        "B",
+        "A",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__buf_2",
+      "sky130_fd_sc_hd__buf_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ], [
+        "X",
+        "VGND",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or2_1",
+      "sky130_fd_sc_hd__or2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 3],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 3 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A",
+        "VPWR",
+        "X",
+        "B",
+        "VPB",
+        "VGND",
+        "VNB"
+      ], [
+        "A",
+        "VPWR",
+        "X",
+        "B",
+        "VPB",
+        "VGND",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__clkbuf_4",
+      "sky130_fd_sc_hd__clkbuf_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "X",
+        "VPB",
+        "A",
+        "VGND",
+        "VNB"
+      ], [
+        "VPWR",
+        "X",
+        "VPB",
+        "A",
+        "VGND",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21oi_1",
+      "sky130_fd_sc_hd__a21oi_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 3],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 3 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "Y",
+        "A2",
+        "VGND",
+        "A1",
+        "VPWR",
+        "B1"
+      ], [
+        "VNB",
+        "VPB",
+        "Y",
+        "A2",
+        "VGND",
+        "A1",
+        "VPWR",
+        "B1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21ba_1",
+      "sky130_fd_sc_hd__o21ba_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "A2",
+        "B1_N",
+        "A1",
+        "X",
+        "VGND",
+        "VPWR"
+      ], [
+        "VNB",
+        "VPB",
+        "A2",
+        "B1_N",
+        "A1",
+        "X",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__xor2_2",
+      "sky130_fd_sc_hd__xor2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "X",
+        "A",
+        "B",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "X",
+        "A",
+        "B",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a211o_1",
+      "sky130_fd_sc_hd__a211o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "A2",
+        "X",
+        "A1",
+        "B1",
+        "C1",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "A2",
+        "X",
+        "A1",
+        "B1",
+        "C1",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and3_1",
+      "sky130_fd_sc_hd__and3_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "A",
+        "B",
+        "C",
+        "X",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "A",
+        "B",
+        "C",
+        "X",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or3b_1",
+      "sky130_fd_sc_hd__or3b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "B",
+        "A",
+        "C_N"
+      ], [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "B",
+        "A",
+        "C_N"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__xnor2_1",
+      "sky130_fd_sc_hd__xnor2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VGND",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "A",
+        "B"
+      ], [
+        "Y",
+        "VGND",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "A",
+        "B"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__decap_6",
+      "sky130_fd_sc_hd__decap_6"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1 ],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ]
+   ],
+   "nets": [
+    4,
+    4
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or2b_1",
+      "sky130_fd_sc_hd__or2b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "A",
+        "B_N",
+        "X",
+        "VGND",
+        "VNB",
+        "VPB"
+      ], [
+        "VPWR",
+        "A",
+        "B_N",
+        "X",
+        "VGND",
+        "VNB",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__inv_2",
+      "sky130_fd_sc_hd__inv_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 1 ],
+         ["sky130_fd_pr__nfet_01v8", 1 ]
+       ]
+   ],
+   "nets": [
+    6,
+    6
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "Y",
+        "A"
+      ], [
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "Y",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor2_1",
+      "sky130_fd_sc_hd__nor2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    8,
+    8
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "A",
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "VPWR"
+      ], [
+        "Y",
+        "A",
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand4_2",
+      "sky130_fd_sc_hd__nand4_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "B",
+        "C",
+        "A",
+        "D",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "Y",
+        "B",
+        "C",
+        "A",
+        "D",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a31o_1",
+      "sky130_fd_sc_hd__a31o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "B1",
+        "X",
+        "A2",
+        "A1",
+        "A3",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "B1",
+        "X",
+        "A2",
+        "A1",
+        "A3",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3_1",
+      "sky130_fd_sc_hd__nand3_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "A",
+        "B",
+        "C",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "Y",
+        "A",
+        "B",
+        "C",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o31ai_1",
+      "sky130_fd_sc_hd__o31ai_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "A3",
+        "B1",
+        "VPWR",
+        "A1",
+        "A2",
+        "Y",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "A3",
+        "B1",
+        "VPWR",
+        "A1",
+        "A2",
+        "Y",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor2_2",
+      "sky130_fd_sc_hd__nor2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    8,
+    8
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "B",
+        "VGND",
+        "VNB",
+        "A",
+        "VPB",
+        "Y"
+      ], [
+        "VPWR",
+        "B",
+        "VGND",
+        "VNB",
+        "A",
+        "VPB",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dlygate4sd3_1",
+      "sky130_fd_sc_hd__dlygate4sd3_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A",
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ], [
+        "A",
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__diode_2",
+      "sky130_fd_sc_hd__diode_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__diode_pw2nd_05v5", 1 ]
+       ], [
+         ["sky130_fd_pr__diode_pw2nd_05v5", 1 ]
+       ]
+   ],
+   "nets": [
+    2,
+    2
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "DIODE",
+        "VGND",
+        "VPB",
+        "VPWR"
+      ], [
+        "VNB",
+        "DIODE",
+        "VGND",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21o_1",
+      "sky130_fd_sc_hd__a21o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "VGND",
+        "VPWR",
+        "A2",
+        "X",
+        "B1",
+        "A1"
+      ], [
+        "VNB",
+        "VPB",
+        "VGND",
+        "VPWR",
+        "A2",
+        "X",
+        "B1",
+        "A1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__buf_4",
+      "sky130_fd_sc_hd__buf_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A"
+      ], [
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a2bb2o_4",
+      "sky130_fd_sc_hd__a2bb2o_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "A2_N",
+        "X",
+        "A1_N",
+        "B2",
+        "B1",
+        "VNB",
+        "VPB",
+        "VGND"
+      ], [
+        "VPWR",
+        "A2_N",
+        "X",
+        "A1_N",
+        "B2",
+        "B1",
+        "VNB",
+        "VPB",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21a_1",
+      "sky130_fd_sc_hd__o21a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "A1",
+        "B1",
+        "X",
+        "A2",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "A1",
+        "B1",
+        "X",
+        "A2",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21ai_1",
+      "sky130_fd_sc_hd__o21ai_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A2",
+        "B1",
+        "VPWR",
+        "A1",
+        "VGND",
+        "Y",
+        "VPB",
+        "VNB"
+      ], [
+        "A2",
+        "B1",
+        "VPWR",
+        "A1",
+        "VGND",
+        "Y",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__xor2_1",
+      "sky130_fd_sc_hd__xor2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A",
+        "VGND",
+        "B",
+        "VNB",
+        "VPB",
+        "X",
+        "VPWR"
+      ], [
+        "A",
+        "VGND",
+        "B",
+        "VNB",
+        "VPB",
+        "X",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand2_2",
+      "sky130_fd_sc_hd__nand2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    8,
+    8
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "A",
+        "VNB",
+        "B",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "Y",
+        "A",
+        "VNB",
+        "B",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__clkbuf_16",
+      "sky130_fd_sc_hd__clkbuf_16"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "X",
+        "VPB",
+        "VGND",
+        "VNB",
+        "A"
+      ], [
+        "VPWR",
+        "X",
+        "VPB",
+        "VGND",
+        "VNB",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or3_4",
+      "sky130_fd_sc_hd__or3_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "VPWR",
+        "B",
+        "A",
+        "C"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "VPWR",
+        "B",
+        "A",
+        "C"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__buf_6",
+      "sky130_fd_sc_hd__buf_6"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "X",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "X",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__clkbuf_2",
+      "sky130_fd_sc_hd__clkbuf_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "VNB",
+        "X"
+      ], [
+        "A",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "VNB",
+        "X"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and2_1",
+      "sky130_fd_sc_hd__and2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "X",
+        "A",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "X",
+        "A",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a2bb2o_1",
+      "sky130_fd_sc_hd__a2bb2o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "A1_N",
+        "A2_N",
+        "X",
+        "B2",
+        "B1",
+        "VGND"
+      ], [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "A1_N",
+        "A2_N",
+        "X",
+        "B2",
+        "B1",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dfstp_1",
+      "sky130_fd_sc_hd__dfstp_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 16],
+         ["sky130_fd_pr__pfet_01v8_hvt", 16 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 16 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 16 ]
+       ]
+   ],
+   "nets": [
+    24,
+    24
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "SET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "D",
+        "Q",
+        "CLK",
+        "VGND"
+      ], [
+        "SET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "D",
+        "Q",
+        "CLK",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand4_4",
+      "sky130_fd_sc_hd__nand4_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "A",
+        "B",
+        "C",
+        "D"
+      ], [
+        "VGND",
+        "Y",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o211a_1",
+      "sky130_fd_sc_hd__o211a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "C1",
+        "A1",
+        "B1",
+        "A2",
+        "X",
+        "VGND"
+      ], [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "C1",
+        "A1",
+        "B1",
+        "A2",
+        "X",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and4_1",
+      "sky130_fd_sc_hd__and4_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "X",
+        "D",
+        "B",
+        "C",
+        "A"
+      ], [
+        "VNB",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "X",
+        "D",
+        "B",
+        "C",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a22oi_1",
+      "sky130_fd_sc_hd__a22oi_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B1",
+        "A2",
+        "VPWR",
+        "A1",
+        "VGND",
+        "B2",
+        "Y",
+        "VNB",
+        "VPB"
+      ], [
+        "B1",
+        "A2",
+        "VPWR",
+        "A1",
+        "VGND",
+        "B2",
+        "Y",
+        "VNB",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dfrtp_2",
+      "sky130_fd_sc_hd__dfrtp_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 14],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 14 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ]
+   ],
+   "nets": [
+    21,
+    21
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "RESET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "VGND",
+        "Q",
+        "D",
+        "CLK"
+      ], [
+        "RESET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "VGND",
+        "Q",
+        "D",
+        "CLK"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a311o_1",
+      "sky130_fd_sc_hd__a311o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "A1",
+        "A3",
+        "B1",
+        "C1",
+        "A2",
+        "X",
+        "VPB",
+        "VNB"
+      ], [
+        "VPWR",
+        "VGND",
+        "A1",
+        "A3",
+        "B1",
+        "C1",
+        "A2",
+        "X",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21oi_2",
+      "sky130_fd_sc_hd__a21oi_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VNB",
+        "VPWR",
+        "B1",
+        "VGND",
+        "A2",
+        "A1",
+        "VPB"
+      ], [
+        "Y",
+        "VNB",
+        "VPWR",
+        "B1",
+        "VGND",
+        "A2",
+        "A1",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and3_2",
+      "sky130_fd_sc_hd__and3_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "A",
+        "C",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ], [
+        "X",
+        "VGND",
+        "A",
+        "C",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dfstp_2",
+      "sky130_fd_sc_hd__dfstp_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 16],
+         ["sky130_fd_pr__pfet_01v8_hvt", 16 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 16 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 16 ]
+       ]
+   ],
+   "nets": [
+    24,
+    24
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "SET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "Q",
+        "D",
+        "CLK",
+        "VGND"
+      ], [
+        "SET_B",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "Q",
+        "D",
+        "CLK",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__mux2_1",
+      "sky130_fd_sc_hd__mux2_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "A0",
+        "A1",
+        "X",
+        "VPWR",
+        "S",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "A0",
+        "A1",
+        "X",
+        "VPWR",
+        "S",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor3_1",
+      "sky130_fd_sc_hd__nor3_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VGND",
+        "VNB",
+        "VPB",
+        "A",
+        "B",
+        "C",
+        "VPWR"
+      ], [
+        "Y",
+        "VGND",
+        "VNB",
+        "VPB",
+        "A",
+        "B",
+        "C",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__xnor2_2",
+      "sky130_fd_sc_hd__xnor2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "VPWR",
+        "B",
+        "A",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "Y",
+        "VPWR",
+        "B",
+        "A",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a2bb2o_2",
+      "sky130_fd_sc_hd__a2bb2o_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "A1_N",
+        "X",
+        "B1",
+        "B2",
+        "A2_N",
+        "VGND",
+        "VPWR"
+      ], [
+        "VNB",
+        "VPB",
+        "A1_N",
+        "X",
+        "B1",
+        "B2",
+        "A2_N",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3b_1",
+      "sky130_fd_sc_hd__nand3b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A_N",
+        "VGND",
+        "B",
+        "C",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "Y"
+      ], [
+        "A_N",
+        "VGND",
+        "B",
+        "C",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and4bb_1",
+      "sky130_fd_sc_hd__and4bb_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 7],
+         ["sky130_fd_pr__nfet_01v8", 7 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 7 ],
+         ["sky130_fd_pr__nfet_01v8", 7 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "C",
+        "A_N",
+        "B_N",
+        "X",
+        "D",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "C",
+        "A_N",
+        "B_N",
+        "X",
+        "D",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__clkbuf_8",
+      "sky130_fd_sc_hd__clkbuf_8"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ], [
+        "X",
+        "VGND",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a32o_1",
+      "sky130_fd_sc_hd__a32o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VPWR",
+        "B2",
+        "X",
+        "B1",
+        "A2",
+        "A3",
+        "A1",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "VPWR",
+        "B2",
+        "X",
+        "B1",
+        "A2",
+        "A3",
+        "A1",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o32a_1",
+      "sky130_fd_sc_hd__o32a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VPWR",
+        "X",
+        "A1",
+        "B1",
+        "A2",
+        "B2",
+        "A3",
+        "VPB",
+        "VNB"
+      ], [
+        "VGND",
+        "VPWR",
+        "X",
+        "A1",
+        "B1",
+        "A2",
+        "B2",
+        "A3",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a41o_1",
+      "sky130_fd_sc_hd__a41o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "B1",
+        "A4",
+        "A3",
+        "A2",
+        "A1",
+        "X"
+      ], [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "B1",
+        "A4",
+        "A3",
+        "A2",
+        "A1",
+        "X"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or4_1",
+      "sky130_fd_sc_hd__or4_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "D",
+        "X",
+        "C",
+        "A",
+        "B",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "D",
+        "X",
+        "C",
+        "A",
+        "B",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o221a_1",
+      "sky130_fd_sc_hd__o221a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "VGND",
+        "X",
+        "B1",
+        "A1",
+        "C1",
+        "B2",
+        "A2",
+        "VPWR"
+      ], [
+        "VPB",
+        "VNB",
+        "VGND",
+        "X",
+        "B1",
+        "A1",
+        "C1",
+        "B2",
+        "A2",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21boi_1",
+      "sky130_fd_sc_hd__a21boi_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A1",
+        "A2",
+        "B1_N",
+        "VNB",
+        "VPB",
+        "VGND",
+        "Y",
+        "VPWR"
+      ], [
+        "A1",
+        "A2",
+        "B1_N",
+        "VNB",
+        "VPB",
+        "VGND",
+        "Y",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a211oi_4",
+      "sky130_fd_sc_hd__a211oi_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 8 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 8 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VGND",
+        "C1",
+        "VNB",
+        "B1",
+        "A1",
+        "VPWR",
+        "A2",
+        "Y"
+      ], [
+        "VPB",
+        "VGND",
+        "C1",
+        "VNB",
+        "B1",
+        "A1",
+        "VPWR",
+        "A2",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or4_2",
+      "sky130_fd_sc_hd__or4_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "D",
+        "X",
+        "C",
+        "A",
+        "B",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "D",
+        "X",
+        "C",
+        "A",
+        "B",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a211oi_1",
+      "sky130_fd_sc_hd__a211oi_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "Y",
+        "VPB",
+        "A2",
+        "C1",
+        "VPWR",
+        "A1",
+        "B1",
+        "VGND"
+      ], [
+        "VNB",
+        "Y",
+        "VPB",
+        "A2",
+        "C1",
+        "VPWR",
+        "A1",
+        "B1",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__xnor2_4",
+      "sky130_fd_sc_hd__xnor2_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "A",
+        "B",
+        "VPWR",
+        "VGND",
+        "Y"
+      ], [
+        "VNB",
+        "VPB",
+        "A",
+        "B",
+        "VPWR",
+        "VGND",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a221o_1",
+      "sky130_fd_sc_hd__a221o_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "X",
+        "B1",
+        "A1",
+        "C1",
+        "A2",
+        "B2"
+      ], [
+        "VGND",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "X",
+        "B1",
+        "A1",
+        "C1",
+        "A2",
+        "B2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or2_4",
+      "sky130_fd_sc_hd__or2_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "X",
+        "VPWR",
+        "A"
+      ], [
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "X",
+        "VPWR",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o211ai_1",
+      "sky130_fd_sc_hd__o211ai_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "A2",
+        "A1",
+        "VGND",
+        "C1",
+        "B1"
+      ], [
+        "Y",
+        "VPB",
+        "VNB",
+        "VPWR",
+        "A2",
+        "A1",
+        "VGND",
+        "C1",
+        "B1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or4bb_4",
+      "sky130_fd_sc_hd__or4bb_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 7],
+         ["sky130_fd_pr__nfet_01v8", 7 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 7 ],
+         ["sky130_fd_pr__nfet_01v8", 7 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "B",
+        "A",
+        "D_N",
+        "C_N",
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "X",
+        "B",
+        "A",
+        "D_N",
+        "C_N",
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dlymetal6s2s_1",
+      "sky130_fd_sc_hd__dlymetal6s2s_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "VNB",
+        "X"
+      ], [
+        "A",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "VNB",
+        "X"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o22a_1",
+      "sky130_fd_sc_hd__o22a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB",
+        "B1",
+        "X",
+        "B2",
+        "A1",
+        "A2"
+      ], [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB",
+        "B1",
+        "X",
+        "B2",
+        "A1",
+        "A2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21a_2",
+      "sky130_fd_sc_hd__o21a_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "A2",
+        "X",
+        "A1",
+        "B1",
+        "VGND",
+        "VPWR"
+      ], [
+        "VNB",
+        "VPB",
+        "A2",
+        "X",
+        "A1",
+        "B1",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o2bb2a_1",
+      "sky130_fd_sc_hd__o2bb2a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "A1_N",
+        "A2_N",
+        "X",
+        "B1",
+        "B2",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "A1_N",
+        "A2_N",
+        "X",
+        "B1",
+        "B2",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a22oi_2",
+      "sky130_fd_sc_hd__a22oi_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "A2",
+        "A1",
+        "VPWR",
+        "B1",
+        "B2",
+        "VNB",
+        "Y",
+        "VPB"
+      ], [
+        "VGND",
+        "A2",
+        "A1",
+        "VPWR",
+        "B1",
+        "B2",
+        "VNB",
+        "Y",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor2_4",
+      "sky130_fd_sc_hd__nor2_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    8,
+    8
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "B",
+        "VPB",
+        "A",
+        "VGND",
+        "VNB",
+        "VPWR"
+      ], [
+        "Y",
+        "B",
+        "VPB",
+        "A",
+        "VGND",
+        "VNB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o211ai_2",
+      "sky130_fd_sc_hd__o211ai_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "C1",
+        "A1",
+        "B1",
+        "VGND",
+        "VPWR"
+      ], [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "C1",
+        "A1",
+        "B1",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3_4",
+      "sky130_fd_sc_hd__nand3_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 3],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 3 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "Y",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A",
+        "B",
+        "C"
+      ], [
+        "VGND",
+        "Y",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A",
+        "B",
+        "C"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand4_1",
+      "sky130_fd_sc_hd__nand4_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A",
+        "C",
+        "B",
+        "D",
+        "Y"
+      ], [
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A",
+        "C",
+        "B",
+        "D",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or4b_1",
+      "sky130_fd_sc_hd__or4b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "A",
+        "B",
+        "C",
+        "X",
+        "D_N"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "A",
+        "B",
+        "C",
+        "X",
+        "D_N"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3b_4",
+      "sky130_fd_sc_hd__nand3b_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPWR",
+        "Y",
+        "VPB",
+        "B",
+        "C",
+        "VGND",
+        "A_N"
+      ], [
+        "VNB",
+        "VPWR",
+        "Y",
+        "VPB",
+        "B",
+        "C",
+        "VGND",
+        "A_N"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and3b_1",
+      "sky130_fd_sc_hd__and3b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "X",
+        "A_N",
+        "C",
+        "B"
+      ], [
+        "VNB",
+        "VPWR",
+        "VPB",
+        "VGND",
+        "X",
+        "A_N",
+        "C",
+        "B"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a31oi_4",
+      "sky130_fd_sc_hd__a31oi_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "B1",
+        "A1",
+        "VGND",
+        "A3",
+        "A2"
+      ], [
+        "Y",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "B1",
+        "A1",
+        "VGND",
+        "A3",
+        "A2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o211ai_4",
+      "sky130_fd_sc_hd__o211ai_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 8 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 8 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "Y",
+        "B1",
+        "C1",
+        "VPB",
+        "A1",
+        "VGND",
+        "A2",
+        "VPWR"
+      ], [
+        "VNB",
+        "Y",
+        "B1",
+        "C1",
+        "VPB",
+        "A1",
+        "VGND",
+        "A2",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21boi_4",
+      "sky130_fd_sc_hd__a21boi_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "A1",
+        "A2",
+        "B1_N",
+        "Y",
+        "VPWR",
+        "VGND"
+      ], [
+        "VPB",
+        "VNB",
+        "A1",
+        "A2",
+        "B1_N",
+        "Y",
+        "VPWR",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__buf_1",
+      "sky130_fd_sc_hd__buf_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ],
+         ["sky130_fd_pr__nfet_01v8", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "X",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ], [
+        "VGND",
+        "X",
+        "VNB",
+        "A",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a31o_4",
+      "sky130_fd_sc_hd__a31o_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 8 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 8 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "A2",
+        "A1",
+        "A3",
+        "VPB",
+        "B1",
+        "X",
+        "VGND",
+        "VPWR"
+      ], [
+        "VNB",
+        "A2",
+        "A1",
+        "A3",
+        "VPB",
+        "B1",
+        "X",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a211oi_2",
+      "sky130_fd_sc_hd__a211oi_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "Y",
+        "VNB",
+        "B1",
+        "C1",
+        "VPWR",
+        "A2",
+        "A1",
+        "VGND"
+      ], [
+        "VPB",
+        "Y",
+        "VNB",
+        "B1",
+        "C1",
+        "VPWR",
+        "A2",
+        "A1",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21oi_4",
+      "sky130_fd_sc_hd__a21oi_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "A2",
+        "VGND",
+        "B1",
+        "VPWR",
+        "A1",
+        "VNB",
+        "Y",
+        "VPB"
+      ], [
+        "A2",
+        "VGND",
+        "B1",
+        "VPWR",
+        "A1",
+        "VNB",
+        "Y",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o31a_1",
+      "sky130_fd_sc_hd__o31a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 5],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 5 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ]
+       ]
+   ],
+   "nets": [
+    13,
+    13
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "A2",
+        "A1",
+        "X",
+        "B1",
+        "A3",
+        "VNB",
+        "VPB"
+      ], [
+        "VPWR",
+        "VGND",
+        "A2",
+        "A1",
+        "X",
+        "B1",
+        "A3",
+        "VNB",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or3b_4",
+      "sky130_fd_sc_hd__or3b_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "B",
+        "C_N",
+        "A"
+      ], [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "X",
+        "B",
+        "C_N",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__mux2_4",
+      "sky130_fd_sc_hd__mux2_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    14,
+    14
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VPWR",
+        "S",
+        "VNB",
+        "VPB",
+        "X",
+        "A0",
+        "A1"
+      ], [
+        "VGND",
+        "VPWR",
+        "S",
+        "VNB",
+        "VPB",
+        "X",
+        "A0",
+        "A1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21ai_2",
+      "sky130_fd_sc_hd__o21ai_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 3],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 3 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "VGND",
+        "VPWR",
+        "B1",
+        "A1"
+      ], [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "VGND",
+        "VPWR",
+        "B1",
+        "A1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__dfrtp_4",
+      "sky130_fd_sc_hd__dfrtp_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 14],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 14 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 14 ]
+       ]
+   ],
+   "nets": [
+    21,
+    21
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "RESET_B",
+        "VPB",
+        "VNB",
+        "VGND",
+        "D",
+        "Q",
+        "CLK"
+      ], [
+        "VPWR",
+        "RESET_B",
+        "VPB",
+        "VNB",
+        "VGND",
+        "D",
+        "Q",
+        "CLK"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and2_4",
+      "sky130_fd_sc_hd__and2_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B",
+        "A",
+        "VGND",
+        "X",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ], [
+        "B",
+        "A",
+        "VGND",
+        "X",
+        "VPWR",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21ai_4",
+      "sky130_fd_sc_hd__o21ai_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "VGND",
+        "A1",
+        "B1",
+        "VPWR"
+      ], [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "VGND",
+        "A1",
+        "B1",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a21boi_2",
+      "sky130_fd_sc_hd__a21boi_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 6],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 6 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B1_N",
+        "VPWR",
+        "A1",
+        "A2",
+        "VNB",
+        "Y",
+        "VGND",
+        "VPB"
+      ], [
+        "B1_N",
+        "VPWR",
+        "A1",
+        "A2",
+        "VNB",
+        "Y",
+        "VGND",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o2111a_1",
+      "sky130_fd_sc_hd__o2111a_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 6 ],
+         ["sky130_fd_pr__nfet_01v8", 6 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB",
+        "D1",
+        "C1",
+        "A1",
+        "A2",
+        "B1",
+        "X"
+      ], [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB",
+        "D1",
+        "C1",
+        "A1",
+        "A2",
+        "B1",
+        "X"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21bai_1",
+      "sky130_fd_sc_hd__o21bai_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "VGND",
+        "Y",
+        "VPWR",
+        "A1",
+        "A2",
+        "B1_N"
+      ], [
+        "VNB",
+        "VPB",
+        "VGND",
+        "Y",
+        "VPWR",
+        "A1",
+        "A2",
+        "B1_N"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__buf_8",
+      "sky130_fd_sc_hd__buf_8"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 2],
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 2 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 2 ]
+       ]
+   ],
+   "nets": [
+    7,
+    7
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A"
+      ], [
+        "X",
+        "VGND",
+        "VNB",
+        "VPWR",
+        "VPB",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or3b_2",
+      "sky130_fd_sc_hd__or3b_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "B",
+        "X",
+        "C_N",
+        "A"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "B",
+        "X",
+        "C_N",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21ba_4",
+      "sky130_fd_sc_hd__o21ba_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 5 ],
+         ["sky130_fd_pr__nfet_01v8", 5 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "A1",
+        "X",
+        "B1_N",
+        "A2",
+        "VGND",
+        "VPWR"
+      ], [
+        "VNB",
+        "VPB",
+        "A1",
+        "X",
+        "B1_N",
+        "A2",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o22ai_1",
+      "sky130_fd_sc_hd__o22ai_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "A1",
+        "VPWR",
+        "B2",
+        "VGND",
+        "B1"
+      ], [
+        "Y",
+        "VPB",
+        "VNB",
+        "A2",
+        "A1",
+        "VPWR",
+        "B2",
+        "VGND",
+        "B1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and2_2",
+      "sky130_fd_sc_hd__and2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "X",
+        "A",
+        "B",
+        "VGND"
+      ], [
+        "VPWR",
+        "VPB",
+        "VNB",
+        "X",
+        "A",
+        "B",
+        "VGND"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__or2_2",
+      "sky130_fd_sc_hd__or2_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    9,
+    9
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "X",
+        "VPWR",
+        "A"
+      ], [
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "X",
+        "VPWR",
+        "A"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o22ai_2",
+      "sky130_fd_sc_hd__o22ai_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B2",
+        "VPWR",
+        "B1",
+        "A2",
+        "VGND",
+        "A1",
+        "Y",
+        "VNB",
+        "VPB"
+      ], [
+        "B2",
+        "VPWR",
+        "B1",
+        "A2",
+        "VGND",
+        "A1",
+        "Y",
+        "VNB",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor4_1",
+      "sky130_fd_sc_hd__nor4_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "A",
+        "C",
+        "B",
+        "D",
+        "Y"
+      ], [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "A",
+        "C",
+        "B",
+        "D",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor4_4",
+      "sky130_fd_sc_hd__nor4_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Y",
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "C",
+        "A",
+        "D",
+        "VPWR"
+      ], [
+        "Y",
+        "VPB",
+        "VGND",
+        "VNB",
+        "B",
+        "C",
+        "A",
+        "D",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o211a_4",
+      "sky130_fd_sc_hd__o211a_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 7],
+         ["sky130_fd_pr__pfet_01v8_hvt", 7 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 7 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 7 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "B1",
+        "C1",
+        "A2",
+        "VGND",
+        "A1"
+      ], [
+        "X",
+        "VPWR",
+        "VPB",
+        "VNB",
+        "B1",
+        "C1",
+        "A2",
+        "VGND",
+        "A1"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__and3_4",
+      "sky130_fd_sc_hd__and3_4"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "X",
+        "VGND",
+        "A",
+        "C",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ], [
+        "X",
+        "VGND",
+        "A",
+        "C",
+        "B",
+        "VNB",
+        "VPWR",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nand3b_2",
+      "sky130_fd_sc_hd__nand3b_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "Y",
+        "VPB",
+        "VNB",
+        "C",
+        "B",
+        "VGND",
+        "A_N"
+      ], [
+        "VPWR",
+        "Y",
+        "VPB",
+        "VNB",
+        "C",
+        "B",
+        "VGND",
+        "A_N"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor3b_1",
+      "sky130_fd_sc_hd__nor3b_1"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "C_N",
+        "A",
+        "B",
+        "Y",
+        "VGND",
+        "VNB",
+        "VPB"
+      ], [
+        "VPWR",
+        "C_N",
+        "A",
+        "B",
+        "Y",
+        "VGND",
+        "VNB",
+        "VPB"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__o21bai_2",
+      "sky130_fd_sc_hd__o21bai_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ],
+         ["sky130_fd_pr__nfet_01v8", 4 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPB",
+        "VNB",
+        "Y",
+        "VPWR",
+        "VGND",
+        "B1_N",
+        "A1",
+        "A2"
+      ], [
+        "VPB",
+        "VNB",
+        "Y",
+        "VPWR",
+        "VGND",
+        "B1_N",
+        "A1",
+        "A2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__a31oi_2",
+      "sky130_fd_sc_hd__a31oi_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8", 4],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8", 4 ],
+         ["sky130_fd_pr__pfet_01v8_hvt", 4 ]
+       ]
+   ],
+   "nets": [
+    12,
+    12
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VNB",
+        "VPB",
+        "Y",
+        "VPWR",
+        "VGND",
+        "A1",
+        "B1",
+        "A3",
+        "A2"
+      ], [
+        "VNB",
+        "VPB",
+        "Y",
+        "VPWR",
+        "VGND",
+        "A1",
+        "B1",
+        "A3",
+        "A2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "sky130_fd_sc_hd__nor3_2",
+      "sky130_fd_sc_hd__nor3_2"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ], [
+         ["sky130_fd_pr__pfet_01v8_hvt", 3 ],
+         ["sky130_fd_pr__nfet_01v8", 3 ]
+       ]
+   ],
+   "nets": [
+    10,
+    10
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "B",
+        "C",
+        "A",
+        "Y"
+      ], [
+        "VPWR",
+        "VGND",
+        "VNB",
+        "VPB",
+        "B",
+        "C",
+        "A",
+        "Y"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "svm",
+      "svm"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_sc_hd__and2b_1", 37],
+         ["sky130_fd_sc_hd__nand2_1", 165],
+         ["sky130_fd_sc_hd__a22o_1", 86],
+         ["sky130_fd_sc_hd__a21bo_1", 43],
+         ["sky130_fd_sc_hd__decap_8", 1],
+         ["sky130_fd_sc_hd__or3_1", 25],
+         ["sky130_fd_sc_hd__decap_4", 1],
+         ["sky130_fd_sc_hd__decap_3", 1],
+         ["sky130_fd_sc_hd__clkbuf_1", 122],
+         ["sky130_fd_sc_hd__dfrtp_1", 63],
+         ["sky130_fd_sc_hd__nand3_2", 27],
+         ["sky130_fd_sc_hd__buf_2", 34],
+         ["sky130_fd_sc_hd__or2_1", 46],
+         ["sky130_fd_sc_hd__clkbuf_4", 80],
+         ["sky130_fd_sc_hd__a21oi_1", 69],
+         ["sky130_fd_sc_hd__o21ba_1", 24],
+         ["sky130_fd_sc_hd__xor2_2", 28],
+         ["sky130_fd_sc_hd__a211o_1", 17],
+         ["sky130_fd_sc_hd__and3_1", 63],
+         ["sky130_fd_sc_hd__or3b_1", 5],
+         ["sky130_fd_sc_hd__xnor2_1", 84],
+         ["sky130_fd_sc_hd__decap_6", 1],
+         ["sky130_fd_sc_hd__or2b_1", 21],
+         ["sky130_fd_sc_hd__inv_2", 139],
+         ["sky130_fd_sc_hd__nor2_1", 89],
+         ["sky130_fd_sc_hd__nand4_2", 11],
+         ["sky130_fd_sc_hd__a31o_1", 49],
+         ["sky130_fd_sc_hd__nand3_1", 63],
+         ["sky130_fd_sc_hd__o31ai_1", 2],
+         ["sky130_fd_sc_hd__nor2_2", 4],
+         ["sky130_fd_sc_hd__dlygate4sd3_1", 19],
+         ["sky130_fd_sc_hd__diode_2", 8],
+         ["sky130_fd_sc_hd__a21o_1", 105],
+         ["sky130_fd_sc_hd__buf_4", 18],
+         ["sky130_fd_sc_hd__a2bb2o_4", 5],
+         ["sky130_fd_sc_hd__o21a_1", 39],
+         ["sky130_fd_sc_hd__o21ai_1", 37],
+         ["sky130_fd_sc_hd__xor2_1", 39],
+         ["sky130_fd_sc_hd__nand2_2", 12],
+         ["sky130_fd_sc_hd__clkbuf_16", 9],
+         ["sky130_fd_sc_hd__or3_4", 4],
+         ["sky130_fd_sc_hd__buf_6", 4],
+         ["sky130_fd_sc_hd__clkbuf_2", 23],
+         ["sky130_fd_sc_hd__and2_1", 47],
+         ["sky130_fd_sc_hd__a2bb2o_1", 10],
+         ["sky130_fd_sc_hd__dfstp_1", 3],
+         ["sky130_fd_sc_hd__nand4_4", 2],
+         ["sky130_fd_sc_hd__o211a_1", 16],
+         ["sky130_fd_sc_hd__and4_1", 34],
+         ["sky130_fd_sc_hd__a22oi_1", 15],
+         ["sky130_fd_sc_hd__dfrtp_2", 10],
+         ["sky130_fd_sc_hd__a311o_1", 3],
+         ["sky130_fd_sc_hd__a21oi_2", 19],
+         ["sky130_fd_sc_hd__and3_2", 4],
+         ["sky130_fd_sc_hd__dfstp_2", 1],
+         ["sky130_fd_sc_hd__mux2_1", 50],
+         ["sky130_fd_sc_hd__nor3_1", 10],
+         ["sky130_fd_sc_hd__xnor2_2", 44],
+         ["sky130_fd_sc_hd__a2bb2o_2", 6],
+         ["sky130_fd_sc_hd__nand3b_1", 18],
+         ["sky130_fd_sc_hd__and4bb_1", 2],
+         ["sky130_fd_sc_hd__clkbuf_8", 1],
+         ["sky130_fd_sc_hd__a32o_1", 8],
+         ["sky130_fd_sc_hd__o32a_1", 2],
+         ["sky130_fd_sc_hd__a41o_1", 2],
+         ["sky130_fd_sc_hd__or4_1", 17],
+         ["sky130_fd_sc_hd__o221a_1", 12],
+         ["sky130_fd_sc_hd__a21boi_1", 3],
+         ["sky130_fd_sc_hd__a211oi_4", 3],
+         ["sky130_fd_sc_hd__or4_2", 2],
+         ["sky130_fd_sc_hd__a211oi_1", 5],
+         ["sky130_fd_sc_hd__xnor2_4", 1],
+         ["sky130_fd_sc_hd__a221o_1", 12],
+         ["sky130_fd_sc_hd__or2_4", 1],
+         ["sky130_fd_sc_hd__o211ai_1", 4],
+         ["sky130_fd_sc_hd__or4bb_4", 2],
+         ["sky130_fd_sc_hd__dlymetal6s2s_1", 1],
+         ["sky130_fd_sc_hd__o22a_1", 11],
+         ["sky130_fd_sc_hd__o21a_2", 1],
+         ["sky130_fd_sc_hd__o2bb2a_1", 1],
+         ["sky130_fd_sc_hd__a22oi_2", 7],
+         ["sky130_fd_sc_hd__nor2_4", 1],
+         ["sky130_fd_sc_hd__o211ai_2", 7],
+         ["sky130_fd_sc_hd__nand3_4", 3],
+         ["sky130_fd_sc_hd__nand4_1", 12],
+         ["sky130_fd_sc_hd__or4b_1", 1],
+         ["sky130_fd_sc_hd__nand3b_4", 4],
+         ["sky130_fd_sc_hd__and3b_1", 2],
+         ["sky130_fd_sc_hd__a31oi_4", 1],
+         ["sky130_fd_sc_hd__o211ai_4", 3],
+         ["sky130_fd_sc_hd__a21boi_4", 1],
+         ["sky130_fd_sc_hd__buf_1", 9],
+         ["sky130_fd_sc_hd__a31o_4", 1],
+         ["sky130_fd_sc_hd__a211oi_2", 8],
+         ["sky130_fd_sc_hd__a21oi_4", 2],
+         ["sky130_fd_sc_hd__o31a_1", 10],
+         ["sky130_fd_sc_hd__or3b_4", 2],
+         ["sky130_fd_sc_hd__mux2_4", 3],
+         ["sky130_fd_sc_hd__o21ai_2", 4],
+         ["sky130_fd_sc_hd__dfrtp_4", 11],
+         ["sky130_fd_sc_hd__and2_4", 1],
+         ["sky130_fd_sc_hd__o21ai_4", 2],
+         ["sky130_fd_sc_hd__a21boi_2", 3],
+         ["sky130_fd_sc_hd__o2111a_1", 1],
+         ["sky130_fd_sc_hd__o21bai_1", 3],
+         ["sky130_fd_sc_hd__buf_8", 3],
+         ["sky130_fd_sc_hd__or3b_2", 1],
+         ["sky130_fd_sc_hd__o21ba_4", 2],
+         ["sky130_fd_sc_hd__o22ai_1", 2],
+         ["sky130_fd_sc_hd__and2_2", 1],
+         ["sky130_fd_sc_hd__or2_2", 2],
+         ["sky130_fd_sc_hd__o22ai_2", 1],
+         ["sky130_fd_sc_hd__nor4_1", 1],
+         ["sky130_fd_sc_hd__nor4_4", 1],
+         ["sky130_fd_sc_hd__o211a_4", 1],
+         ["sky130_fd_sc_hd__and3_4", 1],
+         ["sky130_fd_sc_hd__nand3b_2", 2],
+         ["sky130_fd_sc_hd__nor3b_1", 1],
+         ["sky130_fd_sc_hd__o21bai_2", 1],
+         ["sky130_fd_sc_hd__a31oi_2", 1],
+         ["sky130_fd_sc_hd__nor3_2", 1 ]
+       ], [
+         ["sky130_fd_sc_hd__and2b_1", 37 ],
+         ["sky130_fd_sc_hd__nand2_1", 165 ],
+         ["sky130_fd_sc_hd__a22o_1", 86 ],
+         ["sky130_fd_sc_hd__a21bo_1", 43 ],
+         ["sky130_fd_sc_hd__decap_8", 1 ],
+         ["sky130_fd_sc_hd__or3_1", 25 ],
+         ["sky130_fd_sc_hd__decap_4", 1 ],
+         ["sky130_fd_sc_hd__decap_3", 1 ],
+         ["sky130_fd_sc_hd__clkbuf_1", 122 ],
+         ["sky130_fd_sc_hd__dfrtp_1", 63 ],
+         ["sky130_fd_sc_hd__nand3_2", 27 ],
+         ["sky130_fd_sc_hd__buf_2", 34 ],
+         ["sky130_fd_sc_hd__or2_1", 46 ],
+         ["sky130_fd_sc_hd__clkbuf_4", 80 ],
+         ["sky130_fd_sc_hd__a21oi_1", 69 ],
+         ["sky130_fd_sc_hd__o21ba_1", 24 ],
+         ["sky130_fd_sc_hd__xor2_2", 28 ],
+         ["sky130_fd_sc_hd__a211o_1", 17 ],
+         ["sky130_fd_sc_hd__and3_1", 63 ],
+         ["sky130_fd_sc_hd__or3b_1", 5 ],
+         ["sky130_fd_sc_hd__xnor2_1", 84 ],
+         ["sky130_fd_sc_hd__decap_6", 1 ],
+         ["sky130_fd_sc_hd__or2b_1", 21 ],
+         ["sky130_fd_sc_hd__inv_2", 139 ],
+         ["sky130_fd_sc_hd__nor2_1", 89 ],
+         ["sky130_fd_sc_hd__nand4_2", 11 ],
+         ["sky130_fd_sc_hd__a31o_1", 49 ],
+         ["sky130_fd_sc_hd__nand3_1", 63 ],
+         ["sky130_fd_sc_hd__o31ai_1", 2 ],
+         ["sky130_fd_sc_hd__nor2_2", 4 ],
+         ["sky130_fd_sc_hd__dlygate4sd3_1", 19 ],
+         ["sky130_fd_sc_hd__diode_2", 8 ],
+         ["sky130_fd_sc_hd__a21o_1", 105 ],
+         ["sky130_fd_sc_hd__buf_4", 18 ],
+         ["sky130_fd_sc_hd__a2bb2o_4", 5 ],
+         ["sky130_fd_sc_hd__o21a_1", 39 ],
+         ["sky130_fd_sc_hd__o21ai_1", 37 ],
+         ["sky130_fd_sc_hd__xor2_1", 39 ],
+         ["sky130_fd_sc_hd__nand2_2", 12 ],
+         ["sky130_fd_sc_hd__clkbuf_16", 9 ],
+         ["sky130_fd_sc_hd__or3_4", 4 ],
+         ["sky130_fd_sc_hd__buf_6", 4 ],
+         ["sky130_fd_sc_hd__clkbuf_2", 23 ],
+         ["sky130_fd_sc_hd__and2_1", 47 ],
+         ["sky130_fd_sc_hd__a2bb2o_1", 10 ],
+         ["sky130_fd_sc_hd__dfstp_1", 3 ],
+         ["sky130_fd_sc_hd__nand4_4", 2 ],
+         ["sky130_fd_sc_hd__o211a_1", 16 ],
+         ["sky130_fd_sc_hd__and4_1", 34 ],
+         ["sky130_fd_sc_hd__a22oi_1", 15 ],
+         ["sky130_fd_sc_hd__dfrtp_2", 10 ],
+         ["sky130_fd_sc_hd__a311o_1", 3 ],
+         ["sky130_fd_sc_hd__a21oi_2", 19 ],
+         ["sky130_fd_sc_hd__and3_2", 4 ],
+         ["sky130_fd_sc_hd__dfstp_2", 1 ],
+         ["sky130_fd_sc_hd__mux2_1", 50 ],
+         ["sky130_fd_sc_hd__nor3_1", 10 ],
+         ["sky130_fd_sc_hd__xnor2_2", 44 ],
+         ["sky130_fd_sc_hd__a2bb2o_2", 6 ],
+         ["sky130_fd_sc_hd__nand3b_1", 18 ],
+         ["sky130_fd_sc_hd__and4bb_1", 2 ],
+         ["sky130_fd_sc_hd__clkbuf_8", 1 ],
+         ["sky130_fd_sc_hd__a32o_1", 8 ],
+         ["sky130_fd_sc_hd__o32a_1", 2 ],
+         ["sky130_fd_sc_hd__a41o_1", 2 ],
+         ["sky130_fd_sc_hd__or4_1", 17 ],
+         ["sky130_fd_sc_hd__o221a_1", 12 ],
+         ["sky130_fd_sc_hd__a21boi_1", 3 ],
+         ["sky130_fd_sc_hd__a211oi_4", 3 ],
+         ["sky130_fd_sc_hd__or4_2", 2 ],
+         ["sky130_fd_sc_hd__a211oi_1", 5 ],
+         ["sky130_fd_sc_hd__xnor2_4", 1 ],
+         ["sky130_fd_sc_hd__a221o_1", 12 ],
+         ["sky130_fd_sc_hd__or2_4", 1 ],
+         ["sky130_fd_sc_hd__o211ai_1", 4 ],
+         ["sky130_fd_sc_hd__or4bb_4", 2 ],
+         ["sky130_fd_sc_hd__dlymetal6s2s_1", 1 ],
+         ["sky130_fd_sc_hd__o22a_1", 11 ],
+         ["sky130_fd_sc_hd__o21a_2", 1 ],
+         ["sky130_fd_sc_hd__o2bb2a_1", 1 ],
+         ["sky130_fd_sc_hd__a22oi_2", 7 ],
+         ["sky130_fd_sc_hd__nor2_4", 1 ],
+         ["sky130_fd_sc_hd__o211ai_2", 7 ],
+         ["sky130_fd_sc_hd__nand3_4", 3 ],
+         ["sky130_fd_sc_hd__nand4_1", 12 ],
+         ["sky130_fd_sc_hd__or4b_1", 1 ],
+         ["sky130_fd_sc_hd__nand3b_4", 4 ],
+         ["sky130_fd_sc_hd__and3b_1", 2 ],
+         ["sky130_fd_sc_hd__a31oi_4", 1 ],
+         ["sky130_fd_sc_hd__o211ai_4", 3 ],
+         ["sky130_fd_sc_hd__a21boi_4", 1 ],
+         ["sky130_fd_sc_hd__buf_1", 9 ],
+         ["sky130_fd_sc_hd__a31o_4", 1 ],
+         ["sky130_fd_sc_hd__a211oi_2", 8 ],
+         ["sky130_fd_sc_hd__a21oi_4", 2 ],
+         ["sky130_fd_sc_hd__o31a_1", 10 ],
+         ["sky130_fd_sc_hd__or3b_4", 2 ],
+         ["sky130_fd_sc_hd__mux2_4", 3 ],
+         ["sky130_fd_sc_hd__o21ai_2", 4 ],
+         ["sky130_fd_sc_hd__dfrtp_4", 11 ],
+         ["sky130_fd_sc_hd__and2_4", 1 ],
+         ["sky130_fd_sc_hd__o21ai_4", 2 ],
+         ["sky130_fd_sc_hd__a21boi_2", 3 ],
+         ["sky130_fd_sc_hd__o2111a_1", 1 ],
+         ["sky130_fd_sc_hd__o21bai_1", 3 ],
+         ["sky130_fd_sc_hd__buf_8", 3 ],
+         ["sky130_fd_sc_hd__or3b_2", 1 ],
+         ["sky130_fd_sc_hd__o21ba_4", 2 ],
+         ["sky130_fd_sc_hd__o22ai_1", 2 ],
+         ["sky130_fd_sc_hd__and2_2", 1 ],
+         ["sky130_fd_sc_hd__or2_2", 2 ],
+         ["sky130_fd_sc_hd__o22ai_2", 1 ],
+         ["sky130_fd_sc_hd__nor4_1", 1 ],
+         ["sky130_fd_sc_hd__nor4_4", 1 ],
+         ["sky130_fd_sc_hd__o211a_4", 1 ],
+         ["sky130_fd_sc_hd__and3_4", 1 ],
+         ["sky130_fd_sc_hd__nand3b_2", 2 ],
+         ["sky130_fd_sc_hd__nor3b_1", 1 ],
+         ["sky130_fd_sc_hd__o21bai_2", 1 ],
+         ["sky130_fd_sc_hd__a31oi_2", 1 ],
+         ["sky130_fd_sc_hd__nor3_2", 1 ]
+       ]
+   ],
+   "nets": [
+    2286,
+    2286
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "clk",
+        "in_valid",
+        "periodTop[14]",
+        "periodTop[3]",
+        "periodTop[6]",
+        "periodTop[5]",
+        "periodTop[7]",
+        "periodTop[4]",
+        "periodTop[1]",
+        "periodTop[8]",
+        "vA[14]",
+        "vA[0]",
+        "periodTop[9]",
+        "vB[12]",
+        "vB[13]",
+        "vA[2]",
+        "vA[1]",
+        "vA[15]",
+        "vC[15]",
+        "vA[9]",
+        "vA[13]",
+        "vC[14]",
+        "vA[3]",
+        "vA[8]",
+        "vA[12]",
+        "vC[12]",
+        "vC[13]",
+        "vB[2]",
+        "periodTop[2]",
+        "rstb",
+        "vB[0]",
+        "vB[1]",
+        "vA[11]",
+        "vA[6]",
+        "vA[10]",
+        "vA[4]",
+        "vA[7]",
+        "periodTop[13]",
+        "vA[5]",
+        "vB[15]",
+        "periodTop[12]",
+        "vB[14]",
+        "periodTop[11]",
+        "vB[10]",
+        "vB[11]",
+        "vB[3]",
+        "vB[5]",
+        "vB[6]",
+        "vB[7]",
+        "vB[4]",
+        "vB[8]",
+        "vB[9]",
+        "periodTop[10]",
+        "vC[10]",
+        "vC[11]",
+        "vC[2]",
+        "vC[3]",
+        "vC[5]",
+        "vC[6]",
+        "vC[7]",
+        "vC[4]",
+        "vC[8]",
+        "periodTop[0]",
+        "periodTop[15]",
+        "vC[9]",
+        "vC[0]",
+        "vC[1]",
+        "pwmB",
+        "pwmC",
+        "pwmA",
+        "halt",
+        "ready",
+        "VGND",
+        "VPWR"
+      ], [
+        "clk",
+        "in_valid",
+        "periodTop[14]",
+        "periodTop[3]",
+        "periodTop[6]",
+        "periodTop[5]",
+        "periodTop[7]",
+        "periodTop[4]",
+        "periodTop[1]",
+        "periodTop[8]",
+        "vA[14]",
+        "vA[0]",
+        "periodTop[9]",
+        "vB[12]",
+        "vB[13]",
+        "vA[2]",
+        "vA[1]",
+        "vA[15]",
+        "vC[15]",
+        "vA[9]",
+        "vA[13]",
+        "vC[14]",
+        "vA[3]",
+        "vA[8]",
+        "vA[12]",
+        "vC[12]",
+        "vC[13]",
+        "vB[2]",
+        "periodTop[2]",
+        "rstb",
+        "vB[0]",
+        "vB[1]",
+        "vA[11]",
+        "vA[6]",
+        "vA[10]",
+        "vA[4]",
+        "vA[7]",
+        "periodTop[13]",
+        "vA[5]",
+        "vB[15]",
+        "periodTop[12]",
+        "vB[14]",
+        "periodTop[11]",
+        "vB[10]",
+        "vB[11]",
+        "vB[3]",
+        "vB[5]",
+        "vB[6]",
+        "vB[7]",
+        "vB[4]",
+        "vB[8]",
+        "vB[9]",
+        "periodTop[10]",
+        "vC[10]",
+        "vC[11]",
+        "vC[2]",
+        "vC[3]",
+        "vC[5]",
+        "vC[6]",
+        "vC[7]",
+        "vC[4]",
+        "vC[8]",
+        "periodTop[0]",
+        "periodTop[15]",
+        "vC[9]",
+        "vC[0]",
+        "vC[1]",
+        "pwmB",
+        "pwmC",
+        "pwmA",
+        "halt",
+        "ready",
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  }
+]

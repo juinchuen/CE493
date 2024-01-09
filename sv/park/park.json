@@ -1,0 +1,8 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "park",
+    "VERILOG_FILES": ["../park/park.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10
+}
+

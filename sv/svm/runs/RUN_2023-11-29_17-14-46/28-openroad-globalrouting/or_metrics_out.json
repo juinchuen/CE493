@@ -1,0 +1,11 @@
+{
+	"antenna__violating__nets": 8,
+	"antenna__violating__pins": 11,
+	"design__instance__displacement__total": 0,
+	"design__instance__displacement__mean": 0,
+	"design__instance__displacement__max": 0,
+	"route__wirelength__estimated": 105581,
+	"design__violations": 0,
+	"antenna__violating__nets": 6,
+	"antenna__violating__pins": 6
+}
