@@ -44,7 +44,7 @@ module pid_tb #(
         #10
 
         reg_addr = 1;
-        reg_data = (32'h1) << 12;
+        reg_data = (32'h1) << 11;
         #10
 
         write_enable = 1;
