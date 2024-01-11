@@ -37,13 +37,17 @@ module pid_tb #(
         #0 rstb = 0;
         #0 rstb = 1;
 
+        write_enable = 0;
+
         reg_addr = 0;
-        reg_data = (32'h1) << 25;
+        reg_data = (32'h1) << 9;
         #10
 
         reg_addr = 1;
-        reg_data = (32'h1) << 28;
+        reg_data = (32'h1) << 12;
         #10
+
+        write_enable = 1;
 
         iterate_enable = 1;
 
@@ -53,7 +57,7 @@ module pid_tb #(
 
             wait(out_valid);
 
-            $fdisplay(results, "%d, %d, %d\n", stim1, out, variable);
+            $fdisplay(results, "%d, %d, %d", stim1, out, variable);
 
             variable = variable + out;
 
@@ -63,7 +67,7 @@ module pid_tb #(
 
         end
 
-        $display("Simulation Done\n");
+        $display("Simulation Done");
 
         $fclose(stimulus);
         $fclose(results);
