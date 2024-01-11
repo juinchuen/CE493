@@ -4,6 +4,8 @@
 
 #define NIN 200
 
+#define QAM (1 << 13)
+
 int main () {
 
     float input [NIN];
@@ -14,9 +16,11 @@ int main () {
 
     var_hist[0] = 0.0;
 
-    pi_control test_pid (0.05, 0.5, 0.1, 0.1, 0.0);
+    pi_control test_pid (0.0625, 0.5, 0.0, 0.0, 0.0);
 
     FILE* outf = fopen("pid_test.csv", "w");
+
+    FILE* outfq = fopen("pid_test_q.csv", "w");
 
     fprintf(outf, "input, output, variable\n");
 
@@ -30,8 +34,12 @@ int main () {
 
         fprintf(outf, "%f, %f, %f\n", input[i], pid_out[i], var_hist[i]);
 
+        fprintf(outfq, "%d, %d, %d\n", (int)(input[i] * QAM), (int)(pid_out[i] * QAM), (int)(var_hist[i] * QAM));
+
     }
 
+    fclose(outf);
 
+    fclose(outfq);
 	
 }
