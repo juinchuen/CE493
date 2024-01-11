@@ -1,3 +1,21 @@
+module mult #(
+    parameter D_WIDTH = 16,
+    parameter Q_BITS  = 13
+) (
+    input signed [D_WIDTH-1:0] a,
+    input signed [D_WIDTH-1:0] b,
+
+    output signed [D_WIDTH-1:0] out
+);
+
+    wire signed [2*D_WIDTH-1:0] out_full;
+
+    assign out_full = a * b;
+
+    assign out = out_full[D_WIDTH+Q_BITS-1 : Q_BITS];
+
+endmodule
+
 module pid #(
     parameter D_WIDTH = 16,
     parameter Q_BITS = 13,
@@ -24,6 +42,9 @@ module pid #(
     // too lazy to implement derivative right now
 
     reg signed  [D_WIDTH-1:0]   kp, ki, kd_1, kd_2;
+
+    reg signed  [D_WIDTH-1:0]   mult_a, mult_b;
+    wire signed [D_WIDTH-1:0]   mult_out;
 
     reg         [3:0]           state;
 
@@ -82,17 +103,25 @@ module pid #(
 
                     curr_error  <= target - measurement; // calculate error
 
+                    // set up multiplication in state 2
+                    mult_a      <= kp;
+                    mult_b      <= curr_error
+
                     state <= 2;
 
                 end
 
                 2 : begin // compute 2
 
-                    out         <= (kp * curr_error) >> Q_BITS; // proportional final
+                    out         <= mult_out // proportional final
 
                     curr_int    <= curr_error + prev_error; // integral 1
 
                     prev_error  <= curr_error; // update error
+
+                    // set up multiplication in state 3
+                    mult_a      <= ki;
+                    mult_b      <= curr_int;
 
                     state       <= 3;
 
@@ -100,7 +129,7 @@ module pid #(
 
                 3 : begin // compute 3
 
-                    curr_int <= (ki * curr_int) >> Q_BITS; // integral 2
+                    curr_int <= mult_out // integral 2
 
                     state   <= 4;
 
@@ -151,5 +180,14 @@ module pid #(
         end
 
     end
+
+    mult #(
+        .D_WIDTH    (D_WIDTH),
+        .Q_BITS     (Q_BITS)
+    ) mult0 (
+        .a      (mult_a),
+        .b      (mult_b),
+        .out    (mult_out)
+    );
     
 endmodule
