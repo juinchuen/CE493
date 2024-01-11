@@ -55,15 +55,15 @@ module pid_tb #(
 
             $fscanf(stimulus, "%d, %d, %d\n", stim1, stim2, stim3);
 
+            #10 iterate_enable = 1;
+
+            #10 iterate_enable = 0;
+
             @ (posedge out_valid)
 
             $fdisplay(results, "%d, %d, %d", stim1, out, variable);
 
-            variable = variable + out;
-
-            #10
-            
-            variable = variable;
+            #10 variable = variable + out;
 
         end
 

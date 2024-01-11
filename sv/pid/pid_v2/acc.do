@@ -13,6 +13,7 @@ add wave -noupdate -group TOP -radix decimal /pid_tb/*
 add wave -noupdate -group ALL -radix decimal /pid_tb/pid0/*
 
 add wave -noupdate -group DUT -radix decimal /pid_tb/pid0/state
+add wave -noupdate -group DUT -radix decimal /pid_tb/pid0/iterate_enable
 add wave -noupdate -group DUT -radix decimal /pid_tb/pid0/target
 add wave -noupdate -group DUT -radix decimal /pid_tb/pid0/measurement
 add wave -noupdate -group DUT -radix decimal /pid_tb/pid0/out

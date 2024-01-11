@@ -66,6 +66,9 @@ module pid #(
             prev_error  <= 0;
             prev_int    <= 0;
 
+            mult_a      <= 0;
+            mult_b      <= 0;
+
             if (write_enable) begin
 
                 kp          <= 0;
@@ -167,6 +170,9 @@ module pid #(
 
                     prev_error  <= 0;
                     prev_int    <= 0;
+
+                    mult_a      <= 0;
+                    mult_b      <= 0;
 
                     kp          <= 0;
                     ki          <= 0;
