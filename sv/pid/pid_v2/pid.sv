@@ -4,8 +4,8 @@ module pid #(
     parameter LIM_MAX = 1 <<< 12,
     parameter LIM_MIN = -1 <<< 12
 ) (
-    input logic                         clock,
-    input logic                         reset,
+    input logic                         clk,
+    input logic                         rstb,
 
     input logic                         write_enable,
     input logic                         iterate_enable,
@@ -36,7 +36,7 @@ module pid #(
 
             state       <= 0;
 
-            out_clocked <= 0;
+            out         <= 0;
             out_valid   <= 0;
 
             curr_error  <= 0;
@@ -94,7 +94,7 @@ module pid #(
 
                     prev_error  <= curr_error; // update error
 
-                    state       <= 3
+                    state       <= 3;
 
                 end
 
@@ -130,7 +130,7 @@ module pid #(
 
                     state       <= 0;
 
-                    out_clocked <= 0;
+                    out         <= 0;
                     out_valid   <= 0;
 
                     curr_error  <= 0;
