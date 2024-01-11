@@ -11,7 +11,7 @@ module pid_tb #(
     reg         [D_WIDTH-1:0]   reg_addr, reg_data;
     reg signed  [D_WIDTH-1:0]   variable;
 
-    wire        [D_WIDTH-1:0]   out;
+    wire signed [D_WIDTH-1:0]   out;
     wire                        out_valid;
     
     int stimulus, results;
