@@ -16,7 +16,7 @@ int main () {
 
     var_hist[0] = 0.0;
 
-    pi_control test_pid (0.0625, 0.25, 0.0, 0.0, 0.0);
+    pi_control test_pid (0.125, 0.125, 0.0, 0.0, 0.0);
 
     FILE* outf = fopen("pid_test.csv", "w");
 
