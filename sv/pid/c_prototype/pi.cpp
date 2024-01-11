@@ -36,6 +36,8 @@ class pi_control {
             prev_diff = curr_diff;
             output += curr_diff;
 
+            prev_error = curr_error;
+
             return output + k0;
         }
 
