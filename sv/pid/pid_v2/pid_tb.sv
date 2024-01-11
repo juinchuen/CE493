@@ -8,11 +8,11 @@ module pid_tb #(
     reg clk, rstb;
     reg write_enable, iterate_enable;
 
-    reg [D_WIDTH-1:0] reg_addr, reg_data;
-    reg [D_WIDTH-1:0] variable;
+    reg         [D_WIDTH-1:0]   reg_addr, reg_data;
+    reg signed  [D_WIDTH-1:0]   variable;
 
-    wire [D_WIDTH-1:0]  out;
-    wire                out_valid;
+    wire        [D_WIDTH-1:0]   out;
+    wire                        out_valid;
     
     int stimulus, results;
     int stim1, stim2, stim3;
