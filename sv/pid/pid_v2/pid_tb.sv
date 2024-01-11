@@ -47,17 +47,19 @@ module pid_tb #(
 
         iterate_enable = 1;
 
-        while (!feof(stimulus)) begin
+        while (!$feof(stimulus)) begin
 
             $fscanf(stimulus, "%d, %d, %d\n", stim1, stim2, stim3);
 
             wait(out_valid);
 
-            fprintf(results, "%d, %d, %d\n", stim1, out, variable);
+            $fdisplay(results, "%d, %d, %d\n", stim1, out, variable);
 
             variable = variable + out;
 
             #10
+            
+            variable = variable;
 
         end
 
@@ -74,13 +76,13 @@ module pid_tb #(
         .D_WIDTH    (D_WIDTH),
         .Q_BITS     (Q_BITS)
     ) pid0 (
-        .clock          (clk),
-        .reset          (rstb),
+        .clk            (clk),
+        .rstb           (rstb),
         .write_enable   (write_enable),
         .iterate_enable (iterate_enable),
         .reg_addr       (reg_addr),
         .reg_data       (reg_data),
-        .target         (stim1),
+        .target         (stim1[15:0]),
         .measurement    (variable),
         .out            (out),
         .out_valid      (out_valid)
