@@ -105,7 +105,7 @@ module pid #(
 
                     // set up multiplication in state 2
                     mult_a      <= kp;
-                    mult_b      <= curr_error
+                    mult_b      <= curr_error;
 
                     state <= 2;
 
@@ -113,7 +113,7 @@ module pid #(
 
                 2 : begin // compute 2
 
-                    out         <= mult_out // proportional final
+                    out         <= mult_out; // proportional final
 
                     curr_int    <= curr_error + prev_error; // integral 1
 
@@ -129,7 +129,7 @@ module pid #(
 
                 3 : begin // compute 3
 
-                    curr_int <= mult_out // integral 2
+                    curr_int <= mult_out; // integral 2
 
                     state   <= 4;
 

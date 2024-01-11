@@ -55,7 +55,7 @@ module pid_tb #(
 
             $fscanf(stimulus, "%d, %d, %d\n", stim1, stim2, stim3);
 
-            wait(out_valid);
+            @ (posedge out_valid)
 
             $fdisplay(results, "%d, %d, %d", stim1, out, variable);
 
