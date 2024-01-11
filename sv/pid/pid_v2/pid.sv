@@ -108,7 +108,7 @@ module pid #(
 
                     // set up multiplication in state 2
                     mult_a      <= kp;
-                    mult_b      <= curr_error;
+                    mult_b      <= target - measurement;
 
                     state <= 2;
 
@@ -124,7 +124,7 @@ module pid #(
 
                     // set up multiplication in state 3
                     mult_a      <= ki;
-                    mult_b      <= curr_int;
+                    mult_b      <= curr_error + prev_error;
 
                     state       <= 3;
 
