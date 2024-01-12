@@ -53,7 +53,7 @@ always_ff @(posedge clk or negedge rstb) begin
     d <= 0; 
     e <= 0;
     f <= 0;
-    state <= 0;
+    state <= IDLE;
     mult1 <= 0;
     mult2 <= 0;
     out1  <= 0;
@@ -206,7 +206,7 @@ always_ff @(posedge clk or negedge rstb) begin
     sin   <= 0;
     cos   <= 0;
     op    <= 0;
-    state <= 0;
+    state <= IDLE;
   end else begin
     a     <= a_c;
     b     <= b_c;
