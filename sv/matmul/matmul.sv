@@ -160,6 +160,8 @@ endmodule
 //01 = i_clarke
 //10 = park
 //11 = i_park
+//a = a, alpha, D
+//b = b, beta, Q
 module matmul #(
   parameter D_WIDTH = 19,
   parameter Q_BITS = 15

@@ -23,7 +23,7 @@ module inverse_park #(
 
 /*
 alpha = cos(theta)*D - sin(theta)*Q
-beta = sin(theta)*D - cos(theta)*Q
+beta = sin(theta)*D + cos(theta)*Q
 cos and sin values need to be quantized
 */
 
@@ -82,7 +82,7 @@ always_comb begin
 
     s1: begin
       alpha_c = D_cos - Q_sin;
-      beta_c = D_sin - Q_cos;
+      beta_c = D_sin + Q_cos;
       done_c = 'b1;
       next_state = s0;
     end
