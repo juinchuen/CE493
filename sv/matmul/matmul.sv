@@ -167,7 +167,7 @@ module matmul #(
   input logic clk, rstb,
   input logic signed [D_WIDTH] a_in, b_in, sin_in, cos_in,
   input logic start,
-  input logic [2] op_in,
+  input logic [1:0] op_in,
 
   output logic signed [D_WIDTH] a_out, b_out,
   output logic done
@@ -184,7 +184,7 @@ logic signed [D_WIDTH] alpha_pass, beta_pass;
 logic start_pass, done_pass;
 
 logic signed [D_WIDTH] a, a_c, b, b_c, sin, sin_c, cos, cos_c;
-logic [2] op, op_c;
+logic [1:0] op, op_c;
 
 enum logic [2] {IDLE, SET, WAIT} state, next_state;
 
@@ -262,12 +262,12 @@ always_comb begin
     SET: begin
       start_pass = 1;
       next_state = WAIT;
-      if(op[0]) begin //doing one of the two parks
+      if(op[1]) begin //doing one of the two parks
         a_pass = cos;
         d_pass = cos;
         e_pass = a;
         f_pass = b;
-        if(op[1]) begin //doing inverse park
+        if(op[0]) begin //doing inverse park
           b_pass = -sin;
           c_pass = sin; 
         end else begin  //doing park
@@ -279,7 +279,7 @@ always_comb begin
         b_pass = 0;
         e_pass = a;
         f_pass = b;
-        if(op[1]) begin //doing inverse clark
+        if(op[0]) begin //doing inverse clark
           c_pass = neg_one_div_2;
           d_pass = sqrt_3_div_2;
         end else begin //doing clark
