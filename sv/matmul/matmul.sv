@@ -4,10 +4,10 @@ module mul #(
   parameter Q_BITS = 15
 ) (
   input logic clk,
-  input logic signed [D_WIDTH] a, b,
-  output logic signed [D_WIDTH] out
+  input logic signed [D_WIDTH-1:0] a, b,
+  output logic signed [D_WIDTH-1:0] out
   );
-logic signed [2*D_WIDTH] multiply;
+logic signed [2*D_WIDTH-1:0] multiply;
 
 assign multiply = a * b;
 assign out = multiply >>> Q_BITS;
@@ -24,18 +24,18 @@ module matmul_stage #(
 ) (
   input logic clk, rstb,
 
-  input logic signed [D_WIDTH] a_in, b_in, c_in, d_in, e_in, f_in,
+  input logic signed [D_WIDTH-1:0] a_in, b_in, c_in, d_in, e_in, f_in,
   input logic start,
 
-  output logic signed [D_WIDTH] alpha, beta,
+  output logic signed [D_WIDTH-1:0] alpha, beta,
   output logic done
 );
 
-enum logic [3] {IDLE, MATH0, MATH1, MATH2, MATH3, MATH4, FINISH} state, next_state;
-logic signed [D_WIDTH] a_pass, b_pass, out_pass;  //passing into mul module
-logic signed [D_WIDTH] a, a_c, b, b_c, c, c_c, d, d_c, e, e_c, f, f_c;  //inputs
-logic signed [D_WIDTH] mult1, mult1_c, mult2, mult2_c;
-logic signed [D_WIDTH] out1, out1_c, out2, out2_c;
+enum logic [2:0] {IDLE, MATH0, MATH1, MATH2, MATH3, MATH4, FINISH} state, next_state;
+logic signed [D_WIDTH-1:0] a_pass, b_pass, out_pass;  //passing into mul module
+logic signed [D_WIDTH-1:0] a, a_c, b, b_c, c, c_c, d, d_c, e, e_c, f, f_c;  //inputs
+logic signed [D_WIDTH-1:0] mult1, mult1_c, mult2, mult2_c;
+logic signed [D_WIDTH-1:0] out1, out1_c, out2, out2_c;
 
 mul #(
   .D_WIDTH(D_WIDTH),
@@ -167,28 +167,28 @@ module matmul #(
   parameter Q_BITS = 15
 ) (
   input logic clk, rstb,
-  input logic signed [D_WIDTH] a_in, b_in, sin_in, cos_in,
+  input logic signed [D_WIDTH-1:0] a_in, b_in, sin_in, cos_in,
   input logic start,
   input logic [1:0] op_in,
 
-  output logic signed [D_WIDTH] a_out, b_out,
+  output logic signed [D_WIDTH-1:0] a_out, b_out,
   output logic done
 );
-localparam logic signed [D_WIDTH] one_div_sqrt_3 = 0.5773502692 * (2**Q_BITS);
-localparam logic signed [D_WIDTH] two_div_sqrt_3 = 1.1547005384 * (2**Q_BITS);
-localparam logic signed [D_WIDTH] neg_one_div_2 = -0.5 * (2**Q_BITS);
-localparam logic signed [D_WIDTH] sqrt_3_div_2 = 0.8660254038 * (2**Q_BITS);
-localparam logic signed [D_WIDTH] one_quantized = 1 * (2**Q_BITS);
+localparam logic signed [D_WIDTH-1:0] one_div_sqrt_3 = 0.5773502692 * (2**Q_BITS);
+localparam logic signed [D_WIDTH-1:0] two_div_sqrt_3 = 1.1547005384 * (2**Q_BITS);
+localparam logic signed [D_WIDTH-1:0] neg_one_div_2 = -0.5 * (2**Q_BITS);
+localparam logic signed [D_WIDTH-1:0] sqrt_3_div_2 = 0.8660254038 * (2**Q_BITS);
+localparam logic signed [D_WIDTH-1:0] one_quantized = 1 * (2**Q_BITS);
 
 
-logic signed [D_WIDTH] a_pass, b_pass, c_pass, d_pass, e_pass, f_pass;
-logic signed [D_WIDTH] alpha_pass, beta_pass;
+logic signed [D_WIDTH-1:0] a_pass, b_pass, c_pass, d_pass, e_pass, f_pass;
+logic signed [D_WIDTH-1:0] alpha_pass, beta_pass;
 logic start_pass, done_pass;
 
-logic signed [D_WIDTH] a, a_c, b, b_c, sin, sin_c, cos, cos_c;
+logic signed [D_WIDTH-1:0] a, a_c, b, b_c, sin, sin_c, cos, cos_c;
 logic [1:0] op, op_c;
 
-enum logic [2] {IDLE, SET, WAIT} state, next_state;
+enum logic [1:0] {IDLE, SET, WAIT} state, next_state;
 
 matmul_stage #(
   .D_WIDTH(D_WIDTH),
