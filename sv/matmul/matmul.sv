@@ -7,8 +7,10 @@ module mul #(
   input logic signed [D_WIDTH] a, b,
   output logic signed [D_WIDTH] out
   );
+logic signed [2*D_WIDTH] multiply;
 
-assign out = (a * b) >>> Q_BITS;
+assign multiply = a * b;
+assign out = multiply >>> Q_BITS;
 endmodule
 
 //performs 2x2*2x1 matrix multiplication alpha = a*e + b*f and beta = c*e + d*f
@@ -238,7 +240,7 @@ always_comb begin
   d_pass = 0;
   e_pass = 0;
   f_pass = 0;
-  
+
   // unclocked outputs
   done = 0;
   a_out = 0;
