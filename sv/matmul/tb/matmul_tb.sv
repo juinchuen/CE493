@@ -55,8 +55,8 @@ initial begin : tb_process
   start = 1;
   a = (0.837 * (2**Q_BITS));
   b = (0.101 * (2**Q_BITS));
-  sin = (0.5 * (2**Q_BITS));
-  cos = (0.5 * (2**Q_BITS));
+  sin = (0.7 * (2**Q_BITS));
+  cos = (0.3 * (2**Q_BITS));
   op = 0;
   @(posedge clk)
   start = 0;
