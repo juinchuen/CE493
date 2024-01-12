@@ -122,7 +122,7 @@ always_comb begin
       a_pass     = c;
       b_pass     = e;
       mult1_c    = out_pass;
-      out1_c     = mult1 + mult2
+      out1_c     = mult1 + mult2;
       next_state = MATH3;
     end
 
@@ -163,7 +163,7 @@ module matmul #(
   input logic start,
   input logic [2] op_in,
 
-  output logic signed [D_WIDTH] a_out, b_out
+  output logic signed [D_WIDTH] a_out, b_out,
   output logic done
 );
 localparam logic signed [D_WIDTH] one_div_sqrt_3 = 0.5773502692 * (2**Q_BITS);
