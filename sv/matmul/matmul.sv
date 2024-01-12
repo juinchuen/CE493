@@ -191,7 +191,7 @@ matmul_stage #(
   .start(start_pass),
   .alpha(alpha_pass),
   .beta(beta_pass),
-  .done(done_pass),
+  .done(done_pass)
 );
 
 always_ff @(posedge clk or negedge rstb) begin
@@ -235,7 +235,7 @@ always_comb begin
         b_c = b_in;
         sin_c = sin_in;
         cos_c = cos_in;
-        op_c = op_in
+        op_c = op_in;
         next_state = SET;
       end
     end
