@@ -177,6 +177,7 @@ logic signed [D_WIDTH] alpha_pass, beta_pass;
 logic start_pass, done_pass;
 
 logic signed [D_WIDTH] a, a_c, b, b_c, sin, sin_c, cos, cos_c;
+logic [2] op, op_c;
 
 enum logic [2] {IDLE, SET, WAIT} state, next_state;
 
@@ -246,7 +247,7 @@ always_comb begin
 
     SET: begin
       start_pass = 1;
-      next_state = DONE;
+      next_state = WAIT;
       if(op[1]) begin //doing one of the two parks
         a_pass = cos;
         d_pass = cos;
