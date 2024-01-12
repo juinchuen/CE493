@@ -20,7 +20,7 @@ matmul #(
   .Q_BITS(Q_BITS)
 ) matmul_inst (
   .clk(clk),
-  .rstb(rstb)
+  .rstb(rstb),
   .a_in(a),
   .b_in(b),
   .sin_in(sin),
@@ -90,7 +90,7 @@ initial begin : tb_process
 
   @(posedge done)
   @(posedge clk)
-  $finish
+  $finish;
 end
 
 endmodule
