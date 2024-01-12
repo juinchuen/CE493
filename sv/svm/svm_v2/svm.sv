@@ -1,5 +1,6 @@
 module v_to_t #(
-    parameter D_WIDTH = 16
+    parameter D_WIDTH = 16,
+    parameter Q_BITS = 13
 )(
     input logic [D_WIDTH - 1 : 0] v,
     input logic [D_WIDTH - 1 : 0] top,
@@ -19,7 +20,8 @@ module v_to_t #(
 endmodule
 
 module svm #(
-    parameter D_WIDTH = 16
+    parameter D_WIDTH = 16,
+    parameter Q_BITS = 13
 )(
     output logic pwmA, 
     output logic pwmB, 
