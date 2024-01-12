@@ -1,1 +1,0 @@
-yosys -c /home/jco1147/.local/lib/python3.9/site-packages/openlane/scripts/yosys/synthesize.tcl

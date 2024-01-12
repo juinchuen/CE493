@@ -65,6 +65,8 @@ module cordic (
 
                 0 : begin // waiting for valid input
 
+                        out_valid <= 0;
+
                         if (in_valid) begin
 
                             // FUTURE: explicitly state MUX before adder architecture

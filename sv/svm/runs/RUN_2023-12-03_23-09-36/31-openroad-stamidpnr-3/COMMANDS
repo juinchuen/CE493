@@ -1,1 +1,0 @@
-openroad -exit -no_splash -metrics /home/jco1147/393_folder/CE493/sv/svm/runs/RUN_2023-12-03_23-09-36/31-openroad-stamidpnr-3/or_metrics_out.json /home/jco1147/.local/lib/python3.9/site-packages/openlane/scripts/openroad/sta/corner.tcl

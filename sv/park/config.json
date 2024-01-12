@@ -1,8 +1,0 @@
-{
-    "PDK": "sky130A",
-    "DESIGN_NAME": "inverse_park",
-    "VERILOG_FILES": ["../park/inverse_park.sv"],
-    "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 10
-}
-
