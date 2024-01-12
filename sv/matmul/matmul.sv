@@ -262,12 +262,12 @@ always_comb begin
     SET: begin
       start_pass = 1;
       next_state = WAIT;
-      if(op[1]) begin //doing one of the two parks
+      if(op[0]) begin //doing one of the two parks
         a_pass = cos;
         d_pass = cos;
         e_pass = a;
         f_pass = b;
-        if(op[0]) begin //doing inverse park
+        if(op[1]) begin //doing inverse park
           b_pass = -sin;
           c_pass = sin; 
         end else begin  //doing park
@@ -279,7 +279,7 @@ always_comb begin
         b_pass = 0;
         e_pass = a;
         f_pass = b;
-        if(op[0]) begin //doing inverse clark
+        if(op[1]) begin //doing inverse clark
           c_pass = neg_one_div_2;
           d_pass = sqrt_3_div_2;
         end else begin //doing clark
