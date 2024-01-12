@@ -176,6 +176,10 @@ logic signed [D_WIDTH] a_pass, b_pass, c_pass, d_pass, e_pass, f_pass;
 logic signed [D_WIDTH] alpha_pass, beta_pass;
 logic start_pass, done_pass;
 
+logic signed [D_WIDTH] a, a_c, b, b_c, sin, sin_c, cos, cos_c;
+
+enum logic [2] {IDLE, SET, WAIT} state, next_state;
+
 matmul_stage #(
   .D_WIDTH(D_WIDTH),
   .Q_BITS(Q_BITS)
