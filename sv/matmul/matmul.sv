@@ -279,7 +279,7 @@ always_comb begin
         b_pass = 0;
         e_pass = a;
         f_pass = b;
-        if(op[1]) begin //doing inverse clark
+        if(op[0]) begin //doing inverse clark
           c_pass = neg_one_div_2;
           d_pass = sqrt_3_div_2;
         end else begin //doing clark
