@@ -86,6 +86,10 @@ always_comb begin
   out1_c     = out1;
   out2_c     = out2;
 
+  //pass signals
+  a_pass = 0;
+  b_pass = 0;
+
   //unclocked outputs
   alpha = 0;
   beta  = 0;
@@ -170,6 +174,7 @@ localparam logic signed [D_WIDTH] one_div_sqrt_3 = 0.5773502692 * (2**Q_BITS);
 localparam logic signed [D_WIDTH] two_div_sqrt_3 = 1.1547005384 * (2**Q_BITS);
 localparam logic signed [D_WIDTH] neg_one_div_2 = -0.5 * (2**Q_BITS);
 localparam logic signed [D_WIDTH] sqrt_3_div_2 = 0.8660254038 * (2**Q_BITS);
+localparam logic signed [D_WIDTH] one_quantized = 1 * (2**Q_BITS);
 
 
 logic signed [D_WIDTH] a_pass, b_pass, c_pass, d_pass, e_pass, f_pass;
@@ -225,7 +230,14 @@ always_comb begin
   op_c  = op;
   next_state = state;
 
+  //pass signals
   start_pass = 0;
+  a_pass = 0;
+  b_pass = 0;
+  c_pass = 0;
+  d_pass = 0;
+  e_pass = 0;
+  f_pass = 0;
   
   // unclocked outputs
   done = 0;
@@ -261,7 +273,7 @@ always_comb begin
           c_pass = -sin;
         end
       end else begin  //doing one of the two clarkes
-        a_pass = 1;
+        a_pass = one_quantized;
         b_pass = 0;
         e_pass = a;
         f_pass = b;

@@ -62,7 +62,7 @@ initial begin : tb_process
   start = 0;
 
   //inverse clarke
-  @(posedge done)
+  @(negedge done)
   start = 1;
   a = (-0.927 * (2**Q_BITS));
   b = (0.701 * (2**Q_BITS));
@@ -71,7 +71,7 @@ initial begin : tb_process
   start = 0;
 
   //park
-  @(posedge done)
+  @(negedge done)
   start = 1;
   a = (-0.927 * (2**Q_BITS));
   b = (0.701 * (2**Q_BITS));
@@ -80,7 +80,7 @@ initial begin : tb_process
   start = 0;
 
   //inverse park
-  @(posedge done)
+  @(negedge done)
   start = 1;
   a = (-0.927 * (2**Q_BITS));
   b = (0.701 * (2**Q_BITS));
@@ -88,7 +88,7 @@ initial begin : tb_process
   @(posedge clk)
   start = 0;
 
-  @(posedge done)
+  @(negedge done)
   @(posedge clk)
   $finish;
 end
