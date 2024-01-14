@@ -203,6 +203,23 @@ module top #(
   .rstb       (rstb_m)
   );
 
+  matmul #(
+    .D_WIDTH  (D_WIDTH),
+    .Q_BITS   (Q_BITS)
+  ) matmul0 (
+    clk     (clk),
+    rstb    (rstb),
+    a_in    (a_in),
+    b_in    (b_in),
+    sin_in  (sin_in),
+    cos_in  (cos_in),
+    start   (start),
+    op_in   (op_in),
+    a_out   (a_out),
+    b_out   (b_out),
+    done    (done)
+  );
+
   pid #(
     .D_WIDTH    (D_WIDTH),
     .Q_BITS     (15),

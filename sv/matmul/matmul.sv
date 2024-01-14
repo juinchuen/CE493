@@ -245,9 +245,8 @@ always_comb begin
 
   // unclocked outputs
   done = 0;
-  a_out = 0;
-  b_out = 0;
-
+  a_out = a_out;
+  b_out = b_out;
 
   case(state)
     IDLE: begin

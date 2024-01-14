@@ -99,9 +99,6 @@ module cordic (
                         iter        <= 0;
                         theta_iter  <= 0;
 
-                        // FIX: data width needs to be adjusted
-                        //      to accomodate two's complement in trig output
-
                         cos     <=  (domain == 2'b00) || (domain == 2'b11)  ? 
                                     (vec[0] * 39797) >> 17                  :
                                     ~((vec[0] * 39797) >> 17) + 1           ;
