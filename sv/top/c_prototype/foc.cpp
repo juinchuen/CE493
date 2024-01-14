@@ -27,6 +27,30 @@ class foc {
             d_pi.print_coef();
         }
 
+        void hfoc_wrapper(float* duty_cycle, float alpha, float beta){
+
+            float Vmax = 346;
+
+            float Tmax = 255;
+
+            // XY to ABC
+
+            // normal, wikipedia (jurgen)
+            float A = alpha;
+            float B = 0.5 * (-alpha + sqrt(3) * beta);
+            float C = -A - B;
+
+            // power invariant, wikipedia 
+            // float A = sqrt(3/2) * alpha;
+            // float B = sqrt(2) * (0.5 * alpha + beta);
+            // float C = -A - B;
+
+            duty_cycle[0] = Tmax / 2 / Vmax * (Vmax - A);
+            duty_cycle[1] = Tmax / 2 / Vmax * (Vmax - B);
+            duty_cycle[2] = Tmax / 2 / Vmax * (Vmax - C);
+
+        }
+
     private:
 
         pi_control q_pi {0, 0, 0, 0, 0};
@@ -58,18 +82,17 @@ class foc {
             float Y_i = si*D_i + co*Q_i;
 
             // XY to ABC
-            A_i = X_i;
-            B_i = 0.5 * (-X_i + sqrt(3) * Y_i);
-            C_i = -A_i + B_i;
+            // A_i = X_i;
+            // B_i = 0.5 * (-X_i + sqrt(3) * Y_i);
+            // C_i = -A_i + B_i;
 
             //use SVM to generate PWM duty cycles
             
-
-               
-
             return 0;
 
         }
+
+        
         
 };
 
