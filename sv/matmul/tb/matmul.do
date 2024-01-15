@@ -10,12 +10,12 @@ vsim -classdebug -voptargs=+acc +notimingchecks -L work work.matmul_tb -wlf matm
 
 # wave
 add wave -noupdate -group matmul_tb
-add wave -noupdate -group matmul_tb -radix hexadecimal /matmul_tb/*
+add wave -noupdate -group matmul_tb -radix decimal /matmul_tb/*
 add wave -noupdate -group matmul_tb/matmul_inst
-add wave -noupdate -group matmul_tb/matmul_inst -radix hexadecimal /matmul_tb/matmul_inst/*
+add wave -noupdate -group matmul_tb/matmul_inst -radix decimal /matmul_tb/matmul_inst/*
 add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst
-add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst -radix hexadecimal matmul_tb/matmul_inst/matmul_stage_inst/*
+add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst -radix decimal matmul_tb/matmul_inst/matmul_stage_inst/*
 add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst/mul_inst
-add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst/mul_inst -radix hexadecimal matmul_tb/matmul_inst/matmul_stage_inst/mul_inst/*
+add wave -noupdate -group matmul_tb/matmul_inst/matmul_stage_inst/mul_inst -radix decimal matmul_tb/matmul_inst/matmul_stage_inst/mul_inst/*
 
 run -all

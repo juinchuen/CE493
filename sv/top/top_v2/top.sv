@@ -44,28 +44,32 @@ module top #(
   // state register
   reg [4:0]             state;
 
-  // matmul input
-  reg [D_WIDTH - 1 : 0] a_in_matmul;
-  reg [D_WIDTH - 1 : 0] b_in_matmul;
-  reg [1:0]             op_in_matmul;
+  // matmul input output
+  reg  [D_WIDTH - 1 : 0] a_in_matmul;
+  reg  [D_WIDTH - 1 : 0] b_in_matmul;
+  reg  [1:0]             op_in_matmul;
+  wire [D_WIDTH - 1 : 0] a_out_matmul;
+  wire [D_WIDTH - 1 : 0] b_out_matmul;
 
   // C current output register
-  reg [D_WIDTH - 1 : 0] Ccur;
+  reg [D_WIDTH - 1 : 0] c_out_calc;
 
   // out valid signals
   wire    cordic_out_valid;
   wire    matmul_out_valid;
-  wire    PID_out_valid;
+  wire    pid_d_out_valid;
+  wire    pid_q_out_valid;
   wire    svm_out_valid;
 
   // done registers (only needed for CORDIC and clarke due to parallelism)
   reg     cordic_done;
   reg     clarke_done;
+  reg     pid_d_done;
+  reg     pid_q_done;
 
   // wires between modules
   wire    [         15 : 0] sin, cos;
-  wire    [D_WIDTH - 1 : 0] Dcurr, Qcurr;
-  wire    [D_WIDTH - 1 : 0] Dcurr_i, Qcurr_i;
+  wire    [D_WIDTH - 1 : 0] pid_d_out, pid_q_out;
 
   // module start signals
   reg     start_cordic;
@@ -88,12 +92,14 @@ module top #(
       ready         <= 1;
 
       start_cordic  <= 0;
-      start_park    <= 0;
+      start_matmul  <= 0;
       start_PID     <= 0;
       start_svm     <= 0;
 
       clarke_done   <= 0;
       cordic_done   <= 0;
+      pid_d_done    <= 0;
+      pid_q_done    <= 0;
 
       a_in_matmul   <= 0;
       b_in_matmul   <= 0;
@@ -131,9 +137,9 @@ module top #(
           start_cordic  <= 0;
           start_matmul  <= 0;
 
-          if  (clarke_done      && cordic_out_valid) || 
-              (cordic_done      && clarke_out_valid) || 
-              (clarke_out_valid && cordic_out_valid) begin
+          if  ((clarke_done      && cordic_out_valid) || 
+               (cordic_done      && matmul_out_valid) || 
+               (matmul_out_valid && cordic_out_valid)) begin
 
             clarke_done <= 0;
             cordic_done <= 0;
@@ -149,7 +155,7 @@ module top #(
           end else begin
 
             // remember whether clarke and cordic are done
-            clarke_done <= clarke_out_valid ? 1 : clarke_done;
+            clarke_done <= matmul_out_valid ? 1 : clarke_done;
             cordic_done <= cordic_out_valid ? 1 : cordic_done;
 
           end
@@ -167,11 +173,11 @@ module top #(
         3 : begin // wait for PID
           start_PID <= 0;
 
-          if (PID_out_valid) begin
+          if (pid_d_out_valid) begin
             // setting up matmul for inverse park
             op_in_matmul  <= 3;
-            a_in_matmul   <= Dcurr_i;
-            b_in_matmul   <= Qcurr_i;
+            a_in_matmul   <= pid_d_out;
+            b_in_matmul   <= pid_q_out;
 
             start_matmul <= 1;
             state <= 4;
@@ -225,7 +231,7 @@ module top #(
           ready         <= 1;
 
           start_cordic  <= 0;
-          start_park    <= 0;
+          start_matmul  <= 0;
           start_PID     <= 0;
           start_svm     <= 0;
 
@@ -261,17 +267,17 @@ module top #(
     .D_WIDTH  (D_WIDTH),
     .Q_BITS   (Q_BITS)
   ) matmul0 (
-    clk     (clk),
-    rstb    (rstb),
-    a_in    (a_in_matmul),
-    b_in    (b_in_matmul),
-    sin_in  (sin),
-    cos_in  (cos),
-    start   (start_matmul),
-    op_in   (op_in_matmul),
-    a_out   (a_out_matmul),
-    b_out   (b_out_matmul),
-    done    (matmul_out_valid)
+    .clk     (clk),
+    .rstb    (rstb),
+    .a_in    (a_in_matmul),
+    .b_in    (b_in_matmul),
+    .sin_in  (sin),
+    .cos_in  (cos),
+    .start   (start_matmul),
+    .op_in   (op_in_matmul),
+    .a_out   (a_out_matmul),
+    .b_out   (b_out_matmul),
+    .done    (matmul_out_valid)
   );
 
   pid #(
@@ -280,15 +286,16 @@ module top #(
     .LIM_MAX    (1 <<< 12),
     .LIM_MIN    (-1 <<< 12)
   ) pid_d (
-    .clock          (clk),
-    .reset          (rstb),
+    .clk            (clk),
+    .rstb           (rstb),
     .write_enable   (pid_d_wen),
     .iterate_enable (start_PID),
     .reg_addr       (pid_d_addr),
     .reg_data       (pid_d_data),
     .target         (19'b0),
-    .measurement    (Dcurr),
-    .out_clocked    (Dcurr_i)        
+    .measurement    (a_out_matmul),
+    .out            (pid_d_out),
+    .out_valid      (pid_d_out_valid)        
   );
 
   pid #(
@@ -297,19 +304,20 @@ module top #(
     .LIM_MAX    (1 <<< 12),
     .LIM_MIN    (-1 <<< 12)
   ) pid_q (
-    .clock          (clk),
-    .reset          (rstb),
+    .clk            (clk),
+    .rstb           (rstb),
     .write_enable   (pid_q_wen),
     .iterate_enable (start_PID),
     .reg_addr       (pid_q_addr),
     .reg_data       (pid_q_data),
     .target         (currT_r),
-    .measurement    (Qcurr),
-    .out_clocked    (Qcurr_i)        
+    .measurement    (b_out_matmul),
+    .out            (pid_q_out),
+    .out_valid      (pid_q_out_valid)        
   );
 
   svm #(
-    .D_WIDTH    (D_WIDTH)
+    .D_WIDTH    (D_WIDTH),
     .Q_BITS     (Q_BITS)
   ) svm0 (
     .pwmA       (pwmA_out), 
