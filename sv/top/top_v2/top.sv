@@ -1,6 +1,6 @@
 module top #(
-    parameter D_WIDTH = 19,
-    parameter Q_BITS  = 15
+    parameter D_WIDTH = 16,
+    parameter Q_BITS  = 13
 )(
   //################### IO list ###################
 
@@ -41,74 +41,71 @@ module top #(
   reg [D_WIDTH - 1 : 0] currT_r;
   reg [         15 : 0] periodTop_r;
 
-  // state registers
-  reg [4:0] state;
-  reg module_reset;
-  wire rstb_m;
+  // state register
+  reg [4:0]             state;
 
-  assign rstb_m = rstb && module_reset;
+  // matmul input
+  reg [D_WIDTH - 1 : 0] a_in_matmul;
+  reg [D_WIDTH - 1 : 0] b_in_matmul;
+  reg [1:0]             op_in_matmul;
+
+  // C current output register
+  reg [D_WIDTH - 1 : 0] Ccur;
 
   // out valid signals
   wire    cordic_out_valid;
-  wire    clarke_out_valid;
-  wire    park_out_valid;
+  wire    matmul_out_valid;
   wire    PID_out_valid;
-  wire    ipark_out_valid;
-  wire    iclarke_out_valid;
   wire    svm_out_valid;
 
+  // done registers (only needed for CORDIC and clarke due to parallelism)
+  reg     cordic_done;
+  reg     clarke_done;
+
   // wires between modules
-  wire    [D_WIDTH - 1 : 0] alpha, beta;
   wire    [         15 : 0] sin, cos;
   wire    [D_WIDTH - 1 : 0] Dcurr, Qcurr;
   wire    [D_WIDTH - 1 : 0] Dcurr_i, Qcurr_i;
-  wire    [D_WIDTH - 1 : 0] alpha_i, beta_i;
-  wire    [D_WIDTH - 1 : 0] currA_i_ex, currB_i_ex, currC_i_ex;
-  wire    [         15 : 0] currA_i, currB_i, currC_i;
-
-  wire    [D_WIDTH - 1 : 0] sin_ex, cos_ex;
-
-  assign sin_ex = {{(D_WIDTH - 16){sin[15]}}, sin};
-  assign cos_ex = {{(D_WIDTH - 16){cos[15]}}, cos};
-
-  assign currA_i = currA_i_ex[15:0];
-  assign currB_i = currB_i_ex[15:0];
-  assign currC_i = currC_i_ex[15:0];
 
   // module start signals
-  reg     valid_cordic_clarke ,
-          valid_park          ,
-          valid_PID           ,
-          valid_ipark         ,
-          valid_iclarke       ,
-          valid_svm           ;
+  reg     start_cordic;
+  reg     start_matmul;
+  reg     start_PID;
+  reg     start_svm;
 
   always @(posedge clk or negedge rstb) begin
 
     if (!rstb) begin
-      angle_r     <= 0;
-      currA_r     <= 0;
-      currB_r     <= 0;
-      currC_r     <= 0;
-      currT_r     <= 0;
-      periodTop_r <= 0;
 
-      state        <= 0;
-      ready        <= 1;
-      module_reset <= 1;
+      angle_r       <= 0;
+      currA_r       <= 0;
+      currB_r       <= 0;
+      currC_r       <= 0;
+      currT_r       <= 0;
+      periodTop_r   <= 0;
 
-      valid_cordic_clarke <= 0;
-      valid_park          <= 0;
-      valid_PID           <= 0;
-      valid_ipark         <= 0;
-      valid_iclarke       <= 0;
-      valid_svm           <= 0;
+      state         <= 0;
+      ready         <= 1;
+
+      start_cordic  <= 0;
+      start_park    <= 0;
+      start_PID     <= 0;
+      start_svm     <= 0;
+
+      clarke_done   <= 0;
+      cordic_done   <= 0;
+
+      a_in_matmul   <= 0;
+      b_in_matmul   <= 0;
+      op_in_matmul  <= 0;
+      c_out_calc    <= 0;
+
     end else begin
+
       case (state)
         0 : begin // wait for valid input
-          module_reset <= 1;
+          
           if (valid) begin
-            angle_r     <= angle_in;
             angle_r     <= angle_in;
             currA_r     <= currA_in;
             currB_r     <= currB_in;
@@ -119,72 +116,126 @@ module top #(
             state <= 1;
             ready <= 0;
 
-            valid_cordic_clarke <= 1;
+            // setting up matmul for clarke
+            op_in_matmul  <= 0;
+            a_in_matmul   <= currA_in;
+            b_in_matmul   <= currB_in;
+
+            start_cordic  <= 1;
+            start_matmul  <= 1;
           end
+
         end
 
         1 : begin // wait for clarke and cordic
-          valid_cordic_clarke <= 0;
-          if (clarke_out_valid && cordic_out_valid) begin
-            valid_park <= 1;
+          start_cordic  <= 0;
+          start_matmul  <= 0;
+
+          if  (clarke_done      && cordic_out_valid) || 
+              (cordic_done      && clarke_out_valid) || 
+              (clarke_out_valid && cordic_out_valid) begin
+
+            clarke_done <= 0;
+            cordic_done <= 0;
+
+            // setting up matmul for park
+            op_in_matmul  <= 2;
+            a_in_matmul   <= a_out_matmul;
+            b_in_matmul   <= b_out_matmul;
+
+            start_matmul <= 1;
             state <= 2;
+
+          end else begin
+
+            // remember whether clarke and cordic are done
+            clarke_done <= clarke_out_valid ? 1 : clarke_done;
+            cordic_done <= cordic_out_valid ? 1 : cordic_done;
+
           end
         end
 
         2 : begin // wait for park
-          valid_park <= 0;
-          if (park_out_valid) begin
-            valid_PID <= 1;
+          start_matmul <= 0;
+          
+          if (matmul_out_valid) begin
+            start_PID <= 1;
             state <= 3;
           end
         end
 
-        3 : begin // let PID cook
-          valid_PID <= 0;
-          valid_ipark <= 1;
-          state <= 4;
+        3 : begin // wait for PID
+          start_PID <= 0;
+
+          if (PID_out_valid) begin
+            // setting up matmul for inverse park
+            op_in_matmul  <= 3;
+            a_in_matmul   <= Dcurr_i;
+            b_in_matmul   <= Qcurr_i;
+
+            start_matmul <= 1;
+            state <= 4;
+          end
         end
 
         4 : begin // wait for inverse park
-          valid_ipark <= 0;
-          if (ipark_out_valid) begin
-            valid_iclarke <= 1;
+          start_matmul  <= 0;
+
+          if (matmul_out_valid) begin
+            //setting up matmul for inverse clarke
+            op_in_matmul  <= 1;
+            a_in_matmul   <= a_out_matmul;
+            b_in_matmul   <= b_out_matmul;
+
+            start_matmul <= 1;
             state <= 5;
           end
         end
 
         5 : begin // wait for inverse clark
-          valid_iclarke <= 0;
-          if (iclarke_out_valid) begin
-            valid_svm <= 1;
+          start_matmul  <= 0;
+          
+          if (matmul_out_valid) begin
+            // calculate C current, assuming balanced
+            c_out_calc <= - a_out_matmul - b_out_matmul;
+            start_svm <= 1;
             state <= 6;
           end
         end
 
-        6 : begin // start SVM
-          valid_svm <= 0;
-          state <= 7;
-        end
+        6 : begin // wait for SVM
+          start_svm <= 0;
 
-        7 : begin // wait for SVM
           if (svm_out_valid) begin
-            state <= 8;
+            state <= 0;
+            ready <= 1;
           end
         end
 
-        8 : begin // reset the comb modules
-          module_reset <= 0;
-          state <= 9;
-          // ready <= 1;
-        end
-
-        9 : begin // stop reset
-          module_reset <= 1;
-          state <= 0;
-          ready <= 1;
-        end
-
         default : begin //reset
+
+          angle_r       <= 0;
+          currA_r       <= 0;
+          currB_r       <= 0;
+          currC_r       <= 0;
+          currT_r       <= 0;
+          periodTop_r   <= 0;
+
+          state         <= 0;
+          ready         <= 1;
+
+          start_cordic  <= 0;
+          start_park    <= 0;
+          start_PID     <= 0;
+          start_svm     <= 0;
+
+          clarke_done   <= 0;
+          cordic_done   <= 0;
+
+          a_in_matmul   <= 0;
+          b_in_matmul   <= 0;
+          op_in_matmul  <= 0;
+          c_out_calc    <= 0;
 
         end
 
@@ -192,15 +243,18 @@ module top #(
     end
   end
 
-  cordic cordic0 (
-  .theta      (angle_r),
-  .in_valid   (valid_cordic_clarke),
+  cordic #(
+    .D_WIDTH  (D_WIDTH),
+    .Q_BITS   (Q_BITS)
+  ) cordic0 (
+  .theta      (angle_in),
+  .in_valid   (start_cordic),
   .ready      (),
   .out_valid  (cordic_out_valid),
   .sin        (sin),
   .cos        (cos),
   .clk        (clk),
-  .rstb       (rstb_m)
+  .rstb       (rstb)
   );
 
   matmul #(
@@ -209,27 +263,27 @@ module top #(
   ) matmul0 (
     clk     (clk),
     rstb    (rstb),
-    a_in    (a_in),
-    b_in    (b_in),
-    sin_in  (sin_in),
-    cos_in  (cos_in),
-    start   (start),
-    op_in   (op_in),
-    a_out   (a_out),
-    b_out   (b_out),
-    done    (done)
+    a_in    (a_in_matmul),
+    b_in    (b_in_matmul),
+    sin_in  (sin),
+    cos_in  (cos),
+    start   (start_matmul),
+    op_in   (op_in_matmul),
+    a_out   (a_out_matmul),
+    b_out   (b_out_matmul),
+    done    (matmul_out_valid)
   );
 
   pid #(
     .D_WIDTH    (D_WIDTH),
-    .Q_BITS     (15),
+    .Q_BITS     (Q_BITS),
     .LIM_MAX    (1 <<< 12),
     .LIM_MIN    (-1 <<< 12)
   ) pid_d (
     .clock          (clk),
     .reset          (rstb),
     .write_enable   (pid_d_wen),
-    .iterate_enable (valid_PID),
+    .iterate_enable (start_PID),
     .reg_addr       (pid_d_addr),
     .reg_data       (pid_d_data),
     .target         (19'b0),
@@ -239,14 +293,14 @@ module top #(
 
   pid #(
     .D_WIDTH    (D_WIDTH),
-    .Q_BITS     (15),
+    .Q_BITS     (Q_BITS),
     .LIM_MAX    (1 <<< 12),
     .LIM_MIN    (-1 <<< 12)
   ) pid_q (
     .clock          (clk),
     .reset          (rstb),
     .write_enable   (pid_q_wen),
-    .iterate_enable (valid_PID),
+    .iterate_enable (start_PID),
     .reg_addr       (pid_q_addr),
     .reg_data       (pid_q_data),
     .target         (currT_r),
@@ -255,20 +309,21 @@ module top #(
   );
 
   svm #(
-    .D_WIDTH    (16)
+    .D_WIDTH    (D_WIDTH)
+    .Q_BITS     (Q_BITS)
   ) svm0 (
     .pwmA       (pwmA_out), 
     .pwmB       (pwmB_out), 
     .pwmC       (pwmC_out), 
     .halt       (),
-    .vA         (currA_i), 
-    .vB         (currB_i), 
-    .vC         (currC_i), 
+    .vA         (a_out_matmul), 
+    .vB         (b_out_matmul), 
+    .vC         (c_out_calc), 
     .periodTop  (periodTop_r),
-    .in_valid   (valid_svm),
+    .in_valid   (start_svm),
     .ready      (svm_out_valid),
     .clk        (clk), 
-    .rstb       (rstb_m)
+    .rstb       (rstb)
   );
 
 endmodule

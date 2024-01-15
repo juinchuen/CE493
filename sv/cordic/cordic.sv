@@ -12,14 +12,19 @@ module signed_lte (
 
 endmodule
 
-module cordic (
+module cordic #(
+
+    parameter D_WIDTH = 16,
+    parameter Q_BITS  = 13
+
+)(
     input  logic [15:0] theta,
     input  logic in_valid,
 
     output logic ready,
     output logic out_valid,
-    output logic [15:0] sin,
-    output logic [15:0] cos,
+    output logic signed [15:0] sin,
+    output logic signed [15:0] cos,
     
     input logic clk,
     input logic rstb
@@ -99,13 +104,13 @@ module cordic (
                         iter        <= 0;
                         theta_iter  <= 0;
 
-                        cos     <=  (domain == 2'b00) || (domain == 2'b11)  ? 
-                                    (vec[0] * 39797) >> 17                  :
-                                    ~((vec[0] * 39797) >> 17) + 1           ;
+                        cos     <=  (domain == 2'b00) || (domain == 2'b11)          ? 
+                                    (vec[0] * 39797) >>> (17 + 15 - Q_BITS)         :
+                                    ~((vec[0] * 39797) >>> (17 + 15 - Q_BITS)) + 1  ;
 
-                        sin     <= (domain == 2'b00) || (domain == 2'b01)  ? 
-                                    (vec[1] * 39797) >> 17                  :
-                                    ~((vec[1] * 39797) >> 17) + 1           ;
+                        sin     <=  (domain == 2'b00) || (domain == 2'b01)          ? 
+                                    (vec[1] * 39797) >>> (17 + 15 - Q_BITS)         :
+                                    ~((vec[1] * 39797) >>> (17 + 15 - Q_BITS)) + 1  ;
                             
                         vec[0]  <= 18'hffff;
                         vec[1]  <= 18'h0;

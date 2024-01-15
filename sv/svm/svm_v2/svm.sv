@@ -61,21 +61,6 @@ module svm #(
     assign pwmA_c = calc_ready & (counter >= tA);
     assign pwmB_c = calc_ready & (counter >= tB);
     assign pwmC_c = calc_ready & (counter >= tC);
-
-    // // calculate 1 - V
-    // assign diffA = ({1'b0, {(D_WIDTH - 1){1'b1}}} - vA);     
-    // assign diffB = ({1'b0, {(D_WIDTH - 1){1'b1}}} - vB); 
-    // assign diffC = ({1'b0, {(D_WIDTH - 1){1'b1}}} - vC);     
-
-    // // calculate T * (1 - V)
-    // assign tA_long = periodTop * diffA;
-    // assign tB_long = periodTop * diffB;
-    // assign tC_long = periodTop * diffC;
-
-    // // scale appropriately because of quantization
-    // assign tA = tA_long[2 * D_WIDTH - 1 : D_WIDTH];
-    // assign tB = tB_long[2 * D_WIDTH - 1 : D_WIDTH];
-    // assign tC = tC_long[2 * D_WIDTH - 1 : D_WIDTH];
     
     assign halt = counter == 0;
     
