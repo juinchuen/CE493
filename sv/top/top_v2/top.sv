@@ -249,21 +249,7 @@ module top #(
     end
   end
 
-  cordic #(
-    .D_WIDTH  (D_WIDTH),
-    .Q_BITS   (Q_BITS)
-  ) cordic0 (
-  .theta      (angle_in),
-  .in_valid   (start_cordic),
-  .ready      (),
-  .out_valid  (cordic_out_valid),
-  .sin        (sin),
-  .cos        (cos),
-  .clk        (clk),
-  .rstb       (rstb)
-  );
-
-  matmul #(
+    matmul #(
     .D_WIDTH  (D_WIDTH),
     .Q_BITS   (Q_BITS)
   ) matmul0 (
@@ -280,6 +266,43 @@ module top #(
     .done    (matmul_out_valid)
   );
 
+  svm #(
+    .D_WIDTH    (D_WIDTH),
+    .Q_BITS     (Q_BITS)
+  ) svm0 (
+    .pwmA       (pwmA_out), 
+    .pwmB       (pwmB_out), 
+    .pwmC       (pwmC_out), 
+    .halt       (),
+    .vA         (a_out_matmul), 
+    .vB         (b_out_matmul), 
+    .vC         (c_out_calc), 
+    .periodTop  (periodTop_r),
+    .in_valid   (start_svm),
+    .ready      (svm_out_valid),
+    .clk        (clk), 
+    .rstb       (rstb)
+  );
+
+  cordic #(
+    .D_WIDTH  (D_WIDTH),
+    .Q_BITS   (Q_BITS)
+  ) cordic0 (
+    .theta      (angle_in),
+    .in_valid   (start_cordic),
+    .ready      (),
+    .out_valid  (cordic_out_valid),
+    .sin        (sin),
+    .cos        (cos),
+    .clk        (clk),
+    .rstb       (rstb)
+  );
+  
+
+
+
+
+
   pid #(
     .D_WIDTH    (D_WIDTH),
     .Q_BITS     (Q_BITS),
@@ -292,7 +315,7 @@ module top #(
     .iterate_enable (start_PID),
     .reg_addr       (pid_d_addr),
     .reg_data       (pid_d_data),
-    .target         (19'b0),
+    .target         (16'b0),
     .measurement    (a_out_matmul),
     .out            (pid_d_out),
     .out_valid      (pid_d_out_valid)        
@@ -316,22 +339,6 @@ module top #(
     .out_valid      (pid_q_out_valid)        
   );
 
-  svm #(
-    .D_WIDTH    (D_WIDTH),
-    .Q_BITS     (Q_BITS)
-  ) svm0 (
-    .pwmA       (pwmA_out), 
-    .pwmB       (pwmB_out), 
-    .pwmC       (pwmC_out), 
-    .halt       (),
-    .vA         (a_out_matmul), 
-    .vB         (b_out_matmul), 
-    .vC         (c_out_calc), 
-    .periodTop  (periodTop_r),
-    .in_valid   (start_svm),
-    .ready      (svm_out_valid),
-    .clk        (clk), 
-    .rstb       (rstb)
-  );
+
 
 endmodule

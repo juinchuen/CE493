@@ -65,7 +65,7 @@ module svm #(
     assign halt = counter == 0;
     
     // triangle wave generator
-    always @ (negedge clk or negedge rstb) begin
+    always @ (posedge clk or negedge rstb) begin
         
         if (!rstb) begin
 
@@ -161,6 +161,28 @@ module svm #(
                                 :
                                             (counter == 1)              ? ~rising : rising;   //falling case
 
+                end
+
+                default : begin
+                    counter <= 0;
+                    delta   <= 1;
+                    rising  <= 1;
+                    ready   <= 1;
+                    state   <= 0;
+
+                    tA      <= 0;
+                    tB      <= 0;
+                    tC      <= 0;
+
+                    vA_store <= 0;
+                    vB_store <= 0;
+                    vC_store <= 0;
+
+                    pwmA    <= 0;
+                    pwmB    <= 0;
+                    pwmC    <= 0;
+
+                    calc_ready <= 0;
                 end
 
             endcase

@@ -1,0 +1,7 @@
+{
+    "PDK": "sky130A",
+    "DESIGN_NAME": "matmul",
+    "VERILOG_FILES": ["matmul.sv"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 50
+}
