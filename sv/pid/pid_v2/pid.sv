@@ -53,7 +53,7 @@ module pid #(
 
     always @ (posedge clk or negedge rstb) begin
 
-        if (!rstb || !write_enable) begin
+        if (!rstb) begin
 
             state       <= 0;
 
@@ -69,26 +69,36 @@ module pid #(
             mult_a      <= 0;
             mult_b      <= 0;
 
-            if (write_enable) begin
+            kp          <= 0;
+            ki          <= 0;
+            kd_1        <= 0;    
+            kd_2        <= 0;   
 
-                kp          <= 0;
-                ki          <= 0;
-                kd_1        <= 0;    
-                kd_2        <= 0;   
+        end else if (!write_enable) begin
 
-            end else begin
+            state       <= 0;
 
-                case (reg_addr)
+            out         <= 0;
+            out_valid   <= 0;
 
-                    0 : kp      <= reg_data;
-                    1 : ki      <= reg_data;
-                    2 : kd_1    <= reg_data;
-                    3 : kd_2    <= reg_data;
+            curr_error  <= 0;
+            curr_int    <= 0;
 
-                endcase
+            prev_error  <= 0;
+            prev_int    <= 0;
 
-            end
+            mult_a      <= 0;
+            mult_b      <= 0;
 
+            case (reg_addr)
+
+                0 : kp      <= reg_data;
+                1 : ki      <= reg_data;
+                2 : kd_1    <= reg_data;
+                3 : kd_2    <= reg_data;
+
+            endcase
+            
         end else begin
 
             case (state)

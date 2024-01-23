@@ -279,7 +279,7 @@ module top #(
     .vC         (c_out_calc), 
     .periodTop  (periodTop_r),
     .in_valid   (start_svm),
-    .ready      (svm_out_valid),
+    .out_valid  (svm_out_valid),
     .clk        (clk), 
     .rstb       (rstb)
   );

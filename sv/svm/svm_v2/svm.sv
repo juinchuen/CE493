@@ -34,7 +34,7 @@ module svm #(
     input  logic [D_WIDTH - 1 : 0] periodTop,
 
     input  logic in_valid,
-    output logic ready,
+    output logic out_valid,
 
     input  logic clk, 
     input  logic rstb
@@ -69,11 +69,11 @@ module svm #(
         
         if (!rstb) begin
 
-            counter <= 0;
-            delta   <= 1;
-            rising  <= 1;
-            ready   <= 1;
-            state   <= 0;
+            counter   <= 0;
+            delta     <= 1;
+            rising    <= 1;
+            out_valid <= 0;
+            state     <= 0;
 
             tA      <= 0;
             tB      <= 0;
@@ -95,10 +95,11 @@ module svm #(
 
                 0 : begin
 
+                    out_valid <= 0;
+
                     if (in_valid) begin
 
                         state <= 1;
-                        ready <= 0;
                         delta <= 1;
 
                         vA_store <= vA;
@@ -138,7 +139,7 @@ module svm #(
 
                         counter     <= 0;
                         state       <= 0;
-                        ready       <= 1;
+                        out_valid   <= 1;
                         calc_ready  <= 0;
 
                         pwmA    <= 0;
@@ -164,11 +165,11 @@ module svm #(
                 end
 
                 default : begin
-                    counter <= 0;
-                    delta   <= 1;
-                    rising  <= 1;
-                    ready   <= 1;
-                    state   <= 0;
+                    counter   <= 0;
+                    delta     <= 1;
+                    rising    <= 1;
+                    out_valid <= 0;
+                    state     <= 0;
 
                     tA      <= 0;
                     tB      <= 0;

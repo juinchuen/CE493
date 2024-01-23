@@ -3,7 +3,10 @@
     "DESIGN_NAME": "top",
     "VERILOG_FILES": ["../../cordic/gamma.sv", "../../cordic/cordic.sv", "../../matmul/matmul.sv", "../../pid/pid_v2/pid.sv", "../../svm/svm_v2/svm.sv", "top.sv"],
     "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 50
+    "CLOCK_PERIOD": 1000,
+    "SYNTH_SIZING": 1,
+    "SYNTH_STRATEGY": "DELAY 4",
+    "PL_RESIZER_MAX_WIRE_LENGTH": 25
 }
 
 
