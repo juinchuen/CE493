@@ -1,0 +1,3 @@
+version 3 makes kp and ki inputs instead of registers
+
+it is easier at the top level to pass inputs rather than write to pid
