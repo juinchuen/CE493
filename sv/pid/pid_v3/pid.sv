@@ -18,9 +18,7 @@ endmodule
 
 module pid #(
     parameter D_WIDTH = 16,
-    parameter Q_BITS = 13,
-    parameter LIM_MAX = 1 <<< 12,
-    parameter LIM_MIN = -1 <<< 12
+    parameter Q_BITS = 13
 ) (
     input logic                         clk,
     input logic                         rstb,

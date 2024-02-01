@@ -39,15 +39,11 @@ module fpga_wrapper (
 
     reg rd_en_opcode, rd_en_data;
 
-    reg [15:0] angle_in;
-    reg [15:0] currA_in, currB_in, currC_in, currT_in;
-    reg [15:0] periodTop;
+    reg         [15:0] angle_in;
+    reg signed  [15:0] currA_in, currB_in, currC_in, currT_in;
+    reg         [15:0] periodTop;
 
-    reg pid_d_wen;
-    reg pid_q_wen;
-
-    reg [15:0] pid_d_addr;
-    reg [15:0] pid_q_addr;
+    reg [15:0] signed kpd, kid, kpq, kiq;
 
     reg valid_top, ready_top;
 
@@ -75,6 +71,7 @@ module fpga_wrapper (
             ready_top       <= 0;
 
             state           <= IDLE;
+            ready           <= 1;
 
         end else begin
 
@@ -93,6 +90,8 @@ module fpga_wrapper (
                             state <= WRITE_KPD;
 
                         end else if (fifo_opcode == 8'hff) begin
+
+                            ready <= 0;
                             
                             state <= READ_CURRA;
 
@@ -108,80 +107,175 @@ module fpga_wrapper (
 
                 WRITE_KPD : begin
 
-                    rd_en_data <= 1;
+                    if (!empty_data) begin
 
-                    wr_en_pid_d <= 1;
+                        rd_en_data <= 1;
 
-                    addr_pid_d <= 0;
+                        kpd <= fifo_data;
 
-                    state <= WRITE_KID;
+                        state <= WRITE_KID;
+
+                    end
 
                 end
 
                 WRITE_KID : begin
 
-                    addr_pid_q <= 1;
+                    if (!empty_data) begin
 
-                    state <= WRITE_KPQ;     
+                        kid <= fifo_data;
+
+                        state <= WRITE_KPQ;
+
+                    end     
 
                 end
 
                 WRITE_KPQ : begin
 
-                    wr_en_pid_d <= 0;
-                    wr_en_pid_q <= 1;
+                    if (!empty_data) begin
 
-                    addr_pid_q <= 0;
+                        kpq <= fifo_data;
 
-                    state <= WRITE_KIQ;
+                        state <= WRITE_KIQ;
+
+                    end
 
                 end
 
                 WRITE_KIQ : begin
 
-                    addr_pid_q <= 1;
+                    if (!empty_data) begin
 
-                    state <= WRITE_PTOP;
+                        kiq <= fifo_data;
+
+                        state <= WRITE_PTOP;
+
+                    end
 
                 end
 
                 WRITE_PTOP : begin
 
-                    wr_en_pid_q <= 0;
+                    if (!empty_data) begin
 
-                    periodTop <= fifo_data;
+                        rd_en_data <= 0;
 
-                    rd_en_data <= 0;
+                        periodTop <= fifo_data;
 
-                    state <= IDLE;
+                        state <= IDLE;
+
+                    end
 
                 end
 
                 READ_CURRA : begin
 
-                    rd_en_data <= 1;
+                    if (!empty_data) begin
 
-                    currA_in <= fifo_data;
+                        rd_en_data <= 1;
 
-                    state <= READ_CURRB;
+                        currA_in <= fifo_data;
+
+                        state <= READ_CURRB;
+
+                    end
 
                 end
 
                 READ_CURRB : begin
 
-                    currB_in <= fifo_data;
+                    if (!empty_data) begin
 
-                    state <= READ_CURRC;
+                        currB_in <= fifo_data;
+
+                        state <= READ_CURRC;
+
+                    end
 
                 end
 
                 READ_CURRC : begin
 
-                    currC_in <= fifo_data;
+                    if (!empty_data) begin
 
-                    state <= READ_CURRT;
+                        currC_in <= fifo_data;
+
+                        state <= READ_CURRT;
+
+                    end
 
                 end
+
+                READ_CURRT : begin
+
+                    if (!empty_data) begin
+
+                        currT_in <= fifo_data;
+
+                        state <= READ_ANGLE;
+
+                    end
+
+                end
+
+                READ_ANGLE : begin
+
+                    if (!empty_data) begin
+
+                        rd_en_data <= 0;
+
+                        angle_in <= fifo_data;
+
+                        state <= IDLE;
+
+                        valid_top <= 1;
+
+                    end
+
+                end
+
+                WAIT_FOC : begin
+
+                    valid_top <= 0;
+
+                    if (ready_top && !valid_top) begin
+
+                        ready <= 1;
+
+                        state <= IDLE;
+
+                    end
+
+                end
+
+                default : begin
+
+                    rd_en_opcode    <= 0;
+                    rd_en_data      <= 0;
+
+                    angle_in        <= 0;
+                    currA_in        <= 0;
+                    currB_in        <= 0;
+                    currC_in        <= 0;
+                    currT_in        <= 0;
+                    periodTop       <= 0;
+
+                    pid_d_wen       <= 0;
+                    pid_q_wen       <= 0;
+
+                    pid_d_addr      <= 0;
+                    pid_q_addr      <= 0;
+
+                    valid_top       <= 0;
+                    ready_top       <= 0;
+
+                    state           <= IDLE;
+                    ready           <= 1;
+
+                end
+
+
 
                 
 
@@ -233,14 +327,10 @@ module fpga_wrapper (
         .pwmB_out    (pwmB),
         .pwmC_out    (pwmC),
 
-        .pid_d_wen   (wr_en_pid_d), 
-        .pid_q_wen   (wr_en_pid_q),
-
-        .pid_d_addr  (addr_pid_d), 
-        .pid_q_addr  (addr_pid_q),
-
-        .pid_d_data  (fifo_data), 
-        .pid_q_data  (fifo_data),
+        .kpd            (kpd),
+        .kid            (kid),
+        .kpq            (kpq),
+        .kiq            (kiq),
 
         // control signals
         .clk         (clk_sys),
