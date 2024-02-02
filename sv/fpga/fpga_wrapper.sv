@@ -7,7 +7,7 @@ module fpga_wrapper (
         input logic cs,
         input logic spi_mosi,
 
-        output logic full_spi
+        output logic full_spi,
 
         output logic pwmA,
         output logic pwmB,
@@ -31,7 +31,7 @@ module fpga_wrapper (
                         WAIT_FOC} state;
 
     wire empty_opcode, empty_data;
-    wire full_spi, full_opcode, full_data;
+    wire full_opcode, full_data;
     assign full_spi = full_opcode | full_data;
 
     wire [15:0] fifo_data;
@@ -43,7 +43,7 @@ module fpga_wrapper (
     reg signed  [15:0] currA_in, currB_in, currC_in, currT_in;
     reg         [15:0] periodTop;
 
-    reg [15:0] signed kpd, kid, kpq, kiq;
+    reg signed  [15:0] kpd, kid, kpq, kiq;
 
     reg valid_top, ready_top;
 
@@ -61,11 +61,10 @@ module fpga_wrapper (
             currT_in        <= 0;
             periodTop       <= 0;
 
-            pid_d_wen       <= 0;
-            pid_q_wen       <= 0;
-
-            pid_d_addr      <= 0;
-            pid_q_addr      <= 0;
+            kpd             <= 0;
+            kid             <= 0;
+            kpq             <= 0;
+            kiq             <= 0;
 
             valid_top       <= 0;
             ready_top       <= 0;
@@ -261,11 +260,10 @@ module fpga_wrapper (
                     currT_in        <= 0;
                     periodTop       <= 0;
 
-                    pid_d_wen       <= 0;
-                    pid_q_wen       <= 0;
-
-                    pid_d_addr      <= 0;
-                    pid_q_addr      <= 0;
+                    kpd             <= 0;
+                    kid             <= 0;
+                    kpq             <= 0;
+                    kiq             <= 0;
 
                     valid_top       <= 0;
                     ready_top       <= 0;
@@ -286,13 +284,9 @@ module fpga_wrapper (
 
     end
 
-    
-
-
-
     spi spi0 (
         .clk_spi        (clk_spi),
-        .clk_100mhz     (clk_sys),
+        .clk_sys        (clk_sys),
         .cs             (cs),
         .rstb           (rstb),
         .spi_mosi       (spi_mosi),

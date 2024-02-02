@@ -1,7 +1,7 @@
 module spi (
 
     input logic clk_spi,
-    input logic clk_100mhz,
+    input logic clk_sys,
 
     input logic cs,
     input logic rstb,
@@ -14,7 +14,7 @@ module spi (
     input logic rd_en_data,
 
     output logic [7:0] fifo_opcode,
-    output logic [15:0] fifo_datadata
+    output logic [15:0] fifo_data,
 
     output logic full_opcode,
     output logic full_data,
@@ -65,6 +65,8 @@ module spi (
 
                     state           <= (count == 8) ? READ_DATA : READ_OPCODE;
 
+                    reg_data[0]     <= spi_mosi 
+
                     wr_en_opcode    <= (count == 7) ? 1 : 0;
 
                 end
@@ -100,11 +102,11 @@ module spi (
         .wr_clk (clk_spi),
         .wr_en  (wr_en_opcode),
         .din    (reg_opcode),
-        .full   (),
-        .rd_clk (clk_100mhz),
+        .full   (full_opcode),
+        .rd_clk (clk_sys),
         .rd_en  (rd_en_opcode),
         .dout   (fifo_opcode),
-        .empty  ()
+        .empty  (empty_opcode)
     );
 
     fifo #(
@@ -115,11 +117,11 @@ module spi (
         .wr_clk (clk_spi),
         .wr_en  (wr_en_data),
         .din    (reg_data),
-        .full   (),
-        .rd_clk (clk_100mhz),
+        .full   (full_data),
+        .rd_clk (clk_sys),
         .rd_en  (rd_en_data),
         .dout   (fifo_data),
-        .empty  ()
+        .empty  (empty_data)
     );
 
 

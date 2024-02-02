@@ -1,0 +1,3 @@
+no processing done in the spi clock domain
+
+spi master directly writes into a one-bit fifo, then read out in the system clock domain
