@@ -84,6 +84,46 @@ module spi_master (
 
                 cs <= 1;
 
+                state <= FOC_S;
+
+            end
+
+            FOC_S : begin
+
+                ready <= 0;
+                    
+                state <= FOC_T;
+                    
+                cs <= 0;
+
+                en_clk <= 1;
+
+            end
+
+            FOC_T : begin
+
+                data[1] <= data[1] << 1;
+
+                count_bit <= count_bit + 1;
+
+                if (count_bit == 87) begin
+
+                    count_bit <= 0;
+
+                    state <= FOC_E;
+
+                    en_clk <= 0;
+
+                    ready <= 1;
+
+                end
+
+            end
+
+            FOC_E : begin
+
+                cs <= 1;
+
                 state <= IDLE;
 
             end
@@ -104,7 +144,7 @@ module fpga_wrapper_tb ();
 
     reg start_spi;
 
-    wire spi_mosi, clk_mosi, cs, ready;
+    wire spi_mosi, clk_mosi, cs, ready, valid, ready_fpga;
 
     wire [7:0] opcode;
     wire [15:0] data [4:0];
@@ -129,9 +169,15 @@ module fpga_wrapper_tb ();
 
         start_spi = 0;
 
-        wait (ready)
+        wait (valid)
 
         #200
+
+        wait (valid)
+
+        #200
+
+        wait(ready_fpga);
 
         $finish;
 
@@ -157,7 +203,21 @@ module fpga_wrapper_tb ();
         .opcode     (opcode),
         .data       (data),
         .full       (),
-        .valid      ()
+        .valid      (valid)
+    );
+
+    fpga_wrapper fpgaw0 (
+
+        .clk_sys (clk_sys),
+        .rstb    (rstb),
+        .clk_mosi(clk_mosi),
+        .cs      (cs),
+        .spi_mosi(spi_mosi),
+        .pwmA    (pwmA),
+        .pwmB    (pwmB),
+        .pwmC    (pwmC),
+        .ready   (ready_fpga)
+
     );
 
 endmodule

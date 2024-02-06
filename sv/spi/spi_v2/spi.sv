@@ -39,7 +39,7 @@ module spi (
     wire csb;
     assign csb = ~cs;
 
-    always @ (posedge clk_spi or negedge rstb) begin
+    always @ (posedge clk_sys or negedge rstb) begin
 
         if (!rstb) begin
 
@@ -61,7 +61,7 @@ module spi (
 
                     valid <= 0;
 
-                    if (!empty) begin
+                    if (!empty && cs) begin
 
                         rd_en   <= 1;
 
@@ -91,6 +91,12 @@ module spi (
 
                     if (!empty) begin
 
+                        data_packed[79:1]   <= data_packed[78:0];
+
+                        data_packed[0]      <= spi_fifo;
+
+                        count <= count + 1;
+
                         if (count == 87) begin
                             
                              state <= IDLE;
@@ -99,13 +105,9 @@ module spi (
 
                              valid <= 1;
 
+                             rd_en <= 0;
+
                         end
-
-                        data_packed[79:1]   <= data_packed[78:0];
-
-                        data_packed[0]      <= spi_fifo;
-
-                        count <= count + 1;
 
                     end
 
