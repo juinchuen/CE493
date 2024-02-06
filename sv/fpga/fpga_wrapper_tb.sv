@@ -147,7 +147,7 @@ module fpga_wrapper_tb ();
     wire spi_mosi, clk_mosi, cs, ready, valid, ready_fpga;
 
     wire [7:0] opcode;
-    wire [15:0] data [4:0];
+    wire [79:0] data;
 
     always #40 clk_spi = ~clk_spi;
     always #9 clk_sys = ~clk_sys;
@@ -201,7 +201,7 @@ module fpga_wrapper_tb ();
         .rstb       (rstb),
         .spi_mosi   (spi_mosi),
         .opcode     (opcode),
-        .data       (data),
+        .data_packed(data),
         .full       (),
         .valid      (valid)
     );

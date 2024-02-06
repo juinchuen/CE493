@@ -19,8 +19,15 @@ module fpga_wrapper (
 
     wire valid_spi;
 
+    wire [79:0] data_packed;
     wire [15:0] data [4:0];
     wire [7:0]  opcode;
+
+    assign data[0] = data_packed[15: 0];
+    assign data[1] = data_packed[31:16];
+    assign data[2] = data_packed[47:32];
+    assign data[3] = data_packed[63:48];
+    assign data[4] = data_packed[79:64];
 
     reg signed  [15:0] kpd, kpq, kid, kiq, ptop;
 
@@ -95,7 +102,7 @@ module fpga_wrapper (
         .rstb       (rstb),
         .spi_mosi   (spi_mosi),
         .opcode     (opcode),
-        .data       (data),
+        .data_packed(data_packed),
         .full       (),
         .valid      (valid_spi)
     );

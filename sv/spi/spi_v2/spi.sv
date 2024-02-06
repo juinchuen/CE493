@@ -9,7 +9,7 @@ module spi (
     input logic spi_mosi,
 
     output logic [7:0] opcode,
-    output logic [15:0] data [4:0],
+    output logic [79:0] data_packed,
 
     output logic full,
 
@@ -20,14 +20,6 @@ module spi (
     enum logic [1:0] {IDLE, READ_OPCODE, READ_DATA} state;
 
     reg [7:0] count;
-
-    reg [79:0] data_packed;
-
-    assign data[0] = data_packed[15: 0];
-    assign data[1] = data_packed[31:16];
-    assign data[2] = data_packed[47:32];
-    assign data[3] = data_packed[63:48];
-    assign data[4] = data_packed[79:64];
 
     reg rd_en;
 
