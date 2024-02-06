@@ -14,15 +14,15 @@ module fifo #(
 );
 
     function automatic logic [FIFO_DATA_WIDTH-1:0] to01( input logic [FIFO_DATA_WIDTH-1:0] data );
-        logic [FIFO_DATA_WIDTH-1:0] result;
+        // logic [FIFO_DATA_WIDTH-1:0] result;
 		for ( int i=0; i < $bits(data); i++ ) begin
 			case ( data[i] )  
-				0: result[i] = 1'b0;
-                1: result[i] = 1'b1;
-                default: result[i] = 1'b0;
+				0: to01[i] = 1'b0;
+                1: to01[i] = 1'b1;
+                default: to01[i] = 1'b0;
 			endcase;
 		end;
-		return result;
+		// return result;
     endfunction
 
     localparam FIFO_ADDR_WIDTH = $clog2(FIFO_BUFFER_SIZE) + 1;
