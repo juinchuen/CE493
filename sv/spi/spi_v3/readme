@@ -1,0 +1,3 @@
+stopped using fifos anymore
+just load into a shift register and read out once ready
+use 3 dff synchro to detect chip select signal

@@ -11,7 +11,7 @@ vlog -work work "../cordic/gamma.sv"
 vlog -work work "../matmul/matmul.sv"
 vlog -work work "../pid/pid_v3/pid.sv"
 vlog -work work "../svm/svm_v2/svm.sv"
-vlog -work work "../spi/spi_v2/spi.sv"
+vlog -work work "../spi/spi_v3/spi.sv"
 vlog -work work "../fifo.sv"
 
 vsim -classdebug -voptargs=+acc +notimingchecks -L work work.fpga_wrapper_tb -wlf spi_fpga_wrapper_tb.wlf

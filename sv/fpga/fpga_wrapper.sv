@@ -103,7 +103,6 @@ module fpga_wrapper (
         .spi_mosi   (spi_mosi),
         .opcode     (opcode),
         .data_packed(data_packed),
-        .full       (),
         .valid      (valid_spi)
     );
 

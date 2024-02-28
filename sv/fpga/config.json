@@ -1,10 +1,11 @@
 {
     "PDK": "sky130A",
     "DESIGN_NAME": "fpga_wrapper",
-    "VERILOG_FILES": ["../cordic/gamma.sv", "../cordic/cordic.sv", "../matmul/matmul.sv", "../pid/pid_v3/pid.sv", "../svm/svm_v2/svm.sv", "../top/top_v3/top.sv", "../spi/spi_v2/spi.sv", "../fifo.sv", "fpga_wrapper.sv"],
-    "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 100,
+    "VERILOG_FILES": ["../cordic/gamma.sv", "../cordic/cordic.sv", "../matmul/matmul.sv", "../pid/pid_v3/pid.sv", "../svm/svm_v2/svm.sv", "../top/top_v3/top.sv", "../spi/spi_v3/spi.sv", "../fifo.sv", "fpga_wrapper.sv"],
+    "CLOCK_PORT": "clk_sys",
+    "CLOCK_PERIOD": 25,
     "SYNTH_SIZING": 1,
     "SYNTH_STRATEGY": "DELAY 4",
-    "DESIGN_REPAIR_MAX_WIRE_LENGTH": 25
+    "DESIGN_REPAIR_MAX_WIRE_LENGTH": 25,
+    "FALLBACK_SDC_FILE": "fpga_wrapper.sdc"
 }

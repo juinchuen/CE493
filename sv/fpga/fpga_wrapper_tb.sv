@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module spi_master (
     input logic start,
     input logic clk_spi,
@@ -149,8 +151,16 @@ module fpga_wrapper_tb ();
     wire [7:0] opcode;
     wire [79:0] data;
 
-    always #40 clk_spi = ~clk_spi;
-    always #9 clk_sys = ~clk_sys;
+    always #100 clk_spi = ~clk_spi;
+    always #12.5 clk_sys = ~clk_sys;
+
+    // initial begin
+
+    //     #1500000
+
+    //     $finish;
+
+    // end
 
     initial begin
     
@@ -160,12 +170,12 @@ module fpga_wrapper_tb ();
 
         rstb = 1;
 
-        #0 rstb = 0;
-        #0 rstb = 1;
+        #10 rstb = 0;
+        #10 rstb = 1;
 
-        #18 start_spi = 1;
+        #10 start_spi = 1;
 
-        #160
+        #200
 
         start_spi = 0;
 
@@ -202,7 +212,6 @@ module fpga_wrapper_tb ();
         .spi_mosi   (spi_mosi),
         .opcode     (opcode),
         .data_packed(data),
-        .full       (),
         .valid      (valid)
     );
 
