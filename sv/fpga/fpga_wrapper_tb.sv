@@ -152,7 +152,7 @@ module fpga_wrapper_tb ();
     wire [79:0] data;
 
     always #100 clk_spi = ~clk_spi;
-    always #12.5 clk_sys = ~clk_sys;
+    always #10 clk_sys = ~clk_sys;
 
     // initial begin
 
